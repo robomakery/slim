@@ -1,0 +1,25 @@
+{
+    "variables": {
+        "aws_access_key": "{{env `AWS_ACCESS_KEY`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_KEY`}}"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "region": "us-east-1",
+            "source_ami": "ami-76949177",
+            "instance_type": "t1.micro",
+            "ssh_username": "ubuntu",
+            "ami_name": "packer {{timestamp}}"
+        }
+    ],
+
+    "provisioners": [
+        {
+            "type": "chef-solo",
+            "cookbook_paths": ["ops/packer/cookbooks"]
+        }
+    ]
+}
