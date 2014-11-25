@@ -9,17 +9,17 @@
             "access_key": "{{user `aws_access_key`}}",
             "secret_key": "{{user `aws_secret_key`}}",
             "region": "us-east-1",
-            "source_ami": "ami-76949177",
+            "source_ami": "ami-8caa1ce4",
             "instance_type": "t1.micro",
             "ssh_username": "ubuntu",
-            "ami_name": "packer {{timestamp}}"
+            "ami_name": "packer caffe {{timestamp}}"
         }
     ],
-
     "provisioners": [
         {
             "type": "chef-solo",
-            "cookbook_paths": ["ops/packer/cookbooks"]
+            "cookbook_paths": ["ops/packer/cookbooks/vendor"],
+            "run_list": ["caffe::default"]
         }
     ]
 }
