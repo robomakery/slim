@@ -10,7 +10,7 @@
             "secret_key": "{{user `aws_secret_key`}}",
             "region": "us-east-1",
             "source_ami": "ami-8caa1ce4",
-            "instance_type": "t1.micro",
+            "instance_type": "g2.2xlarge",
             "ssh_username": "ubuntu",
             "ami_name": "packer caffe {{timestamp}}"
         }
