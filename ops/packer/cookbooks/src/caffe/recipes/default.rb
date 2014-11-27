@@ -35,9 +35,9 @@ end
 
 package 'cuda'
 
-remote_file "#{software_dir}/cudnn-6.5-linux-R1.tgz" do
-  source "http://developer.download.nvidia.com/assets/cuda/secure/cuDNN/R1/cudnn-6.5-linux-R1.tgz?autho=1417028373_094b1a968b3d3511171c63c0d5c6b287&file=cudnn-6.5-linux-R1.tgz"
-  action :create_if_missing
+cookbook_file "#{software_dir}/cudnn-6.5-linux-R1.tgz" do
+  source "cudnn-6.5-linux-R1.tgz"
+  mode 0644
 end
 
 execute 'tar -zxf cudnn-6.5-linux-R1.tgz' do
