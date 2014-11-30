@@ -157,6 +157,7 @@ end
 # http://stackoverflow.com/a/26028597
 link "/dev/raw1394" do
   to "/dev/null"
+  link_type :hard
 end
 
 # set path
