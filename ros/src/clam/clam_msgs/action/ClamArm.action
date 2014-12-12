@@ -1,0 +1,9 @@
+#goal definition
+int32 command                      # desired function to perform
+int32 RESET = 1                    # go to home position
+int32 SHUTDOWN = 2                 # send clam arm to sleep position so it can power off without falling
+---
+#result definition
+bool success                       # whether command worked successfully
+---
+#feedback

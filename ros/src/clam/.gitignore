@@ -1,0 +1,20 @@
+# Python stuff
+*.pyc
+
+# Data files
+*.dat
+
+# Emacs temp files
+.#*
+
+# OSX Files
+.DS_Store
+
+# CSV Files of Data
+*.csv
+
+
+
+
+# Packages not in clam_catkin
+moveit_ikfast_converter/

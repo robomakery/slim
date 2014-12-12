@@ -1,0 +1,24 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  <!-- Low level stuff -->
+  <include file="$(find clam_bringup)/launch/clam_lowlevel.launch" />
+
+  <!-- MoveIt -->
+  <include file="$(find clam_moveit_config)/launch/move_group.launch" />
+
+  <!-- Vision -->
+  <include file="$(find clam_bringup)/launch/clam_vision.launch" />
+
+  <!-- Rviz -->
+  <include file="$(find clam_block_manipulation)/launch/block_manipulation_rviz.launch" />
+
+  <!-- Block Perception Servers -->
+  <include file="$(find clam_block_manipulation)/launch/block_perception_server.launch" />
+
+  <!-- Block Pick and Place Servers -->
+  <include file="$(find clam_block_manipulation)/launch/block_pick_place_server.launch" />
+
+  <!-- Block Manipulation Logic Demo -->
+  <include file="$(find clam_block_manipulation)/launch/block_manipulation_logic.launch" />
+
+</launch>
