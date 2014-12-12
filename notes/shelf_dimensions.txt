@@ -1,0 +1,10 @@
+
+
+total shelf width: 0.90 meters
+single shelf depth: 0.435 meters
+single shelf height: 0.30 meters
+single shelf width: 0.30 meters
+inner shelf wall width: 0.01 meters
+outer shelf wall width: 0.03 meters
+shelf floor / ceiling wall width: 0.04 meters
+shelf lip: 0.01 meters
