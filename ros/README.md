@@ -1,15 +1,8 @@
 
-ROS Setup
-=========
+# ROS Setup
 
-1. [Install Indigo](http://wiki.ros.org/indigo/Installation/Ubuntu)
+## [Install Indigo](http://wiki.ros.org/indigo/Installation/Ubuntu)
 
-2. Build Packages
+## Build Packages
 
-```
- $ catkin_make
-```
-
-
-
-    
+   $ catkin_make
