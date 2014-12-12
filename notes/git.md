@@ -1,3 +1,8 @@
+# git flow
+
+We are using the git-flow method of branching:
+
+http://nvie.com/posts/a-successful-git-branching-model/
 
 # git subtrees
 
