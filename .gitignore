@@ -1,5 +1,5 @@
 .vagrant
-ops/packer/cookbooks/vendor
+ops/packer/cookbooks
 ros/devel
 ros/build
 

@@ -1,3 +1,4 @@
 source 'https://supermarket.getchef.com'
 
-cookbook 'caffe', path: 'ops/packer/cookbooks/src/caffe'
+cookbook 'caffe', git: 'git://github.com/robomakery/caffe-cookbook.git'
+cookbook 'dylansenv', git: 'git@github.com:dylanvaughn/dylansenv-cookbook.git'

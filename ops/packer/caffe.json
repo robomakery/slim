@@ -12,14 +12,14 @@
             "source_ami": "ami-4ae27e22",
             "instance_type": "g2.2xlarge",
             "ssh_username": "ubuntu",
-            "ami_name": "packer caffe {{timestamp}}"
+            "ami_name": "caffe-{{isotime \"20060102T150405Z\"}}"
         }
     ],
     "provisioners": [
         {
             "type": "chef-solo",
-            "cookbook_paths": ["ops/packer/cookbooks/vendor"],
-            "run_list": ["caffe::default"]
+            "cookbook_paths": ["ops/packer/cookbooks"],
+            "run_list": ["dylansenv::default","caffe::default"]
         }
     ]
 }
