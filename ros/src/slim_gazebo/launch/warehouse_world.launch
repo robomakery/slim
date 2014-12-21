@@ -37,6 +37,6 @@
   </group>
 
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -urdf -z 2 -y -1 -model slim" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -urdf -z 1.017 -y -1 -model slim" />
 
 </launch>

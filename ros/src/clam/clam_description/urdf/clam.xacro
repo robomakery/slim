@@ -23,6 +23,7 @@ http://www.ros.org/wiki/xacro
   <property name="M_PI" value="3.14159"/>
 
   <!-- TABLETOP LINK -->
+  <!--
   <joint name="tabletop_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <parent link="base_link"/>
@@ -57,15 +58,23 @@ http://www.ros.org/wiki/xacro
   <gazebo reference="tabletop_link">
     <material>Gazebo/White</material>
   </gazebo>
+  -->
+
+  <link name="world" />
+
+  <joint name="fixed" type="fixed">
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
 
   <!-- BASE LINK -->
   <link name="base_link">
 
-    <!--inertial>
-        <origin xyz="0 0 0" />
-        <mass value="1.0" />
-        <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-        </inertial-->
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
 
     <visual>
       <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" /> <!-- rotate PI/2 -->
