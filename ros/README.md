@@ -30,3 +30,29 @@ You might have to do ```catkin_make``` a few times.  This is what you should see
 
     $ roslaunch clam_bringup simulation.launch
     $ roslaunch slim_gazebo warehouse_world.launch
+
+## Using MoveIt in Rviz
+
+From a clean environment:
+
+    $ roslaunch clam_bringup lowlevel_simulator.launch
+    (new initialized terminal)
+    $ roslaunch clam_moveit_config move_group.launch
+    (new initialized terminal)
+    $ roslaunch clam_moveit_config moveit_rviz.launch
+
+You now should see the arm in rviz and be able to do planning via the tabs in the bottom left of rviz.
+
+## Gazebo
+
+From a clean environment:
+
+    $ roslaunch clam_gazebo clam_world.launch
+    $ roscd clam_controller
+    (have gazebo on your screen before you run the next command - it happens pretty fast)
+    $ python scripts/pose_cobra.py
+    
+Current Issues:
+
+* arm keeps moving after being directed to go to a pose.  Issue with PID settings?
+* topic namespaces for controllers don't match between lowlevel_simulator.launch (no namespace) and gazebo controllers (all in /clam namespace)
