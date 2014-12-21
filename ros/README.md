@@ -48,11 +48,14 @@ You now should see the arm in rviz and be able to do planning via the tabs in th
 From a clean environment:
 
     $ roslaunch clam_gazebo clam_world.launch
+    (new initialized terminal)
     $ roscd clam_controller
+    (new initialized terminal)
     (have gazebo on your screen before you run the next command - it happens pretty fast)
     $ python scripts/pose_cobra.py
     
 Current Issues:
 
 * arm keeps moving after being directed to go to a pose.  Issue with PID settings?
-* topic namespaces for controllers don't match between lowlevel_simulator.launch (no namespace) and gazebo controllers (all in /clam namespace)
+* can't use moveit - topic namespaces for controllers don't match between lowlevel_simulator.launch (no namespace) and gazebo controllers (all in /clam namespace)
+* can we use the lowlevel_simulator controllers for gazebo?
