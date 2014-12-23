@@ -35,14 +35,17 @@ You might have to do ```catkin_make``` a few times.  This is what you should see
 ## Using MoveIt in Rviz
 
 From a clean environment:
+    $ roslaunch slim_bringup rviz_simulation.launch"
 
+You now should see the arm in rviz and be able to do planning via the tabs in the bottom left of rviz.
+
+If there's any failure in the above command, try running the following commands individual in separate terminal windows in order to isolate any problems.
     $ roslaunch clam_bringup lowlevel_simulator.launch
     (new initialized terminal)
     $ roslaunch clam_moveit_config move_group.launch
     (new initialized terminal)
     $ roslaunch clam_moveit_config moveit_rviz.launch
 
-You now should see the arm in rviz and be able to do planning via the tabs in the bottom left of rviz.
 
 ## Gazebo
 
