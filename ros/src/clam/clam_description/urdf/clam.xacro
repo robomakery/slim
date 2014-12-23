@@ -22,53 +22,7 @@ http://www.ros.org/wiki/xacro
   <property name="M_SCALE" value="0.001 0.001 0.001"/>
   <property name="M_PI" value="3.14159"/>
 
-  <!-- TABLETOP LINK -->
-  <!--
-  <joint name="tabletop_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="base_link"/>
-    <child link="tabletop_link"/>
-  </joint>
-
-  <link name="tabletop_link">
-
-    <inertial>
-      <origin xyz=" 0 0 -0.017"/>
-      <mass value="100.0" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-    </inertial>
-
-    <visual>
-      <origin xyz=" 0 0 -0.017"  rpy="${.5*M_PI} 0 ${.5*M_PI}"/>
-      <geometry>
-        <mesh filename="package://clam_description/stl/tabletop_link.STL" scale="${M_SCALE}" />
-      </geometry>
-      <material name="Brown" />
-    </visual>
-
-    <collision>
-      <origin xyz=" 0 0 -0.017"  rpy="${.5*M_PI} 0 ${.5*M_PI}"/>
-      <geometry>
-        <mesh filename="package://clam_description/stl/tabletop_link_simple.STL" scale="${M_SCALE}" />
-      </geometry>
-      </collision>>
-
-  </link>
-
-  <gazebo reference="tabletop_link">
-    <material>Gazebo/White</material>
-  </gazebo>
-  -->
-
-  <link name="world" />
-
-  <joint name="fixed" type="fixed">
-    <parent link="world" />
-    <child link="base_link" />
-  </joint>
-
-  <!-- BASE LINK -->
-  <link name="base_link">
+  <link name="arm_base_link">
 
     <inertial>
       <origin xyz="0 0 0" />
@@ -93,12 +47,12 @@ http://www.ros.org/wiki/xacro
 
   </link>
 
-  <gazebo reference="base_link">
+  <gazebo reference="arm_base_link">
     <material>Gazebo/Grey</material>
   </gazebo>
 
   <joint name="shoulder_pan_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="arm_base_link"/>
     <child link="shoulder_pan_link"/>
     <origin xyz="0 0 0.05" rpy="0 ${M_PI/2} ${M_PI*0}" />
     <axis xyz="-1 0 0" />
@@ -667,7 +621,8 @@ http://www.ros.org/wiki/xacro
 
 
   <!-- FAKE CAMERA CALIBRATION POINT AT GRIPPER TIP -->
-  <!--joint name="gripper_fake_tip_joint" type="fixed">
+  <!--
+  <joint name="gripper_fake_tip_joint" type="fixed">
     <origin xyz="0.1785 0.0 0.0" rpy="0 0 0" />
     <parent link="gripper_roll_link"/>
     <child link="gripper_fake_tip_link" />
@@ -699,6 +654,7 @@ http://www.ros.org/wiki/xacro
 
   <gazebo reference="gripper_fake_tip_link">
     <material>Gazebo/Grey</material>
-  </gazebo-->
+  </gazebo>
+  -->
 
 </robot>

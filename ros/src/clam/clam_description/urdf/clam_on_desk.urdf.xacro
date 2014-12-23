@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<!-- Robot Description format of CLAM arm
+Dave Coleman - davetcoleman@gmail.com
+10/23/13
+
+Documentation:
+
+URDF
+http://www.ros.org/wiki/urdf/XML
+
+XARCO - Macro Language
+http://www.ros.org/wiki/xacro
+
+-->
+<robot name="clam_on_desk" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants -->
+  <property name="M_SCALE" value="0.001 0.001 0.001"/>
+  <property name="M_PI" value="3.14159"/>
+
+  <!-- Include arm macro -->
+  <xacro:include filename="$(find clam_description)/urdf/clam.xacro" />
+
+  <!-- TABLETOP LINK -->
+  <joint name="tabletop_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link"/>
+    <child link="tabletop_link"/>
+  </joint>
+
+  <link name="tabletop_link">
+
+    <inertial>
+      <origin xyz=" 0 0 -0.017"/>
+      <mass value="100.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+
+    <visual>
+      <origin xyz=" 0 0 -0.017"  rpy="${.5*M_PI} 0 ${.5*M_PI}"/>
+      <geometry>
+        <mesh filename="package://clam_description/stl/tabletop_link.STL" scale="${M_SCALE}" />
+      </geometry>
+      <material name="Brown" />
+    </visual>
+
+    <collision>
+      <origin xyz=" 0 0 -0.017"  rpy="${.5*M_PI} 0 ${.5*M_PI}"/>
+      <geometry>
+        <mesh filename="package://clam_description/stl/tabletop_link_simple.STL" scale="${M_SCALE}" />
+      </geometry>
+    </collision>
+
+  </link>
+
+  <gazebo reference="tabletop_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <xacro:clam_arm name="clam" parent="table_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:clam_arm>
+
+</robot>

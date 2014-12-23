@@ -1,6 +1,6 @@
 <launch>
   <!-- send robot XML to param server -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find clam_description)/urdf/clam_on_desk.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
 
   <!-- send fake joint values -->
   <node name="joint_state_publisher" pkg="clam_controller" type="joint_state_publisher.py">

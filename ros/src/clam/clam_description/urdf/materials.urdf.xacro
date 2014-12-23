@@ -17,6 +17,10 @@
         <color rgba="0.2 0.2 0.2 1.0"/>
     </material>
 
+    <material name="LightGrey">
+        <color rgba="0.6 0.6 0.6 1.0"/>
+    </material>
+  
     <material name="Orange">
         <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
     </material>

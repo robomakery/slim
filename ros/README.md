@@ -30,6 +30,7 @@ You might have to do ```catkin_make``` a few times.  This is what you should see
 
     $ roslaunch clam_bringup simulation.launch
     $ roslaunch slim_gazebo warehouse_world.launch
+    $ roslaunch slim_bringup rviz.launch
 
 ## Using MoveIt in Rviz
 

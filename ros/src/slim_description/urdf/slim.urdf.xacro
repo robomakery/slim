@@ -1,8 +1,157 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="slim">
 
-  <xacro:include filename="$(find clam_description)/urdf/clam.xacro" />
+  <link name="base_link" />
 
-  <xacro:clam name="clamarm" />
+  <joint name="fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="lift_base" />
+  </joint>
+
+  <link name="lift_base">
+    <visual>
+      <geometry>
+        <box size="1.3 0.2 0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+  <gazebo reference="lift_base">
+    <material>Gazebo/LightGrey</material>
+  </gazebo>
+
+  <joint name="lift_base_joint" type="fixed">
+    <parent link="lift_base" />
+    <child link="fl_lift_rod" />
+  </joint>
+
+  <link name="fl_lift_rod">
+    <visual>
+      <origin xyz="0.55 0.07 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.6" radius="0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+
+  <joint name="fl_lift_joint" type="prismatic">
+    <axis xyz="0 0 1" />
+    <parent link="fl_lift_rod" />
+    <child link="slide_rail_base" />
+    <limit effort="1000.0" velocity="0.1" lower="0" upper="0.5" />
+  </joint>
+
+  <link name="fr_lift_rod">
+    <visual>
+      <origin xyz="-0.55 0.07 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.6" radius="0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+
+  <joint name="fr_lift_joint" type="fixed">
+    <parent link="lift_base" />
+    <child link="fr_lift_rod" />
+  </joint>
+
+  <link name="bl_lift_rod">
+    <visual>
+      <origin xyz="0.55 -0.07 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.6" radius="0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+
+  <joint name="bl_lift_joint" type="fixed">
+    <parent link="lift_base" />
+    <child link="bl_lift_rod" />
+  </joint>
+
+  <link name="br_lift_rod">
+    <visual>
+      <origin xyz="-0.55 -0.07 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.6" radius="0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+
+  <joint name="br_lift_joint" type="fixed">
+    <parent link="lift_base" />
+    <child link="br_lift_rod" />
+  </joint>
+
+  <link name="l_lift_rod_cap">
+    <visual>
+      <origin xyz="0.55 0 0.6" />
+      <geometry>
+        <box size="0.05 0.2 0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+
+  <joint name="l_lift_rod_cap_joint" type="fixed">
+    <parent link="fl_lift_rod" />
+    <child link="l_lift_rod_cap" />
+  </joint>
+
+  <link name="r_lift_rod_cap">
+    <visual>
+      <origin xyz="-0.55 0 0.6" />
+      <geometry>
+        <box size="0.05 0.2 0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+
+  <joint name="r_lift_rod_cap_joint" type="fixed">
+    <parent link="fr_lift_rod" />
+    <child link="r_lift_rod_cap" />
+  </joint>
+
+  <link name="slide_rail_base">
+    <visual>
+      <origin xyz="0 0 0.01" />
+      <geometry>
+        <box size="1.2 0.2 0.01" />
+      </geometry>
+      <material name="LightGrey" />
+    </visual>
+  </link>
+  <gazebo reference="slide_rail_base">
+    <material>Gazebo/LightGrey</material>
+  </gazebo>
+
+  <joint name="slide_rail_base_joint" type="prismatic">
+    <axis xyz="1 0 0" />
+    <parent link="slide_rail_base" />
+    <child link="slide_rail" />
+    <limit effort="1000.0" velocity="0.2" lower="-0.4" upper="0.4" />
+  </joint>
+
+  <link name="slide_rail">
+    <visual>
+      <geometry>
+        <box size="0.18 0.18 0.01" />
+      </geometry>
+      <material name="LightGrey" />
+      <origin xyz="0 0 0.02" />
+    </visual>
+  </link>
+
+  <joint name="slide_rail_joint" type="fixed">
+    <parent link="slide_rail" />
+    <child link="arm_base_link" />
+  </joint>
+
+  <xacro:include filename="$(find clam_description)/urdf/clam.xacro" />
 
 </robot>
