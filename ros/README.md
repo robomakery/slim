@@ -63,3 +63,10 @@ Current Issues:
 * arm keeps moving after being directed to go to a pose.  Issue with PID settings?
 * can't use moveit - topic namespaces for controllers don't match between lowlevel_simulator.launch (no namespace) and gazebo controllers (all in /clam namespace)
 * can we use the lowlevel_simulator controllers for gazebo?
+
+## Pick and Place Demo (not currently working)
+
+    $ roslaunch clam_bringup lowlevel_simulator.launch
+    $ roslaunch clam_moveit_config move_group.launch verbose:=true debug:=true
+    $ roslaunch clam_moveit_config moveit_rviz.launch
+    $ roslaunch clam_pick_place pick_place.launch verbose:=true debug:=true
