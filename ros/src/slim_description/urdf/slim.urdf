@@ -4,35 +4,136 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="slim" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <link name="world"/>
+  <link name="base_link"/>
   <joint name="fixed" type="fixed">
-    <parent link="world"/>
+    <parent link="base_link"/>
+    <child link="lift_base"/>
+  </joint>
+  <link name="lift_base">
+    <visual>
+      <geometry>
+        <box size="1.3 0.2 0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <gazebo reference="lift_base">
+    <material>Gazebo/LightGrey</material>
+  </gazebo>
+  <joint name="lift_base_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="fl_lift_rod"/>
+  </joint>
+  <link name="fl_lift_rod">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.55 0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="fl_lift_joint" type="prismatic">
+    <axis xyz="0 0 1"/>
+    <parent link="fl_lift_rod"/>
     <child link="slide_rail_base"/>
+    <limit effort="1000.0" lower="0" upper="0.5" velocity="0.1"/>
+  </joint>
+  <link name="fr_lift_rod">
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.55 0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="fr_lift_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="fr_lift_rod"/>
+  </joint>
+  <link name="bl_lift_rod">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.55 -0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="bl_lift_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="bl_lift_rod"/>
+  </joint>
+  <link name="br_lift_rod">
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.55 -0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="br_lift_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="br_lift_rod"/>
+  </joint>
+  <link name="l_lift_rod_cap">
+    <visual>
+      <origin xyz="0.55 0 0.6"/>
+      <geometry>
+        <box size="0.05 0.2 0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="l_lift_rod_cap_joint" type="fixed">
+    <parent link="fl_lift_rod"/>
+    <child link="l_lift_rod_cap"/>
+  </joint>
+  <link name="r_lift_rod_cap">
+    <visual>
+      <origin xyz="-0.55 0 0.6"/>
+      <geometry>
+        <box size="0.05 0.2 0.01"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="r_lift_rod_cap_joint" type="fixed">
+    <parent link="fr_lift_rod"/>
+    <child link="r_lift_rod_cap"/>
   </joint>
   <link name="slide_rail_base">
     <visual>
+      <origin xyz="0 0 0.01"/>
       <geometry>
-        <box size="1.0 0.2 0.01"/>
+        <box size="1.2 0.2 0.01"/>
       </geometry>
+      <material name="LightGrey"/>
     </visual>
   </link>
+  <gazebo reference="slide_rail_base">
+    <material>Gazebo/LightGrey</material>
+  </gazebo>
   <joint name="slide_rail_base_joint" type="prismatic">
     <axis xyz="1 0 0"/>
     <parent link="slide_rail_base"/>
     <child link="slide_rail"/>
-    <limit effort="1000.0" lower="-0.41" upper="0.41" velocity="0.2"/>
+    <limit effort="1000.0" lower="-0.4" upper="0.4" velocity="0.2"/>
   </joint>
   <link name="slide_rail">
     <visual>
       <geometry>
         <box size="0.18 0.18 0.01"/>
       </geometry>
-      <origin xyz="0 0 0.01"/>
+      <material name="LightGrey"/>
+      <origin xyz="0 0 0.02"/>
     </visual>
   </link>
   <joint name="slide_rail_joint" type="fixed">
     <parent link="slide_rail"/>
-    <child link="base_link"/>
+    <child link="arm_base_link"/>
   </joint>
   <material name="Black">
     <color rgba="0.0 0.0 0.0 1.0"/>
@@ -46,6 +147,9 @@
   <material name="Grey">
     <color rgba="0.2 0.2 0.2 1.0"/>
   </material>
+  <material name="LightGrey">
+    <color rgba="0.6 0.6 0.6 1.0"/>
+  </material>
   <material name="Orange">
     <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
   </material>
@@ -58,7 +162,7 @@
   <material name="White">
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
-  <link name="base_link">
+  <link name="arm_base_link">
     <inertial>
       <origin xyz="0 0 0"/>
       <mass value="1.0"/>
@@ -80,11 +184,11 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="base_link">
+  <gazebo reference="arm_base_link">
     <material>Gazebo/Grey</material>
   </gazebo>
   <joint name="shoulder_pan_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="arm_base_link"/>
     <child link="shoulder_pan_link"/>
     <origin rpy="0 1.570795 0.0" xyz="0 0 0.05"/>
     <axis xyz="-1 0 0"/>
