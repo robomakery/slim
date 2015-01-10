@@ -18,5 +18,10 @@
       <uri>model://table</uri>
       <pose>0 -1 0 0 0 0</pose>
     </include>
+    <!-- a box to pick out of the shelf -->
+    <include>
+      <uri>model://wood_cube_5cm</uri>
+      <pose>-0.293235 -0.261138 1.634271 -0.086714 -0.009537 -0.121213</pose>
+    </include>
   </world>
 </sdf>

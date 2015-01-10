@@ -523,89 +523,89 @@ http://www.ros.org/wiki/xacro
   </gazebo>
 
   <!-- Transmissions for ROS Control -->
-  <transmission name="tran1">
+  <transmission name="shoulder_pan_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_pan_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="shoulder_pan_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="shoulder_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="shoulder_pitch_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="elbow_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="elbow_roll_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="elbow_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="elbow_pitch_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="wrist_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="wrist_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="wrist_roll_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="wrist_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="wrist_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="wrist_pitch_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="gripper_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="gripper_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="gripper_roll_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="tran1">
+  <transmission name="gripper_finger_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="gripper_finger_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="gripper_finger_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>

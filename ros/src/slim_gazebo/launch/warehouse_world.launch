@@ -44,18 +44,18 @@
   <rosparam file="$(find slim_gazebo)/config/slim_gazebo_control.yaml" command="load"/>
 
   <!-- load the controllers -->
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-	    output="screen" ns="/slim" args="joint_state_controller
-					                     fl_lift_controller
-                                         slide_rail_base_controller
-					                     shoulder_pan_controller
-					                     shoulder_pitch_controller
-					                     elbow_roll_controller
-					                     elbow_pitch_controller
-					                     wrist_roll_controller
-					                     wrist_pitch_controller
-					                     gripper_roll_controller
-					                     gripper_finger_controller" />
+  <node name="controller_spawner" pkg="controller_manager" type="spawner"
+	    ns="/clam" args="joint_state_controller
+					     fl_lift_controller
+                         slide_rail_base_controller
+					     shoulder_pan_controller
+					     shoulder_pitch_controller
+					     elbow_roll_controller
+					     elbow_pitch_controller
+					     wrist_roll_controller
+					     wrist_pitch_controller
+					     gripper_roll_controller
+					     gripper_finger_controller" />
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
