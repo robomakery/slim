@@ -1,0 +1,47 @@
+slim:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Position Controllers ---------------------------------------
+  fl_lift_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_lift_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  slide_rail_base_controller:
+    type: effort_controllers/JointPositionController
+    joint: slide_rail_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  shoulder_pan_controller:
+    type: effort_controllers/JointPositionController
+    joint: shoulder_pan_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  shoulder_pitch_controller:
+    type: effort_controllers/JointPositionController
+    joint: shoulder_pitch_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  elbow_roll_controller:
+    type: effort_controllers/JointPositionController
+    joint: elbow_roll_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  elbow_pitch_controller:
+    type: effort_controllers/JointPositionController
+    joint: elbow_pitch_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wrist_roll_controller:
+    type: effort_controllers/JointPositionController
+    joint: wrist_roll_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wrist_pitch_controller:
+    type: effort_controllers/JointPositionController
+    joint: wrist_pitch_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  gripper_roll_controller:
+    type: effort_controllers/JointPositionController
+    joint: gripper_roll_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  gripper_finger_controller:
+    type: effort_controllers/JointPositionController
+    joint: gripper_finger_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
