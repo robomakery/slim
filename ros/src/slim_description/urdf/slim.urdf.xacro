@@ -20,10 +20,10 @@
         <box size="1.3 0.2 0.01" />
       </geometry>
     </collision>
-    <inertial>
-      <mass value="5" />
-      <inertia />
-    </inertial>
+    <!-- <inertial> -->
+    <!--   <mass value="5" /> -->
+    <!--   <inertia /> -->
+    <!-- </inertial> -->
   </link>
   <gazebo reference="lift_base">
     <material>Gazebo/LightGrey</material>
