@@ -241,6 +241,27 @@
     <child link="arm_base_link" />
   </joint>
 
+  <transmission name="fl_lift_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fl_lift_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="fl_lift_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="slide_rail_base_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="slide_rail_base_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="slide_rail_base_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
   <xacro:include filename="$(find clam_description)/urdf/clam.xacro" />
 
 </robot>
