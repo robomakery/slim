@@ -37,7 +37,11 @@
   </group>
 
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -urdf -z 1.017 -y -1 -model slim" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -urdf -z 1.02 -y -0.73 -model slim" />
+
+  <!-- load PID gains for PositionJointInterface -->
+  <!-- http://answers.gazebosim.org/question/5468/gazebo_ros_pkgs-no-p-gain-specified-for-pid-in/ -->
+  
 
   <!-- ros_control controllers -->
   <!-- Load joint controller configurations from YAML file to parameter server -->

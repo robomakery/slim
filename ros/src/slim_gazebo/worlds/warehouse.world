@@ -23,5 +23,10 @@
       <uri>model://wood_cube_5cm</uri>
       <pose>-0.293235 -0.261138 1.634271 -0.086714 -0.009537 -0.121213</pose>
     </include>
+    <!-- a bowl to put the item into -->
+    <include>
+      <uri>model://bowl</uri>
+      <pose>-0.022727 -1.067523 1.032691 0.001745 -0.000877 0.003361</pose>
+    </include>
   </world>
 </sdf>

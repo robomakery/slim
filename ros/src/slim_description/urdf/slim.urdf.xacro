@@ -25,9 +25,6 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
-  <gazebo reference="lift_base">
-    <material>Gazebo/LightGrey</material>
-  </gazebo>
 
   <joint name="lift_base_joint" type="fixed">
     <parent link="lift_base" />
@@ -205,9 +202,6 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
-  <gazebo reference="slide_rail_base">
-    <material>Gazebo/LightGrey</material>
-  </gazebo>
 
   <joint name="slide_rail_base_joint" type="prismatic">
     <axis xyz="1 0 0" />
