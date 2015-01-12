@@ -32,6 +32,14 @@ You might have to do ```catkin_make``` a few times.  This is what you should see
     $ roslaunch slim_gazebo warehouse_world.launch
     $ roslaunch slim_bringup rviz.launch
 
+## Running Gazebo / MoveIt! / RViz
+
+    $ roslaunch slim_gazebo warehouse_world.launch
+    $ roslaunch slim_moveit_config move_group.launch
+    $ roslaunch slim_moveit_config moveit_rviz.launch
+
+# Old examples
+
 ## Using MoveIt in Rviz
 
 From a clean environment:
