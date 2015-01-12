@@ -20,7 +20,7 @@ joint_commands = (0.0, 0.0, 0.0, 0.0, 0.0, 1.5, 0.0, -1)
 
 
 if __name__ == '__main__':
-    pubs = [rospy.Publisher('clam/' + name + '/command', Float64) for name in joint_names]
+    pubs = [rospy.Publisher('slim/' + name + '/command', Float64) for name in joint_names]
     rospy.init_node('make_cobra_pose', anonymous=True)
     
     for i in range(len(pubs)):

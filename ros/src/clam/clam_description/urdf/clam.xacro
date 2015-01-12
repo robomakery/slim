@@ -611,6 +611,61 @@ http://www.ros.org/wiki/xacro
     </actuator>
   </transmission>
 
+  <transmission name="r_gripper_aft_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_gripper_aft_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_gripper_aft_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l_gripper_fwd_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_gripper_fwd_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="l_gripper_fwd_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="r_gripper_fwd_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_gripper_fwd_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_gripper_fwd_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="gripper_finger_pincher_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_finger_pincher_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="gripper_finger_pincher_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="r_gripper_aft_pincher_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_gripper_aft_pincher_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_gripper_aft_pincher_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
   <!-- FAKE CAMERA CALIBRATION POINT AT GRIPPER TIP -->
   <!--
   <joint name="gripper_fake_tip_joint" type="fixed">
