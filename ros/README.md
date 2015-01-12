@@ -78,3 +78,10 @@ Current Issues:
     $ roslaunch clam_moveit_config move_group.launch verbose:=true debug:=true
     $ roslaunch clam_moveit_config moveit_rviz.launch
     $ roslaunch clam_pick_place pick_place.launch verbose:=true debug:=true
+
+
+## demo notes
+
+Run joint state publisher gui like this:
+
+    $ rosrun joint_state_publisher joint_state_publisher _use_gui:=True
