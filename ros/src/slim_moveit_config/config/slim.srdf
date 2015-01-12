@@ -35,7 +35,7 @@
     </group_state>
     <group_state name="top_right" group="gantry">
         <joint name="fl_lift_joint" value="0.5" />
-        <joint name="slide_rail_base_joint" value="-0.4" />
+        <joint name="slide_rail_base_joint" value="-0.3" />
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="end_effector" parent_link="gripper_roll_link" group="gripper_group" parent_group="arm" />
@@ -57,7 +57,6 @@
     <disable_collisions link1="arm_base_link" link2="l_gripper_fwd_link" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="l_lift_rod_cap" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="lift_base" reason="Default" />
-    <disable_collisions link1="arm_base_link" link2="r_gripper_fwd_link" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="r_lift_rod_cap" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="shoulder_pan_link" reason="Adjacent" />
     <disable_collisions link1="arm_base_link" link2="slide_rail" reason="Adjacent" />
@@ -244,6 +243,7 @@
     <disable_collisions link1="l_gripper_fwd_link" link2="r_gripper_pincher_link" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="shoulder_pan_link" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="l_gripper_fwd_link" link2="slide_rail" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="wrist_pitch_link" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="wrist_roll_link" reason="Never" />
     <disable_collisions link1="l_gripper_pincher_link" link2="r_gripper_aft_link" reason="Never" />
