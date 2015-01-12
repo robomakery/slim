@@ -26,7 +26,7 @@
     <inertial>
       <origin xyz="0 -0.35 0"/>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.266708333333" ixy="0" ixz="0" iyy="0.704208333333" iyz="0" izz="0.704208333333"/>
     </inertial>
   </link>
   <gazebo reference="lift_base">
@@ -53,7 +53,7 @@
     <inertial>
       <origin xyz="0.55 0.14 0.3"/>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150166666667" ixy="0" ixz="0" iyy="0.150166666667" iyz="0" izz="0.150166666667"/>
     </inertial>
   </link>
   <gazebo reference="fl_frame_post">
@@ -80,7 +80,7 @@
     <inertial>
       <origin xyz="-0.55 0.14 0.3"/>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150166666667" ixy="0" ixz="0" iyy="0.150166666667" iyz="0" izz="0.150166666667"/>
     </inertial>
   </link>
   <gazebo reference="fr_frame_post">
@@ -107,7 +107,7 @@
     <inertial>
       <origin xyz="0.55 -0.64 0.3"/>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150166666667" ixy="0" ixz="0" iyy="0.150166666667" iyz="0" izz="0.150166666667"/>
     </inertial>
   </link>
   <gazebo reference="bl_frame_post">
@@ -134,7 +134,7 @@
     <inertial>
       <origin xyz="-0.55 -0.64 0.3"/>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150166666667" ixy="0" ixz="0" iyy="0.150166666667" iyz="0" izz="0.150166666667"/>
     </inertial>
   </link>
   <gazebo reference="br_frame_post">
@@ -160,7 +160,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150125" ixy="0" ixz="0" iyy="0.150125" iyz="0" izz="0.00025"/>
     </inertial>
   </link>
   <gazebo reference="fl_lift_rod">
@@ -188,7 +188,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150125" ixy="0" ixz="0" iyy="0.150125" iyz="0" izz="0.00025"/>
     </inertial>
   </link>
   <gazebo reference="fr_lift_rod">
@@ -214,7 +214,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150125" ixy="0" ixz="0" iyy="0.150125" iyz="0" izz="0.00025"/>
     </inertial>
   </link>
   <gazebo reference="bl_lift_rod">
@@ -240,7 +240,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.150125" ixy="0" ixz="0" iyy="0.150125" iyz="0" izz="0.00025"/>
     </inertial>
   </link>
   <gazebo reference="br_lift_rod">
@@ -267,7 +267,7 @@
     <inertial>
       <origin xyz="0 -0.64 0.595"/>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.000333333333333" ixy="0" ixz="0" iyy="0.522833333333" iyz="0" izz="0.522833333333"/>
     </inertial>
   </link>
   <gazebo reference="back_frame">
@@ -276,6 +276,30 @@
   <joint name="back_frame_joint" type="fixed">
     <parent link="l_lift_rod_cap"/>
     <child link="back_frame"/>
+  </joint>
+  <link name="camera">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.64 0.595"/>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 -0.64 0.595"/>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="0 -0.64 0.595"/>
+      <inertia ixx="4.16666666667e-05" ixy="0" ixz="0" iyy="4.16666666667e-05" iyz="0" izz="4.16666666667e-05"/>
+    </inertial>
+  </link>
+  <joint name="camera_joint" type="fixed">
+    <parent link="back_frame"/>
+    <child link="camera"/>
   </joint>
   <link name="l_lift_rod_cap">
     <visual>
@@ -293,7 +317,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.0167083333333" ixy="0" ixz="0" iyy="0.00108333333333" iyz="0" izz="0.00108333333333"/>
     </inertial>
   </link>
   <gazebo reference="l_lift_rod_cap">
@@ -319,7 +343,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.266708333333" ixy="0" ixz="0" iyy="0.00108333333333" iyz="0" izz="0.00108333333333"/>
     </inertial>
   </link>
   <gazebo reference="r_lift_rod_cap">
@@ -345,7 +369,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.0167083333333" ixy="0" ixz="0" iyy="0.600041666667" iyz="0" izz="0.600041666667"/>
     </inertial>
   </link>
   <gazebo reference="slide_rail_base">
@@ -373,7 +397,7 @@
     </collision>
     <inertial>
       <mass value="5"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.0135416666667" ixy="0" ixz="0" iyy="0.0135416666667" iyz="0" izz="0.0135416666667"/>
     </inertial>
   </link>
   <gazebo reference="slide_rail">
@@ -386,20 +410,20 @@
   <transmission name="fl_lift_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="fl_lift_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="fl_lift_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="slide_rail_base_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="slide_rail_base_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="slide_rail_base_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -830,87 +854,171 @@
   <transmission name="shoulder_pan_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_pan_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="shoulder_pan_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="shoulder_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_pitch_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="shoulder_pitch_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="elbow_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_roll_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="elbow_roll_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="elbow_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_pitch_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="elbow_pitch_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="wrist_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="wrist_roll_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="wrist_roll_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="wrist_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="wrist_pitch_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="wrist_pitch_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="gripper_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="gripper_roll_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="gripper_roll_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="gripper_finger_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="gripper_finger_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="gripper_finger_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
+  <transmission name="r_gripper_aft_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_gripper_aft_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_gripper_aft_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="l_gripper_fwd_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_gripper_fwd_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="l_gripper_fwd_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="r_gripper_fwd_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_gripper_fwd_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_gripper_fwd_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="gripper_finger_pincher_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_finger_pincher_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="gripper_finger_pincher_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="r_gripper_aft_pincher_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_gripper_aft_pincher_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="r_gripper_aft_pincher_motor">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!-- ros_control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>/clam</robotNamespace>
+      <robotNamespace>/slim</robotNamespace>
     </plugin>
+  </gazebo>
+  <!-- http://www.generationrobots.com/en/content/75-gazebo-and-ros -->
+  <gazebo reference="camera">
+    <material>Gazebo/Blue</material>
+    <sensor name="camera1" type="camera">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+      </camera>
+      <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>slim/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
   </gazebo>
 </robot>
 

@@ -32,7 +32,7 @@ int main(int argc, char **argv)
   ros::Publisher pub_co = nh.advertise<moveit_msgs::CollisionObject>("collision_object", 10);
   ros::Publisher pub_aco = nh.advertise<moveit_msgs::AttachedCollisionObject>("attached_collision_object", 10);
 
-  moveit::planning_interface::MoveGroup group("gantry");
+  moveit::planning_interface::MoveGroup gantry_group("gantry");
 
   moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
@@ -40,19 +40,19 @@ int main(int argc, char **argv)
 
   ros::WallDuration(1.0).sleep();
 
-  moveit_msgs::CollisionObject collision_object;
-  collision_object.header.frame_id = group.getPlanningFrame();
+  moveit_msgs::CollisionObject table;
+  table.header.frame_id = gantry_group.getPlanningFrame();
 
   /* The id of the object is used to identify it. */
-  collision_object.id = "box1";
+  table.id = "table";
 
-  /* Define a box to add to the world. */
+  /* Define a table to add to the world. */
   shape_msgs::SolidPrimitive primitive;
   primitive.type = primitive.BOX;
   primitive.dimensions.resize(3);
-  primitive.dimensions[0] = 0.4;
-  primitive.dimensions[1] = 0.1;
-  primitive.dimensions[2] = 0.4;
+  primitive.dimensions[0] = 0.3;
+  primitive.dimensions[1] = 0.01;
+  primitive.dimensions[2] = 0.435;
 
   /* A pose for the box (specified relative to frame_id) */
   geometry_msgs::Pose box_pose;
@@ -61,12 +61,12 @@ int main(int argc, char **argv)
   box_pose.position.y = -0.4;
   box_pose.position.z =  1.2;
 
-  collision_object.primitives.push_back(primitive);
-  collision_object.primitive_poses.push_back(box_pose);
-  collision_object.operation = collision_object.ADD;
+  table.primitives.push_back(primitive);
+  table.primitive_poses.push_back(box_pose);
+  table.operation = table.ADD;
 
   std::vector<moveit_msgs::CollisionObject> collision_objects;
-  collision_objects.push_back(collision_object);
+  collision_objects.push_back(table);
 
   ROS_INFO("Add an object into the world");
   planning_scene_interface.addCollisionObjects(collision_objects);
@@ -75,26 +75,34 @@ int main(int argc, char **argv)
   sleep(2.0);
 
   // try to move gantry
-  moveit::planning_interface::MoveGroup::Plan my_plan;
-  std::vector<double> group_variable_values;
-  group.getCurrentState()->copyJointGroupPositions(group.getCurrentState()->getRobotModel()->getJointModelGroup(group.getName()), group_variable_values);
-  group_variable_values[0] = 0.1;
-  group.setJointValueTarget(group_variable_values);
-  bool success = group.plan(my_plan);
+  // moveit::planning_interface::MoveGroup::Plan my_plan;
+  // std::vector<double> group_variable_values;
+  // group.getCurrentState()->copyJointGroupPositions(group.getCurrentState()->getRobotModel()->getJointModelGroup(group.getName()), group_variable_values);
+  // group_variable_values[0] = 0.1;
+  // group.setJointValueTarget(group_variable_values);
+  // bool success = group.plan(my_plan);
 
-  ROS_INFO("Visualizing plan 2 (joint space goal) %s",success?"":"FAILED");
-  /* Sleep to give Rviz time to visualize the plan. */
+  // ROS_INFO("Visualizing plan 2 (joint space goal) %s",success?"":"FAILED");
+  // /* Sleep to give Rviz time to visualize the plan. */
+  // sleep(5.0);
+  // // move to the location
+  // ROS_INFO("Moving to location");
+  // group.move();
+  // ROS_INFO("Done moving.");
+
+
+  // move to correct bin
+  gantry_group.setNamedTarget("top_right");
+  gantry_group.move();
+
   sleep(5.0);
-  // move to the location
-  ROS_INFO("Moving to location");
-  group.move();
-  ROS_INFO("Done moving.");
 
-  pick(group);
+  pick(gantry_group);
 
-  ros::WallDuration(1.0).sleep();
+  sleep(1.0);
+  // ros::WallDuration(1.0).sleep();
 
-  place(group);
+  place(gantry_group);
 
   ros::shutdown();
   return 0;

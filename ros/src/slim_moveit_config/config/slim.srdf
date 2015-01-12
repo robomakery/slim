@@ -47,6 +47,7 @@
     <disable_collisions link1="arm_base_link" link2="bl_lift_rod" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="br_frame_post" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="br_lift_rod" reason="Never" />
+    <disable_collisions link1="arm_base_link" link2="camera" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="elbow_pitch_link" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="elbow_roll_link" reason="Never" />
     <disable_collisions link1="arm_base_link" link2="fl_frame_post" reason="Never" />
@@ -67,6 +68,7 @@
     <disable_collisions link1="back_frame" link2="bl_lift_rod" reason="Never" />
     <disable_collisions link1="back_frame" link2="br_frame_post" reason="Default" />
     <disable_collisions link1="back_frame" link2="br_lift_rod" reason="Never" />
+    <disable_collisions link1="back_frame" link2="camera" reason="Adjacent" />
     <disable_collisions link1="back_frame" link2="elbow_pitch_link" reason="Never" />
     <disable_collisions link1="back_frame" link2="elbow_roll_link" reason="Never" />
     <disable_collisions link1="back_frame" link2="fl_frame_post" reason="Never" />
@@ -90,6 +92,7 @@
     <disable_collisions link1="bl_frame_post" link2="bl_lift_rod" reason="Never" />
     <disable_collisions link1="bl_frame_post" link2="br_frame_post" reason="Never" />
     <disable_collisions link1="bl_frame_post" link2="br_lift_rod" reason="Never" />
+    <disable_collisions link1="bl_frame_post" link2="camera" reason="Never" />
     <disable_collisions link1="bl_frame_post" link2="elbow_pitch_link" reason="Never" />
     <disable_collisions link1="bl_frame_post" link2="elbow_roll_link" reason="Never" />
     <disable_collisions link1="bl_frame_post" link2="fl_frame_post" reason="Never" />
@@ -114,6 +117,7 @@
     <disable_collisions link1="bl_frame_post" link2="wrist_roll_link" reason="Never" />
     <disable_collisions link1="bl_lift_rod" link2="br_frame_post" reason="Never" />
     <disable_collisions link1="bl_lift_rod" link2="br_lift_rod" reason="Never" />
+    <disable_collisions link1="bl_lift_rod" link2="camera" reason="Never" />
     <disable_collisions link1="bl_lift_rod" link2="fl_frame_post" reason="Never" />
     <disable_collisions link1="bl_lift_rod" link2="fl_lift_rod" reason="Never" />
     <disable_collisions link1="bl_lift_rod" link2="fr_frame_post" reason="Never" />
@@ -126,6 +130,7 @@
     <disable_collisions link1="bl_lift_rod" link2="slide_rail" reason="Never" />
     <disable_collisions link1="bl_lift_rod" link2="slide_rail_base" reason="Default" />
     <disable_collisions link1="br_frame_post" link2="br_lift_rod" reason="Never" />
+    <disable_collisions link1="br_frame_post" link2="camera" reason="Never" />
     <disable_collisions link1="br_frame_post" link2="elbow_pitch_link" reason="Never" />
     <disable_collisions link1="br_frame_post" link2="elbow_roll_link" reason="Never" />
     <disable_collisions link1="br_frame_post" link2="fl_frame_post" reason="Never" />
@@ -148,6 +153,7 @@
     <disable_collisions link1="br_frame_post" link2="slide_rail_base" reason="Never" />
     <disable_collisions link1="br_frame_post" link2="wrist_pitch_link" reason="Never" />
     <disable_collisions link1="br_frame_post" link2="wrist_roll_link" reason="Never" />
+    <disable_collisions link1="br_lift_rod" link2="camera" reason="Never" />
     <disable_collisions link1="br_lift_rod" link2="fl_frame_post" reason="Never" />
     <disable_collisions link1="br_lift_rod" link2="fl_lift_rod" reason="Never" />
     <disable_collisions link1="br_lift_rod" link2="fr_frame_post" reason="Never" />
@@ -159,6 +165,28 @@
     <disable_collisions link1="br_lift_rod" link2="shoulder_pitch_link" reason="Never" />
     <disable_collisions link1="br_lift_rod" link2="slide_rail" reason="Never" />
     <disable_collisions link1="br_lift_rod" link2="slide_rail_base" reason="Default" />
+    <disable_collisions link1="camera" link2="elbow_pitch_link" reason="Never" />
+    <disable_collisions link1="camera" link2="elbow_roll_link" reason="Never" />
+    <disable_collisions link1="camera" link2="fl_frame_post" reason="Never" />
+    <disable_collisions link1="camera" link2="fl_lift_rod" reason="Never" />
+    <disable_collisions link1="camera" link2="fr_frame_post" reason="Never" />
+    <disable_collisions link1="camera" link2="fr_lift_rod" reason="Never" />
+    <disable_collisions link1="camera" link2="gripper_finger_link" reason="Never" />
+    <disable_collisions link1="camera" link2="gripper_roll_link" reason="Never" />
+    <disable_collisions link1="camera" link2="l_gripper_fwd_link" reason="Never" />
+    <disable_collisions link1="camera" link2="l_gripper_pincher_link" reason="Never" />
+    <disable_collisions link1="camera" link2="l_lift_rod_cap" reason="Never" />
+    <disable_collisions link1="camera" link2="lift_base" reason="Never" />
+    <disable_collisions link1="camera" link2="r_gripper_aft_link" reason="Never" />
+    <disable_collisions link1="camera" link2="r_gripper_fwd_link" reason="Never" />
+    <disable_collisions link1="camera" link2="r_gripper_pincher_link" reason="Never" />
+    <disable_collisions link1="camera" link2="r_lift_rod_cap" reason="Never" />
+    <disable_collisions link1="camera" link2="shoulder_pan_link" reason="Never" />
+    <disable_collisions link1="camera" link2="shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="camera" link2="slide_rail" reason="Never" />
+    <disable_collisions link1="camera" link2="slide_rail_base" reason="Never" />
+    <disable_collisions link1="camera" link2="wrist_pitch_link" reason="Never" />
+    <disable_collisions link1="camera" link2="wrist_roll_link" reason="Never" />
     <disable_collisions link1="elbow_pitch_link" link2="elbow_roll_link" reason="Adjacent" />
     <disable_collisions link1="elbow_pitch_link" link2="gripper_finger_link" reason="Never" />
     <disable_collisions link1="elbow_pitch_link" link2="gripper_roll_link" reason="Never" />
@@ -243,7 +271,6 @@
     <disable_collisions link1="l_gripper_fwd_link" link2="r_gripper_pincher_link" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="shoulder_pan_link" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="shoulder_pitch_link" reason="Never" />
-    <disable_collisions link1="l_gripper_fwd_link" link2="slide_rail" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="wrist_pitch_link" reason="Never" />
     <disable_collisions link1="l_gripper_fwd_link" link2="wrist_roll_link" reason="Never" />
     <disable_collisions link1="l_gripper_pincher_link" link2="r_gripper_aft_link" reason="Never" />
@@ -273,6 +300,7 @@
     <disable_collisions link1="r_gripper_fwd_link" link2="r_gripper_pincher_link" reason="Never" />
     <disable_collisions link1="r_gripper_fwd_link" link2="shoulder_pan_link" reason="Never" />
     <disable_collisions link1="r_gripper_fwd_link" link2="shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="r_gripper_fwd_link" link2="slide_rail" reason="Never" />
     <disable_collisions link1="r_gripper_fwd_link" link2="wrist_pitch_link" reason="Never" />
     <disable_collisions link1="r_gripper_fwd_link" link2="wrist_roll_link" reason="Never" />
     <disable_collisions link1="r_gripper_pincher_link" link2="shoulder_pan_link" reason="Never" />
