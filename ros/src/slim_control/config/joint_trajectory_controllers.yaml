@@ -22,7 +22,7 @@ slim:
       - l_gripper_fwd_joint
       - r_gripper_fwd_joint
       - r_gripper_aft_pincher_joint
-      # - gripper_finger_pincher_joint
-  gripper_controller:
-    type: "position_controllers/GripperActionController"
-    joint: "gripper_finger_pincher_joint"
+      - gripper_finger_pincher_joint
+  # gripper_controller:
+  #   type: "position_controllers/GripperActionController"
+  #   joint: "gripper_finger_pincher_joint"

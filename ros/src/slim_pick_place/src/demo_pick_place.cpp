@@ -269,22 +269,25 @@ int main(int argc, char **argv)
   // ROS_INFO("Done moving.");
 
 
-  // move to correct bin
+  // open gripper
+  ROS_INFO("Opening Gripper");
+  gripper_group.setNamedTarget("open");
+  gripper_group.move();
+  sleep(2.0);
+
+  
+  ROS_INFO("Move to bin");
   gantry_group.setNamedTarget("demo_pick");
   gantry_group.move();
-
   sleep(2.0);
 
   // pick(arm_group);
+  ROS_INFO("Pre-grasp pose");
   arm_group.setNamedTarget("cobra");
   arm_group.move();
   
   sleep(2.0);
 
-  gripper_group.setNamedTarget("open");
-  gripper_group.move();
-
-  sleep(2.0);
 
   // sleep(1.0);
   // ros::WallDuration(1.0).sleep();
