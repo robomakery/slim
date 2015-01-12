@@ -3,6 +3,6 @@
   <!-- create joint trajectory controllers -->
   <rosparam file="$(find slim_control)/config/joint_trajectory_controllers.yaml"/>
   <node name="trajectory_controller_spawner" pkg="controller_manager" type="spawner"
-        ns="/slim" args="arm_trajectory_controller gantry_trajectory_controller gripper_trajectory_controller" />
+        ns="/slim" args="arm_trajectory_controller gantry_trajectory_controller gripper_trajectory_controller gripper_controller" />
 
 </launch>
