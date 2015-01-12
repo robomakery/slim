@@ -11,14 +11,134 @@
   </joint>
   <link name="lift_base">
     <visual>
+      <origin xyz="0 -0.25 0"/>
       <geometry>
-        <box size="1.3 0.2 0.01"/>
+        <box size="1.3 0.8 0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
     </visual>
+    <collision>
+      <origin xyz="0 -0.35 0"/>
+      <geometry>
+        <box size="1.3 0.8 0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 -0.35 0"/>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
   <gazebo reference="lift_base">
-    <material>Gazebo/LightGrey</material>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <joint name="fl_frame_post_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="fl_frame_post"/>
+  </joint>
+  <link name="fl_frame_post">
+    <visual>
+      <origin xyz="0.55 0.14 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.55 0.14 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.55 0.14 0.3"/>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <gazebo reference="fl_frame_post">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <joint name="fr_frame_post_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="fr_frame_post"/>
+  </joint>
+  <link name="fr_frame_post">
+    <visual>
+      <origin xyz="-0.55 0.14 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.55 0.14 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.55 0.14 0.3"/>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <gazebo reference="fr_frame_post">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <joint name="bl_frame_post_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="bl_frame_post"/>
+  </joint>
+  <link name="bl_frame_post">
+    <visual>
+      <origin xyz="0.55 -0.64 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0.55 -0.64 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.55 -0.64 0.3"/>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <gazebo reference="bl_frame_post">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <joint name="br_frame_post_joint" type="fixed">
+    <parent link="lift_base"/>
+    <child link="br_frame_post"/>
+  </joint>
+  <link name="br_frame_post">
+    <visual>
+      <origin xyz="-0.55 -0.64 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.55 -0.64 0.3"/>
+      <geometry>
+        <box size="0.02 0.02 0.6"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.55 -0.64 0.3"/>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <gazebo reference="br_frame_post">
+    <material>Gazebo/Grey</material>
   </gazebo>
   <joint name="lift_base_joint" type="fixed">
     <parent link="lift_base"/>
@@ -30,9 +150,22 @@
       <geometry>
         <cylinder length="0.6" radius="0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.55 0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="fl_lift_rod">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="fl_lift_joint" type="prismatic">
     <axis xyz="0 0 1"/>
     <parent link="fl_lift_rod"/>
@@ -45,9 +178,22 @@
       <geometry>
         <cylinder length="0.6" radius="0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.55 0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="fr_lift_rod">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="fr_lift_joint" type="fixed">
     <parent link="lift_base"/>
     <child link="fr_lift_rod"/>
@@ -58,9 +204,22 @@
       <geometry>
         <cylinder length="0.6" radius="0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.55 -0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="bl_lift_rod">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="bl_lift_joint" type="fixed">
     <parent link="lift_base"/>
     <child link="bl_lift_rod"/>
@@ -71,35 +230,101 @@
       <geometry>
         <cylinder length="0.6" radius="0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.55 -0.07 0.3"/>
+      <geometry>
+        <cylinder length="0.6" radius="0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="br_lift_rod">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="br_lift_joint" type="fixed">
     <parent link="lift_base"/>
     <child link="br_lift_rod"/>
   </joint>
+  <link name="back_frame">
+    <visual>
+      <origin xyz="0 -0.64 0.595"/>
+      <geometry>
+        <box size="1.12 0.02 0.02"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.64 0.595"/>
+      <geometry>
+        <box size="1.12 0.02 0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 -0.64 0.595"/>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <gazebo reference="back_frame">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <joint name="back_frame_joint" type="fixed">
+    <parent link="l_lift_rod_cap"/>
+    <child link="back_frame"/>
+  </joint>
   <link name="l_lift_rod_cap">
     <visual>
+      <origin xyz="0.55 -0.25 0.6"/>
+      <geometry>
+        <box size="0.05 0.8 0.01"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
       <origin xyz="0.55 0 0.6"/>
       <geometry>
         <box size="0.05 0.2 0.01"/>
       </geometry>
-      <material name="LightGrey"/>
-    </visual>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="l_lift_rod_cap">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="l_lift_rod_cap_joint" type="fixed">
     <parent link="fl_lift_rod"/>
     <child link="l_lift_rod_cap"/>
   </joint>
   <link name="r_lift_rod_cap">
     <visual>
+      <origin xyz="-0.55 -0.25 0.6"/>
+      <geometry>
+        <box size="0.05 0.8 0.01"/>
+      </geometry>
+      <material name="Grey"/>
+    </visual>
+    <collision>
       <origin xyz="-0.55 0 0.6"/>
       <geometry>
         <box size="0.05 0.2 0.01"/>
       </geometry>
-      <material name="LightGrey"/>
-    </visual>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="r_lift_rod_cap">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="r_lift_rod_cap_joint" type="fixed">
     <parent link="fr_lift_rod"/>
     <child link="r_lift_rod_cap"/>
@@ -110,11 +335,21 @@
       <geometry>
         <box size="1.2 0.2 0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
     </visual>
+    <collision>
+      <origin xyz="0 0 0.01"/>
+      <geometry>
+        <box size="1.2 0.2 0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
   <gazebo reference="slide_rail_base">
-    <material>Gazebo/LightGrey</material>
+    <material>Gazebo/Grey</material>
   </gazebo>
   <joint name="slide_rail_base_joint" type="prismatic">
     <axis xyz="1 0 0"/>
@@ -127,14 +362,47 @@
       <geometry>
         <box size="0.18 0.18 0.01"/>
       </geometry>
-      <material name="LightGrey"/>
+      <material name="Grey"/>
       <origin xyz="0 0 0.02"/>
     </visual>
+    <collision>
+      <geometry>
+        <box size="0.18 0.18 0.01"/>
+      </geometry>
+      <origin xyz="0 0 0.02"/>
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
+    </inertial>
   </link>
+  <gazebo reference="slide_rail">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <joint name="slide_rail_joint" type="fixed">
     <parent link="slide_rail"/>
     <child link="arm_base_link"/>
   </joint>
+  <transmission name="fl_lift_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="fl_lift_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="fl_lift_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="slide_rail_base_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="slide_rail_base_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="slide_rail_base_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   <material name="Black">
     <color rgba="0.0 0.0 0.0 1.0"/>
   </material>
@@ -559,82 +827,82 @@
   <gazebo reference="r_gripper_pincher_link">
     <material>Gazebo/Black</material>
   </gazebo>
-  <transmission name="tran1">
+  <transmission name="shoulder_pan_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_pan_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="shoulder_pan_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="shoulder_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="shoulder_pitch_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="elbow_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="elbow_roll_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="elbow_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="elbow_pitch_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="wrist_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="wrist_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="wrist_roll_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="wrist_pitch_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="wrist_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="wrist_pitch_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="gripper_roll_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="gripper_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="gripper_roll_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran1">
+  <transmission name="gripper_finger_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="gripper_finger_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="motor1">
+    <actuator name="gripper_finger_motor">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
