@@ -721,14 +721,14 @@
   <gazebo reference="l_gripper_aft_link">
     <material>Gazebo/Grey</material>
   </gazebo>
-  <joint name="r_gripper_aft_joint" type="revolute">
+  <joint name="r_gripper_aft_joint" type="fixed">
     <parent link="gripper_roll_link"/>
     <child link="r_gripper_aft_link"/>
     <origin rpy="4.22543855 1.570795 0.603534345556" xyz="0.026 -0.011  0"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="300" lower="-3.14" upper="3.14" velocity="1"/>
-    <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0"/>
-    <dynamics damping="50" friction="1"/>
+    <!-- <axis xyz="1 0 0" /> -->
+    <!-- <limit effort="300" velocity="1" lower="-3.14" upper="3.14" /> -->
+    <!-- <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0" /> -->
+    <!-- <dynamics damping="50" friction="1"/> -->
   </joint>
   <link name="r_gripper_aft_link">
     <inertial>
@@ -747,66 +747,14 @@
   <gazebo reference="r_gripper_aft_link">
     <material>Gazebo/Grey</material>
   </gazebo>
-  <joint name="l_gripper_fwd_joint" type="revolute">
-    <parent link="gripper_roll_link"/>
-    <child link="l_gripper_fwd_link"/>
-    <origin rpy="3.2672536 1.570795 3.74512434556" xyz="0.05 0.008 0.007"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="300" lower="0" upper="1.57" velocity="1"/>
-    <mimic joint="gripper_finger_joint" multiplier="1.0" offset="0.0"/>
-    <dynamics damping="50" friction="1"/>
-  </joint>
-  <link name="l_gripper_fwd_link">
-    <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 3.14159" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://clam_description/stl/l_gripper_fwd_link.STL" scale="1 1 1"/>
-      </geometry>
-      <material name="Grey"/>
-    </visual>
-  </link>
-  <gazebo reference="l_gripper_fwd_link">
-    <material>Gazebo/Grey</material>
-  </gazebo>
-  <joint name="r_gripper_fwd_joint" type="revolute">
-    <parent link="gripper_roll_link"/>
-    <child link="r_gripper_fwd_link"/>
-    <origin rpy="3.0159264 1.570795 2.53805565444" xyz="0.05 -0.0014 0.007"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="300" lower="-1.57" upper="0" velocity="1"/>
-    <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0"/>
-    <dynamics damping="50" friction="1"/>
-  </joint>
-  <link name="r_gripper_fwd_link">
-    <inertial>
-      <origin xyz="0 0 0"/>
-      <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="100.0" iyz="0.0" izz="1.0"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 3.14159" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://clam_description/stl/r_gripper_fwd_link.STL" scale="1 1 1"/>
-      </geometry>
-      <material name="Grey"/>
-    </visual>
-  </link>
-  <gazebo reference="r_gripper_fwd_link">
-    <material>Gazebo/Grey</material>
-  </gazebo>
-  <joint name="gripper_finger_pincher_joint" type="revolute">
+  <joint name="gripper_finger_pincher_joint" type="fixed">
     <parent link="gripper_finger_link"/>
     <child link="l_gripper_pincher_link"/>
     <origin rpy="2.55812692389 0 0" xyz="-0.0032 0 -0.0508"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="300" lower="-1.57" upper="1.57" velocity="1"/>
-    <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0"/>
-    <dynamics damping="50" friction="1"/>
+    <!-- <axis xyz="1 0 0" /> -->
+    <!-- <limit effort="300" velocity="1" lower="-1.57" upper="1.57" /> -->
+    <!-- <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0" /> -->
+    <!-- <dynamics damping="50" friction="1"/> -->
   </joint>
   <link name="l_gripper_pincher_link">
     <inertial>
@@ -825,14 +773,14 @@
   <gazebo reference="l_gripper_pincher_link">
     <material>Gazebo/Black</material>
   </gazebo>
-  <joint name="r_gripper_aft_pincher_joint" type="revolute">
+  <joint name="r_gripper_aft_pincher_joint" type="fixed">
     <parent link="r_gripper_aft_link"/>
     <child link="r_gripper_pincher_link"/>
     <origin rpy="-0.583463076111 3.14159 0" xyz="0 0 -0.0508"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="300" lower="0" upper="1.57" velocity="1"/>
-    <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0"/>
-    <dynamics damping="50" friction="1"/>
+    <!-- <axis xyz="1 0 0" /> -->
+    <!-- <limit effort="300" velocity="1" lower="0" upper="1.57" /> -->
+    <!-- <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0" /> -->
+    <!-- <dynamics damping="50" friction="1"/> -->
   </joint>
   <link name="r_gripper_pincher_link">
     <inertial>
@@ -927,56 +875,6 @@
       <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="gripper_finger_motor">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="r_gripper_aft_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="r_gripper_aft_joint">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="r_gripper_aft_motor">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="l_gripper_fwd_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="l_gripper_fwd_joint">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="l_gripper_fwd_motor">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="r_gripper_fwd_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="r_gripper_fwd_joint">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="r_gripper_fwd_motor">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="gripper_finger_pincher_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="gripper_finger_pincher_joint">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="gripper_finger_pincher_motor">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="r_gripper_aft_pincher_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="r_gripper_aft_pincher_joint">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="r_gripper_aft_pincher_motor">
       <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>

@@ -21,7 +21,7 @@
     <!-- a box to pick out of the shelf -->
     <include>
       <uri>model://wood_cube_5cm</uri>
-      <pose>-0.286220 -0.329337 1.652472 -0.087174 0.004946 0.055541</pose>
+      <pose>-0.332016 -0.351593 1.650928 -0.087242 0.000683 0.007625</pose>
     </include>
     <!-- a bowl to put the item into -->
     <include>
