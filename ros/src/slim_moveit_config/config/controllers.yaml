@@ -1,0 +1,32 @@
+controller_list:
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - shoulder_pan_joint
+      - shoulder_pitch_joint
+      - elbow_roll_joint
+      - elbow_pitch_joint
+      - wrist_roll_joint
+      - wrist_pitch_joint
+      - gripper_roll_joint
+  - name: gantry_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - fl_lift_joint
+      - slide_rail_base_joint
+  - name: gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - gripper_finger_joint
+      - r_gripper_aft_joint
+      - l_gripper_fwd_joint
+      - r_gripper_fwd_joint
+      - gripper_finger_pincher_joint
+      - r_gripper_aft_pincher_joint
+      

@@ -413,24 +413,31 @@
   <transmission name="fl_lift_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="fl_lift_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="fl_lift_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="slide_rail_base_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="slide_rail_base_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="slide_rail_base_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
   <xacro:include filename="$(find clam_description)/urdf/clam.xacro" />
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/slim</robotNamespace>
+    </plugin>
+  </gazebo>
 
 </robot>

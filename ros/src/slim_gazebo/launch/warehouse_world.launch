@@ -41,7 +41,11 @@
 
   <!-- load PID gains for PositionJointInterface -->
   <!-- http://answers.gazebosim.org/question/5468/gazebo_ros_pkgs-no-p-gain-specified-for-pid-in/ -->
-  
+
+  <!-- create joint trajectory controllers -->
+  <!-- <rosparam file="$(find slim_pick_place)/config/joint_trajectory_controllers.yaml"/> -->
+  <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" -->
+  <!--       args="arm_controller gantry_controller gripper_controller" /> -->
 
   <!-- ros_control controllers -->
   <!-- Load joint controller configurations from YAML file to parameter server -->
@@ -49,7 +53,7 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner"
-	    ns="/clam" args="joint_state_controller
+	    ns="/slim" args="joint_state_controller
 					     fl_lift_controller
                          slide_rail_base_controller
 					     shoulder_pan_controller

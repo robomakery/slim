@@ -13,16 +13,37 @@
   <!-- load robot params -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
 
-  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
-  <include file="$(find slim_moveit_config)/launch/planning_context.launch" />
+  <!-- load joint trajectory controllers -->
+  <rosparam file="$(find slim_pick_place)/config/joint_trajectory_controllers.yaml"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner"
+        args="arm_controller gantry_controller gripper_controller" />
 
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <!-- <include file="$(find slim_moveit_config)/launch/planning_context.launch"> -->
+  <!--   <arg name="load_robot_description" value="true" /> -->
+  <!-- </include> -->
+
+  <!-- Run the main MoveIt executable -->
+  <!-- <include file="$(find slim_moveit_config)/launch/move_group.launch"> -->
+  <!--   <arg name="allow_trajectory_execution" value="true"/>   -->
+  <!--   <arg name="fake_execution" value="false"/> -->
+  <!--   <arg name="info" value="true"/> -->
+  <!--   <arg name="debug" value="$(arg debug)"/> -->
+  <!-- </include> -->
+
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+  <!-- <include file="$(find slim_moveit_config)/launch/moveit_rviz.launch"> -->
+  <!--   <arg name="config" value="true"/> -->
+  <!--   <arg name="debug" value="$(arg debug)"/> -->
+  <!-- </include> -->
+  
   <!-- Start the block grasping -->
-  <node name="demo_pick_place" launch-prefix="$(arg launch_prefix)" pkg="slim_pick_place"
-	type="demo_pick_place" output="screen" args="$(arg command_args)">
-    <param name="ee_group_name" value="gripper_group"/>
-    <param name="planning_group_name" value="arm"/>
-    <rosparam command="load" file="$(find slim_moveit_config)/config/kinematics.yaml"/>
-    <rosparam command="load" file="$(find moveit_simple_grasps)/config/clam_grasp_data.yaml"/>
-  </node>   
+  <!-- <node name="demo_pick_place" launch-prefix="$(arg launch_prefix)" pkg="slim_pick_place" -->
+  <!--   type="demo_pick_place" output="screen" args="$(arg command_args)"> -->
+  <!--   <param name="ee_group_name" value="gripper_group"/> -->
+  <!--   <param name="planning_group_name" value="arm"/> -->
+  <!--   <rosparam command="load" file="$(find slim_moveit_config)/config/kinematics.yaml"/> -->
+  <!--   <rosparam command="load" file="$(find moveit_simple_grasps)/config/clam_grasp_data.yaml"/> -->
+  <!-- </node>    -->
 
 </launch>
