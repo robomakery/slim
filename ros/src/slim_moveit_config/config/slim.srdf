@@ -28,16 +28,20 @@
         <joint name="slide_rail_base_joint" value="0.4" />
     </group_state>
     <group_state name="default" group="gantry">
-        <joint name="fl_lift_joint" value="0" />
-        <joint name="slide_rail_base_joint" value="0" />
+        <joint name="fl_lift_joint" value="0.01" />
+        <joint name="slide_rail_base_joint" value="0.1" />
     </group_state>
     <group_state name="top_right" group="gantry">
         <joint name="fl_lift_joint" value="0.5" />
         <joint name="slide_rail_base_joint" value="-0.3" />
     </group_state>
     <group_state name="demo_pick" group="gantry">
-        <joint name="fl_lift_joint" value="0.18" />
+        <joint name="fl_lift_joint" value="0.22" />
         <joint name="slide_rail_base_joint" value="-0.3" />
+    </group_state>
+    <group_state name="demo_pick2" group="gantry">
+        <joint name="fl_lift_joint" value="0.52" />
+        <joint name="slide_rail_base_joint" value="0.01" />
     </group_state>
     <group_state name="cobra" group="arm">
         <joint name="elbow_pitch_joint" value="-0.0691" />
@@ -48,6 +52,15 @@
         <joint name="wrist_pitch_joint" value="1.622" />
         <joint name="wrist_roll_joint" value="0.0856" />
     </group_state>
+    <group_state name="cobra2" group="arm">
+        <joint name="elbow_pitch_joint" value="0.5255" />
+        <joint name="elbow_roll_joint" value="0.0148" />
+        <joint name="gripper_roll_joint" value="0" />
+        <joint name="shoulder_pan_joint" value="1.5185" />
+        <joint name="shoulder_pitch_joint" value="-0.0503" />
+        <joint name="wrist_pitch_joint" value="1.1394" />
+        <joint name="wrist_roll_joint" value="0.0562" />
+    </group_state>
     <group_state name="open" group="gripper_group">
         <joint name="gripper_finger_joint" value="-0.5456" />
         <joint name="gripper_roll_joint" value="0" />
@@ -55,6 +68,15 @@
     <group_state name="closed" group="gripper_group">
         <joint name="gripper_finger_joint" value="0" />
         <joint name="gripper_roll_joint" value="0" />
+    </group_state>
+    <group_state name="bowl" group="arm">
+        <joint name="elbow_pitch_joint" value="1.2193" />
+        <joint name="elbow_roll_joint" value="0.2015" />
+        <joint name="gripper_roll_joint" value="0" />
+        <joint name="shoulder_pan_joint" value="-1.7648" />
+        <joint name="shoulder_pitch_joint" value="0.1412" />
+        <joint name="wrist_pitch_joint" value="1.4611" />
+        <joint name="wrist_roll_joint" value="-0.0319" />
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="end_effector" parent_link="gripper_roll_link" group="gripper_group" parent_group="arm" />

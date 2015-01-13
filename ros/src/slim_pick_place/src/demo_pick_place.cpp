@@ -275,16 +275,100 @@ int main(int argc, char **argv)
   gantry_group.move();
   sleep(2.0);
 
-  ROS_INFO("Opening Gripper");
-  gripper_group.setNamedTarget("open");
-  gripper_group.move();
-  sleep(2.0);
+  // ROS_INFO("Opening Gripper");
+  // gripper_group.setNamedTarget("open");
+  // gripper_group.move();
+  // sleep(2.0);
   
   ROS_INFO("Pre-grasp pose");
   arm_group.setNamedTarget("cobra");
   arm_group.move();
   
   sleep(2.0);
+
+  ROS_INFO("Grasp pose");
+  arm_group.setNamedTarget("cobra2");
+  arm_group.move();
+  
+  sleep(2.0);
+
+  // ROS_INFO("Close Gripper");
+  // gripper_group.setNamedTarget("closed");
+  // gripper_group.move();
+  
+  sleep(10.0);
+
+  ROS_INFO("Post-grasp");
+  arm_group.setNamedTarget("cobra");
+  arm_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Reset Gantry");
+  gantry_group.setNamedTarget("default");
+  gantry_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Place");
+  arm_group.setNamedTarget("bowl");
+  arm_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Drop");
+  gripper_group.setNamedTarget("open");
+  gripper_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Moving to bin");
+  gantry_group.setNamedTarget("demo2_pick");
+  gantry_group.move();
+  sleep(2.0);
+
+  ROS_INFO("Pre-grasp pose");
+  arm_group.setNamedTarget("cobra");
+  arm_group.move();
+  
+  sleep(2.0);
+
+  ROS_INFO("Grasp pose");
+  arm_group.setNamedTarget("cobra2");
+  arm_group.move();
+  
+  sleep(2.0);
+
+  // ROS_INFO("Close Gripper");
+  // gripper_group.setNamedTarget("closed");
+  // gripper_group.move();
+  
+  sleep(10.0);
+
+  ROS_INFO("Post-grasp");
+  arm_group.setNamedTarget("cobra");
+  arm_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Reset Gantry");
+  gantry_group.setNamedTarget("default");
+  gantry_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Place");
+  arm_group.setNamedTarget("bowl");
+  arm_group.move();
+
+  sleep(2.0);
+
+  ROS_INFO("Drop");
+  gripper_group.setNamedTarget("open");
+  gripper_group.move();
+
+  sleep(2.0);
+  
 
   // pick(arm_group);
   // sleep(1.0);
