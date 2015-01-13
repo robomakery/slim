@@ -279,13 +279,15 @@
   </joint>
   <link name="camera">
     <collision>
-      <origin rpy="0 0 0" xyz="0 -0.64 0.595"/>
+      <!-- <origin xyz="0 -0.64 0.595" rpy="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <box size="0.05 0.05 0.05"/>
       </geometry>
     </collision>
     <visual>
-      <origin rpy="0 0 0" xyz="0 -0.64 0.595"/>
+      <!-- <origin xyz="0 -0.64 0.595" rpy="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <box size="0.05 0.05 0.05"/>
       </geometry>
@@ -293,13 +295,17 @@
     </visual>
     <inertial>
       <mass value="0.1"/>
-      <origin rpy="0 0 0" xyz="0 -0.64 0.595"/>
+      <!-- <origin xyz="0 -0.64 0.595" rpy="0 0 0"/> -->
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <inertia ixx="4.16666666667e-05" ixy="0" ixz="0" iyy="4.16666666667e-05" iyz="0" izz="4.16666666667e-05"/>
     </inertial>
   </link>
   <joint name="camera_joint" type="fixed">
     <parent link="back_frame"/>
     <child link="camera"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0 1.57" xyz="0 -0.64 0.595"/>
+    <!-- <origin xyz="0 -0.64 0.595" rpy="-1.57 0 1.57"/> -->
   </joint>
   <link name="l_lift_rod_cap">
     <visual>
@@ -884,6 +890,22 @@
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <robotNamespace>/slim</robotNamespace>
     </plugin>
+  </gazebo>
+  <!-- http://answers.gazebosim.org/question/4324/gripper-tag-gazebophysicsgripper-doesnt-create-the/ -->
+  <gazebo>
+    <gripper name="grasping">
+      <grasp_check>
+        <attach_steps>20</attach_steps>
+        <detach_steps>40</detach_steps>
+        <min_contact_count>1</min_contact_count>
+      </grasp_check>
+      <!-- seem to only be able to specify one of these gripper_links -->
+      <!-- <gripper_link>gripper_finger_link</gripper_link> -->
+      <gripper_link>l_gripper_pincher_link</gripper_link>
+      <!-- <gripper_link>r_gripper_aft_link</gripper_link> -->
+      <!-- <gripper_link>r_gripper_pincher_link</gripper_link> -->
+      <palm_link>r_gripper_pincher_link</palm_link>
+    </gripper>
   </gazebo>
   <!-- http://www.generationrobots.com/en/content/75-gazebo-and-ros -->
   <gazebo reference="camera">

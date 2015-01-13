@@ -323,7 +323,7 @@ int main(int argc, char **argv)
   sleep(2.0);
 
   ROS_INFO("Moving to bin");
-  gantry_group.setNamedTarget("demo2_pick");
+  gantry_group.setNamedTarget("demo_pick2");
   gantry_group.move();
   sleep(2.0);
 
