@@ -21,12 +21,16 @@
     <!-- a box to pick out of the shelf -->
     <include>
       <uri>model://wood_cube_5cm</uri>
-      <pose>-0.286220 -0.329337 1.652472 -0.087174 0.004946 0.055541</pose>
+      <pose>-0.326378 -0.371335 1.652938 -0.086595 0.010648 0.121787</pose>
+    </include>
+    <include>
+      <uri>model://wood_cube_7_5cm</uri>
+      <pose>-0.025820 -0.279122 1.873477 -0.087257 0.001226 0.013810</pose>
     </include>
     <!-- a bowl to put the item into -->
     <include>
       <uri>model://bowl</uri>
-      <pose>-0.022727 -1.067523 1.032691 0.001745 -0.000877 0.003361</pose>
+      <pose>0.091135 -1.070269 1.042536 -0.000064 0.000394 0.002492</pose>
     </include>
   </world>
 </sdf>
