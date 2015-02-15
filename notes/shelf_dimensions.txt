@@ -1,6 +1,7 @@
 
 
 total shelf width: 0.90 meters
+total shelf height: 1.20 meters
 single shelf depth: 0.435 meters
 single shelf height: 0.30 meters
 single shelf width: 0.30 meters
