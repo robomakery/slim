@@ -1,0 +1,21 @@
+
+
+
+IplImage *imHSV;
+imHSV = convertRGBtoHSV(imRGB);	// Allocates a new HSV image.
+//... do stuff with imHSV ...
+cvReleaseImage(&imHSV);		// Frees the new HSV image.
+cvReleaseImage(&imRGB);		// Frees the original RGB image.
+
+
+-------------------------------------
+Convert Ipl to Mat
+
+
+IplImage* frame;
+
+// here load your frame with some image
+
+// convert to cv::Mat and show the converted image
+cv::Mat image(frame);
+cv::imshow("Image Window", image)

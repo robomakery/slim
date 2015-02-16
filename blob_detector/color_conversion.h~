@@ -1,0 +1,10 @@
+// color_conversion.h
+//
+#ifndef _color_conversion_H // must be unique name in the project
+#define _color_conversion_H
+
+// prototype declaration of the function in color_conversion.cpp
+IplImage* convertImageRGBtoHSV(const IplImage *imageRGB);
+IplImage* convertImageHSVtoRGB(const IplImage *imageHSV);
+
+#endif 
