@@ -1,7 +1,10 @@
 #include <cv.h>
 #include <highgui.h>
+#include <cvblob.h>
 
 using namespace cv;
+using namespace cvb;
+
 
 int main( int argc, char** argv )
 {
