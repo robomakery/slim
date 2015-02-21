@@ -7,7 +7,7 @@ Panels:
         - /MotionPlanning1
         - /Image1
       Splitter Ratio: 0.74256
-    Tree Height: 650
+    Tree Height: 428
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -53,145 +53,6 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          arm_base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          back_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          bl_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          bl_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          br_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          br_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          camera:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          elbow_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          elbow_roll_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fl_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fl_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fr_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fr_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          gripper_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          gripper_roll_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          l_gripper_pincher_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          l_lift_rod_cap:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          lift_base:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          r_gripper_aft_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          r_gripper_pincher_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          r_lift_rod_cap:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          shoulder_pan_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          shoulder_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          slide_rail:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          slide_rail_base:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wrist_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wrist_roll_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
         Loop Animation: true
         Robot Alpha: 0.5
         Show Robot Collision: false
@@ -235,151 +96,12 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          arm_base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          back_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          bl_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          bl_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          br_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          br_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          camera:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          elbow_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          elbow_roll_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fl_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fl_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fr_frame_post:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          fr_lift_rod:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          gripper_finger_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          gripper_roll_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          l_gripper_pincher_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          l_lift_rod_cap:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          lift_base:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          r_gripper_aft_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          r_gripper_pincher_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          r_lift_rod_cap:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          shoulder_pan_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          shoulder_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          slide_rail:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          slide_rail_base:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wrist_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wrist_roll_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
         Robot Alpha: 0.5
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: /slim/camera1/image_raw
       Max Value: 1
       Median window: 5
@@ -388,7 +110,7 @@ Visualization Manager:
       Normalize Range: true
       Queue Size: 2
       Transport Hint: raw
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -424,7 +146,7 @@ Visualization Manager:
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 907
+  Height: 647
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -433,9 +155,9 @@ Window Geometry:
     collapsed: false
   Motion Planning:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000200000000000001b500000326fc0200000004fb000000100044006900730070006c006100790073010000004300000326000000de00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b800fffffffb0000000c00430061006d00650072006100000002ff00000161000000000000000000000001000002b300000326fc0200000001fc0000004300000326000001db01000021fa000000010100000002fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000000ffffffff000002b300fffffffb0000000a0049006d006100670065010000056a000002160000005b00ffffff000002410000032600000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000200000000000001b500000241fc0200000004fb000000100044006900730070006c006100790073010000002800000241000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a0056006900650077007300000003b0000000b0000000b000fffffffb0000000c00430061006d00650072006100000002ff00000161000000000000000000000001000002b300000241fc0200000001fc00000028000002410000018a00fffffffa000000000100000002fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000000ffffffff000002a200fffffffb0000000a0049006d006100670065000000056a000002160000005c00ffffff000000a10000024100000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1717
-  X: -53
-  Y: 130
+  Width: 1301
+  X: 65
+  Y: 24

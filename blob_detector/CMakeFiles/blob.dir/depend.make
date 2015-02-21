@@ -3,4 +3,5 @@
 
 CMakeFiles/blob.dir/blobDetector.cpp.o: blobDetector.cpp
 CMakeFiles/blob.dir/blobDetector.cpp.o: /usr/include/opencv/cv.h
+CMakeFiles/blob.dir/blobDetector.cpp.o: /usr/include/opencv/highgui.h
 

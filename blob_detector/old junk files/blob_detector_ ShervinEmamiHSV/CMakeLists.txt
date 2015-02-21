@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( blob_detector_Emami )
+find_package( OpenCV REQUIRED )
+add_executable( blobEmami blobDetectorEmami.cpp )
+target_link_libraries( blobEmami ${OpenCV_LIBS} )

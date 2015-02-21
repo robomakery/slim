@@ -47,44 +47,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robomakery/Code/slim/blob_detector
+CMAKE_SOURCE_DIR = "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robomakery/Code/slim/blob_detector
+CMAKE_BINARY_DIR = "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV"
 
 #=============================================================================
-# Target rules for target CMakeFiles/blob.dir
+# Target rules for target CMakeFiles/blobEmami.dir
 
 # All Build rule for target.
-CMakeFiles/blob.dir/all:
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/depend
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robomakery/Code/slim/blob_detector/CMakeFiles  1
-	@echo "Built target blob"
-.PHONY : CMakeFiles/blob.dir/all
+CMakeFiles/blobEmami.dir/all:
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/depend
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles"  1
+	@echo "Built target blobEmami"
+.PHONY : CMakeFiles/blobEmami.dir/all
 
 # Include target in all.
-all: CMakeFiles/blob.dir/all
+all: CMakeFiles/blobEmami.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/blob.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomakery/Code/slim/blob_detector/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/blob.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomakery/Code/slim/blob_detector/CMakeFiles 0
-.PHONY : CMakeFiles/blob.dir/rule
+CMakeFiles/blobEmami.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles" 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/blobEmami.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles" 0
+.PHONY : CMakeFiles/blobEmami.dir/rule
 
 # Convenience name for target.
-blob: CMakeFiles/blob.dir/rule
-.PHONY : blob
+blobEmami: CMakeFiles/blobEmami.dir/rule
+.PHONY : blobEmami
 
 # clean rule for target.
-CMakeFiles/blob.dir/clean:
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/clean
-.PHONY : CMakeFiles/blob.dir/clean
+CMakeFiles/blobEmami.dir/clean:
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/clean
+.PHONY : CMakeFiles/blobEmami.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/blob.dir/clean
+clean: CMakeFiles/blobEmami.dir/clean
 .PHONY : clean
 
 #=============================================================================

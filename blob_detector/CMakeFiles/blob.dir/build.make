@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robomakery/Code/ian_code/blob_detector
+CMAKE_SOURCE_DIR = /home/robomakery/Code/slim/blob_detector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robomakery/Code/ian_code/blob_detector
+CMAKE_BINARY_DIR = /home/robomakery/Code/slim/blob_detector
 
 # Include any dependencies generated for this target.
 include CMakeFiles/blob.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/blob.dir/flags.make
 
 CMakeFiles/blob.dir/blobDetector.cpp.o: CMakeFiles/blob.dir/flags.make
 CMakeFiles/blob.dir/blobDetector.cpp.o: blobDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robomakery/Code/ian_code/blob_detector/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robomakery/Code/slim/blob_detector/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/blob.dir/blobDetector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/blob.dir/blobDetector.cpp.o -c /home/robomakery/Code/ian_code/blob_detector/blobDetector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/blob.dir/blobDetector.cpp.o -c /home/robomakery/Code/slim/blob_detector/blobDetector.cpp
 
 CMakeFiles/blob.dir/blobDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/blob.dir/blobDetector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/robomakery/Code/ian_code/blob_detector/blobDetector.cpp > CMakeFiles/blob.dir/blobDetector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/robomakery/Code/slim/blob_detector/blobDetector.cpp > CMakeFiles/blob.dir/blobDetector.cpp.i
 
 CMakeFiles/blob.dir/blobDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/blob.dir/blobDetector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/robomakery/Code/ian_code/blob_detector/blobDetector.cpp -o CMakeFiles/blob.dir/blobDetector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/robomakery/Code/slim/blob_detector/blobDetector.cpp -o CMakeFiles/blob.dir/blobDetector.cpp.s
 
 CMakeFiles/blob.dir/blobDetector.cpp.o.requires:
 .PHONY : CMakeFiles/blob.dir/blobDetector.cpp.o.requires
@@ -126,6 +126,6 @@ CMakeFiles/blob.dir/clean:
 .PHONY : CMakeFiles/blob.dir/clean
 
 CMakeFiles/blob.dir/depend:
-	cd /home/robomakery/Code/ian_code/blob_detector && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robomakery/Code/ian_code/blob_detector /home/robomakery/Code/ian_code/blob_detector /home/robomakery/Code/ian_code/blob_detector /home/robomakery/Code/ian_code/blob_detector /home/robomakery/Code/ian_code/blob_detector/CMakeFiles/blob.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robomakery/Code/slim/blob_detector && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robomakery/Code/slim/blob_detector /home/robomakery/Code/slim/blob_detector /home/robomakery/Code/slim/blob_detector /home/robomakery/Code/slim/blob_detector /home/robomakery/Code/slim/blob_detector/CMakeFiles/blob.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/blob.dir/depend
 

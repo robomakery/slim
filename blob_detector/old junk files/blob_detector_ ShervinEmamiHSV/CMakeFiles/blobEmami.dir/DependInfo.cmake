@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robomakery/Code/slim/blob_detector/blobDetector.cpp" "/home/robomakery/Code/slim/blob_detector/CMakeFiles/blob.dir/blobDetector.cpp.o"
+  "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/blobDetectorEmami.cpp" "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles/blobEmami.dir/blobDetectorEmami.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

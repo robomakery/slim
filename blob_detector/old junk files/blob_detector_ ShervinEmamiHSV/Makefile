@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robomakery/Code/slim/blob_detector
+CMAKE_SOURCE_DIR = "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robomakery/Code/slim/blob_detector
+CMAKE_BINARY_DIR = "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomakery/Code/slim/blob_detector/CMakeFiles /home/robomakery/Code/slim/blob_detector/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles" "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robomakery/Code/slim/blob_detector/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/robomakery/Code/slim/blob_detector/blob_detector_ ShervinEmamiHSV/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -99,41 +99,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named blob
+# Target rules for targets named blobEmami
 
 # Build rule for target.
-blob: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 blob
-.PHONY : blob
+blobEmami: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blobEmami
+.PHONY : blobEmami
 
 # fast build rule for target.
-blob/fast:
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/build
-.PHONY : blob/fast
+blobEmami/fast:
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/build
+.PHONY : blobEmami/fast
 
-blobDetector.o: blobDetector.cpp.o
-.PHONY : blobDetector.o
+blobDetectorEmami.o: blobDetectorEmami.cpp.o
+.PHONY : blobDetectorEmami.o
 
 # target to build an object file
-blobDetector.cpp.o:
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/blobDetector.cpp.o
-.PHONY : blobDetector.cpp.o
+blobDetectorEmami.cpp.o:
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/blobDetectorEmami.cpp.o
+.PHONY : blobDetectorEmami.cpp.o
 
-blobDetector.i: blobDetector.cpp.i
-.PHONY : blobDetector.i
+blobDetectorEmami.i: blobDetectorEmami.cpp.i
+.PHONY : blobDetectorEmami.i
 
 # target to preprocess a source file
-blobDetector.cpp.i:
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/blobDetector.cpp.i
-.PHONY : blobDetector.cpp.i
+blobDetectorEmami.cpp.i:
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/blobDetectorEmami.cpp.i
+.PHONY : blobDetectorEmami.cpp.i
 
-blobDetector.s: blobDetector.cpp.s
-.PHONY : blobDetector.s
+blobDetectorEmami.s: blobDetectorEmami.cpp.s
+.PHONY : blobDetectorEmami.s
 
 # target to generate assembly for a file
-blobDetector.cpp.s:
-	$(MAKE) -f CMakeFiles/blob.dir/build.make CMakeFiles/blob.dir/blobDetector.cpp.s
-.PHONY : blobDetector.cpp.s
+blobDetectorEmami.cpp.s:
+	$(MAKE) -f CMakeFiles/blobEmami.dir/build.make CMakeFiles/blobEmami.dir/blobDetectorEmami.cpp.s
+.PHONY : blobDetectorEmami.cpp.s
 
 # Help Target
 help:
@@ -141,12 +141,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... blob"
+	@echo "... blobEmami"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... blobDetector.o"
-	@echo "... blobDetector.i"
-	@echo "... blobDetector.s"
+	@echo "... blobDetectorEmami.o"
+	@echo "... blobDetectorEmami.i"
+	@echo "... blobDetectorEmami.s"
 .PHONY : help
 
 
