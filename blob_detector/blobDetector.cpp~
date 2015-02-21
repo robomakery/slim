@@ -5,27 +5,18 @@ using namespace cv;
 
 int main( int argc, char** argv )
 {
- char* imageName;
-
- if( argv != NULL)
- {
-  printf( " argv !=NULL");
-  
-  imageName = argv[1];
- }
- else
- { 
-   printf( " Default file ./balls.jpg \n " );
-   char temp[] = "./balls.jpg";
-   imageName = temp;
-   
- }
+ 
+  const char* imageName;
+  if(argc > 1)
+    imageName = argv[1];
+  else
+    imageName = "./inputFiles/balls.jpg";
 
  Mat image;
  
  image = imread( imageName, 1 );
 
- if( argc != 2 || !image.data )
+ if( !image.data )
  {
    printf( " No image data \n " );
    return -1;
@@ -34,13 +25,9 @@ int main( int argc, char** argv )
  Mat HSV_image;
  cvtColor( image, HSV_image, CV_BGR2HSV );
 
- imwrite( "../../images/HSV_Image.jpg", HSV_image );
- //imwrite( "./HSV_Image.jpg", HSV_image );
-
- //namedWindow( imageName, CV_WINDOW_AUTOSIZE );
+ 
+ imwrite( "./outputFiles/HSV_Image.jpg", HSV_image );
  namedWindow( "HSV image", CV_WINDOW_AUTOSIZE );
-
- imshow( imageName, image );
  imshow( "HSV image", HSV_image );
 
  waitKey(0);
