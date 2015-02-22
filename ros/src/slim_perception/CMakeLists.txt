@@ -109,6 +109,7 @@ add_executable(write_pcd_from_topic src/write_pcd_from_topic.cpp)
 add_executable(simple_viewer src/simple_viewer.cpp)
 add_executable(generate_cad_model_views src/generate_cad_model_views.cpp)
 add_executable(cloud_matcher_node src/cloud_matcher_node.cpp)
+add_executable(test_opencv_features src/test_opencv_features.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -129,6 +130,9 @@ target_link_libraries(generate_cad_model_views
   ${VTK_LIBRARIES}
 )
 target_link_libraries(cloud_matcher_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(test_opencv_features
   ${catkin_LIBRARIES}
 )
 
