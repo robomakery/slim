@@ -172,6 +172,9 @@ blob_detector_BINARY_DIR:STATIC=/home/robomakery/Code/slim/blob_detector
 //Value Computed by CMake
 blob_detector_SOURCE_DIR:STATIC=/home/robomakery/Code/slim/blob_detector
 
+//The directory containing a CMake configuration file for cvblob.
+cvblob_DIR:PATH=cvblob_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

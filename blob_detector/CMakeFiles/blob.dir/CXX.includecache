@@ -11,6 +11,12 @@ cv.h
 -
 highgui.h
 -
+opencv2/imgproc/imgproc.hpp
+/home/robomakery/Code/slim/blob_detector/opencv2/imgproc/imgproc.hpp
+opencv2/video/background_segm.hpp
+-
+cvblob.h
+-
 
 /usr/include/opencv/cv.h
 opencv2/core/core_c.h

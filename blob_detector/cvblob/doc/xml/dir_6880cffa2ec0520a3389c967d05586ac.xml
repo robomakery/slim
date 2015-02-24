@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_6880cffa2ec0520a3389c967d05586ac" kind="dir">
+    <compoundname>cvBlob/</compoundname>
+    <innerfile refid="cvaux_8cpp">cvaux.cpp</innerfile>
+    <innerfile refid="cvblob_8cpp">cvblob.cpp</innerfile>
+    <innerfile refid="cvblob_8h">cvblob.h</innerfile>
+    <innerfile refid="cvcolor_8cpp">cvcolor.cpp</innerfile>
+    <innerfile refid="cvcontour_8cpp">cvcontour.cpp</innerfile>
+    <innerfile refid="cvlabel_8cpp">cvlabel.cpp</innerfile>
+    <innerfile refid="cvtrack_8cpp">cvtrack.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/cvblob/cvBlob/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1871 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="namespacecvb" kind="namespace">
+    <compoundname>cvb</compoundname>
+    <innerclass refid="structcvb_1_1CvContourChainCode" prot="public">cvb::CvContourChainCode</innerclass>
+    <innerclass refid="structcvb_1_1CvBlob" prot="public">cvb::CvBlob</innerclass>
+    <innerclass refid="structcvb_1_1CvTrack" prot="public">cvb::CvTrack</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacecvb_1a9c94707ada0be6b2344177093747ffeb" prot="public" static="no">
+        <type>std::map&lt; CvLabel, CvScalar &gt;</type>
+        <definition>typedef std::map&lt;CvLabel, CvScalar&gt; cvb::Palete</definition>
+        <argsstring></argsstring>
+        <name>Palete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="282" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a29b745ef590321dbc1633b2222a7f4f4" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char cvb::CvChainCode</definition>
+        <argsstring></argsstring>
+        <name>CvChainCode</name>
+        <briefdescription>
+<para>Direction. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="cvblob_8h_1a15f244e529bb2c6a4e7245ec0fe51206" kindref="member">CV_CHAINCODE_UP</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a1a4babf8e3ceb3c89b579a222577f29f" kindref="member">CV_CHAINCODE_UP_LEFT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aa7dc08f3867bc7c5d1ed941c4a440c21" kindref="member">CV_CHAINCODE_LEFT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aab9a3cf6ed1c9431f39336e2689f79e3" kindref="member">CV_CHAINCODE_DOWN_LEFT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aee51205238c5432d9aff4a92dd0f19ee" kindref="member">CV_CHAINCODE_DOWN</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a15387f2b75523f414ce773b369b1f521" kindref="member">CV_CHAINCODE_DOWN_RIGHT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a92aac8df1864e48e85f3081e82e2c805" kindref="member">CV_CHAINCODE_RIGHT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a9b7fcf030cfefac2339363851ee04773" kindref="member">CV_CHAINCODE_UP_RIGHT</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="103" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1ab1de541ecef490dd655e1f9a97ea8af7" prot="public" static="no">
+        <type>std::list&lt; CvChainCode &gt;</type>
+        <definition>typedef std::list&lt;CvChainCode&gt; cvb::CvChainCodes</definition>
+        <argsstring></argsstring>
+        <name>CvChainCodes</name>
+        <briefdescription>
+<para>Chain code. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvChainCode </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="107" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a8451cbd039fb847b15add2d477f8c81c" prot="public" static="no">
+        <type>std::list&lt; <ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref> * &gt;</type>
+        <definition>typedef std::list&lt;CvContourChainCode *&gt; cvb::CvContoursChainCode</definition>
+        <argsstring></argsstring>
+        <name>CvContoursChainCode</name>
+        <briefdescription>
+<para>List of contours (chain codes type). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="117" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a0100aef2de89dce28038f467ecf4532d" prot="public" static="no">
+        <type>std::vector&lt; CvPoint &gt;</type>
+        <definition>typedef std::vector&lt;CvPoint&gt; cvb::CvContourPolygon</definition>
+        <argsstring></argsstring>
+        <name>CvContourPolygon</name>
+        <briefdescription>
+<para>Polygon based contour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="120" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a523f062b82065eaeef66747c70175839" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int cvb::CvLabel</definition>
+        <argsstring></argsstring>
+        <name>CvLabel</name>
+        <briefdescription>
+<para>Type of label. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="cvblob_8h_1a7b6294f56d1d9089f71d9236162a6df0" kindref="member">IPL_DEPTH_LABEL</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="204" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a2cd6d65eea3b0f91efd43d77e57745a4" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int cvb::CvID</definition>
+        <argsstring></argsstring>
+        <name>CvID</name>
+        <briefdescription>
+<para>Type of identification numbers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="218" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a55d7a6f026c520aff4c1b2750e673b87" prot="public" static="no">
+        <type>std::map&lt; CvLabel, <ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> * &gt;</type>
+        <definition>typedef std::map&lt; CvLabel, CvBlob * &gt; cvb::CvBlobs</definition>
+        <argsstring></argsstring>
+        <name>CvBlobs</name>
+        <briefdescription>
+<para>List of blobs. A map is used to access each blob from its label number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvLabel </para><simplesectsep/><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="264" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1ac4616ba3a79980056ba9cec32b5433ba" prot="public" static="no">
+        <type>std::pair&lt; CvLabel, <ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> * &gt;</type>
+        <definition>typedef std::pair&lt; CvLabel, CvBlob * &gt; cvb::CvLabelBlob</definition>
+        <argsstring></argsstring>
+        <name>CvLabelBlob</name>
+        <briefdescription>
+<para>Pair (label, blob). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvLabel </para><simplesectsep/><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="270" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1aca0416cbe20cbf13b88739cbb70288d0" prot="public" static="no">
+        <type>std::map&lt; CvID, <ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> * &gt;</type>
+        <definition>typedef std::map&lt; CvID, CvTrack * &gt; cvb::CvTracks</definition>
+        <argsstring></argsstring>
+        <name>CvTracks</name>
+        <briefdescription>
+<para>List of tracks. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvID </para><simplesectsep/><para><ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="513" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecvb_1a435b3b341b219f6943d4d3b039f11f77" prot="public" static="no">
+        <type>std::pair&lt; CvID, <ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> * &gt;</type>
+        <definition>typedef std::pair&lt; CvID, CvTrack * &gt; cvb::CvIDTrack</definition>
+        <argsstring></argsstring>
+        <name>CvIDTrack</name>
+        <briefdescription>
+<para>Pair (identification number, track). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvID </para><simplesectsep/><para><ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="519" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecvb_1a84915a92e7e9c4bddad67380df55a0bd" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char cvb::cvChainCodeMoves[8][2]</definition>
+        <argsstring>[8][2]</argsstring>
+        <name>cvChainCodeMoves</name>
+        <initializer> { { 0, -1},
+                                        { 1, -1},
+					{ 1,  0},
+					{ 1,  1},
+					{ 0,  1},
+					{-1,  1},
+					{-1,  0},
+					{-1, -1}
+                                      }</initializer>
+        <briefdescription>
+<para>Move vectors of chain codes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="cvblob_8h_1a15f244e529bb2c6a4e7245ec0fe51206" kindref="member">CV_CHAINCODE_UP</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a1a4babf8e3ceb3c89b579a222577f29f" kindref="member">CV_CHAINCODE_UP_LEFT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aa7dc08f3867bc7c5d1ed941c4a440c21" kindref="member">CV_CHAINCODE_LEFT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aab9a3cf6ed1c9431f39336e2689f79e3" kindref="member">CV_CHAINCODE_DOWN_LEFT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aee51205238c5432d9aff4a92dd0f19ee" kindref="member">CV_CHAINCODE_DOWN</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a15387f2b75523f414ce773b369b1f521" kindref="member">CV_CHAINCODE_DOWN_RIGHT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a92aac8df1864e48e85f3081e82e2c805" kindref="member">CV_CHAINCODE_RIGHT</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a9b7fcf030cfefac2339363851ee04773" kindref="member">CV_CHAINCODE_UP_RIGHT</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="92" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecvb_1a6e69e3cbfae6a98dfda66310cc10ccb8" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char cvb::movesE[4][3][4]</definition>
+        <argsstring>[4][3][4]</argsstring>
+        <name>movesE</name>
+        <initializer> { { {-1, -1, 3, CV_CHAINCODE_UP_LEFT   }, { 0, -1, 0, CV_CHAINCODE_UP   }, { 1, -1, 0, CV_CHAINCODE_UP_RIGHT   } },
+				 { { 1, -1, 0, CV_CHAINCODE_UP_RIGHT  }, { 1,  0, 1, CV_CHAINCODE_RIGHT}, { 1,  1, 1, CV_CHAINCODE_DOWN_RIGHT } },
+				 { { 1,  1, 1, CV_CHAINCODE_DOWN_RIGHT}, { 0,  1, 2, CV_CHAINCODE_DOWN }, {-1,  1, 2, CV_CHAINCODE_DOWN_LEFT  } },
+				 { {-1,  1, 2, CV_CHAINCODE_DOWN_LEFT }, {-1,  0, 3, CV_CHAINCODE_LEFT }, {-1, -1, 3, CV_CHAINCODE_UP_LEFT    } }
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvlabel.cpp" line="38" bodyfile="/tmp/cvblob/cvBlob/cvlabel.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecvb_1a7ebd4e5797c62fbe381cb94a55485d00" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char cvb::movesI[4][3][4]</definition>
+        <argsstring>[4][3][4]</argsstring>
+        <name>movesI</name>
+        <initializer> { { { 1, -1, 3, CV_CHAINCODE_UP_RIGHT   }, { 0, -1, 0, CV_CHAINCODE_UP   }, {-1, -1, 0, CV_CHAINCODE_UP_LEFT    } },
+				 { {-1, -1, 0, CV_CHAINCODE_UP_LEFT    }, {-1,  0, 1, CV_CHAINCODE_LEFT }, {-1,  1, 1, CV_CHAINCODE_DOWN_LEFT  } },
+				 { {-1,  1, 1, CV_CHAINCODE_DOWN_LEFT  }, { 0,  1, 2, CV_CHAINCODE_DOWN }, { 1,  1, 2, CV_CHAINCODE_DOWN_RIGHT } },
+				 { { 1,  1, 2, CV_CHAINCODE_DOWN_RIGHT }, { 1,  0, 3, CV_CHAINCODE_RIGHT}, { 1, -1, 3, CV_CHAINCODE_UP_RIGHT   } }
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvlabel.cpp" line="44" bodyfile="/tmp/cvblob/cvBlob/cvlabel.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecvb_1a75521ce06349b6538a2c0ab134e0fdde" prot="public" static="no" mutable="no">
+        <type>CvFont *</type>
+        <definition>CvFont* cvb::defaultFont</definition>
+        <argsstring></argsstring>
+        <name>defaultFont</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvtrack.cpp" line="343" bodyfile="/tmp/cvblob/cvBlob/cvtrack.cpp" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecvb_1a688f250bb2214cb4b5220678e51228a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvDotProductPoints</definition>
+        <argsstring>(CvPoint const &amp;a, CvPoint const &amp;b, CvPoint const &amp;c)</argsstring>
+        <name>cvDotProductPoints</name>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Dot product of the vectors ab and bc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Middle point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Last point. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dot product of ab and bc. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvaux.cpp" line="37" bodyfile="/tmp/cvblob/cvBlob/cvaux.cpp" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a9c2829138d57bb6e4bbcb1183dc9171e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvCrossProductPoints</definition>
+        <argsstring>(CvPoint const &amp;a, CvPoint const &amp;b, CvPoint const &amp;c)</argsstring>
+        <name>cvCrossProductPoints</name>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Cross product of the vectors ab and bc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Cross product of ab and bc. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvaux.cpp" line="47" bodyfile="/tmp/cvblob/cvBlob/cvaux.cpp" bodystart="46" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a869ecba88a96d06ddea47bdec5e00565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvDistancePointPoint</definition>
+        <argsstring>(CvPoint const &amp;a, CvPoint const &amp;b)</argsstring>
+        <name>cvDistancePointPoint</name>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Distance between two points. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Distance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvaux.cpp" line="57" bodyfile="/tmp/cvblob/cvBlob/cvaux.cpp" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ae2defe529fb22333321da9906bb47b9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvDistanceLinePoint</definition>
+        <argsstring>(CvPoint const &amp;a, CvPoint const &amp;b, CvPoint const &amp;c, bool isSegment)</argsstring>
+        <name>cvDistanceLinePoint</name>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>CvPoint const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSegment</declname>
+        </param>
+        <briefdescription>
+<para>Distance between line ab and point c. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First point of the segment. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second point of the segment. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isSegment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If false then the distance will be calculated from the line defined by the points a and b, to the point c. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Distance between ab and c. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvaux.cpp" line="65" bodyfile="/tmp/cvblob/cvBlob/cvaux.cpp" bodystart="64" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a33c71bb6712745e6d6983aae2faa45ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CvLabel</type>
+        <definition>CvLabel cvb::cvLargestBlob</definition>
+        <argsstring>(const CvBlobs &amp;blobs)</argsstring>
+        <name>cvLargestBlob</name>
+        <param>
+          <type>const CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+<para>Find largest blob (biggest area). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Label of the largest blob or 0 if there are no blobs. </para></simplesect>
+<simplesect kind="see"><para>cvLabel </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="38" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="37" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a1c54f82908ad127fed3f187d5add9b4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvFilterByArea</definition>
+        <argsstring>(CvBlobs &amp;blobs, unsigned int minArea, unsigned int maxArea)</argsstring>
+        <name>cvFilterByArea</name>
+        <param>
+          <type>CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>minArea</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>maxArea</declname>
+        </param>
+        <briefdescription>
+<para>Filter blobs by area. Those blobs whose areas are not in range will be erased from the input list of blobs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minArea</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimun area. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxArea</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximun area. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="57" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="56" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a6479f518fb2d7d326ab9aa3be81a61f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvFilterByLabel</definition>
+        <argsstring>(CvBlobs &amp;blobs, CvLabel label)</argsstring>
+        <name>cvFilterByLabel</name>
+        <param>
+          <type>CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <param>
+          <type>CvLabel</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Filter blobs by label. Delete all blobs except those with label l. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label to leave. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="76" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="75" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a545f20d735c0715c8d875ae622aa226d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvRenderBlob</definition>
+        <argsstring>(const IplImage *imgLabel, CvBlob *blob, IplImage *imgSource, IplImage *imgDest, unsigned short mode, CvScalar const &amp;color, double alpha)</argsstring>
+        <name>cvRenderBlob</name>
+        <param>
+          <type>const IplImage *</type>
+          <declname>imgLabel</declname>
+        </param>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgSource</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgDest</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>CvScalar const &amp;</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Draws or prints information about a blob. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imgLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label image (depth=IPL_DEPTH_LABEL and num. channels=1). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input image (depth=IPL_DEPTH_8U and num. channels=3). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output image (depth=IPL_DEPTH_8U and num. channels=3). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render mode. By default is CV_BLOB_RENDER_COLOR|CV_BLOB_RENDER_CENTROID|CV_BLOB_RENDER_BOUNDING_BOX|CV_BLOB_RENDER_ANGLE. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color to render (if CV_BLOB_RENDER_COLOR is used). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If mode CV_BLOB_RENDER_COLOR is used. 1.0 indicates opaque and 0.0 translucent (1.0 by default). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cvblob_8h_1a72ea76fd059c1bd5191038c3c4a806d2" kindref="member">CV_BLOB_RENDER_COLOR</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a9c8c94ebb8d703696f22e30895618c91" kindref="member">CV_BLOB_RENDER_CENTROID</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a8910d4138f7650718f7fe219cda784d2" kindref="member">CV_BLOB_RENDER_BOUNDING_BOX</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aa84ebce42d1053bfc4552d06c9ec4bee" kindref="member">CV_BLOB_RENDER_ANGLE</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aec0b96c61251408d29f5f0d20c041038" kindref="member">CV_BLOB_RENDER_TO_LOG</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a2c5ecf02adc2da19fce6432aadcd6880" kindref="member">CV_BLOB_RENDER_TO_STD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="137" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="136" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a30d81a731c923998718d1eedcf74ce9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvRenderBlobs</definition>
+        <argsstring>(const IplImage *imgLabel, CvBlobs &amp;blobs, IplImage *imgSource, IplImage *imgDest, unsigned short mode, double alpha)</argsstring>
+        <name>cvRenderBlobs</name>
+        <param>
+          <type>const IplImage *</type>
+          <declname>imgLabel</declname>
+        </param>
+        <param>
+          <type>CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgSource</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgDest</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Draws or prints information about blobs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imgLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label image (depth=IPL_DEPTH_LABEL and num. channels=1). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input image (depth=IPL_DEPTH_8U and num. channels=3). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output image (depth=IPL_DEPTH_8U and num. channels=3). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render mode. By default is CV_BLOB_RENDER_COLOR|CV_BLOB_RENDER_CENTROID|CV_BLOB_RENDER_BOUNDING_BOX|CV_BLOB_RENDER_ANGLE. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If mode CV_BLOB_RENDER_COLOR is used. 1.0 indicates opaque and 0.0 translucent (1.0 by default). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cvblob_8h_1a72ea76fd059c1bd5191038c3c4a806d2" kindref="member">CV_BLOB_RENDER_COLOR</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a9c8c94ebb8d703696f22e30895618c91" kindref="member">CV_BLOB_RENDER_CENTROID</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a8910d4138f7650718f7fe219cda784d2" kindref="member">CV_BLOB_RENDER_BOUNDING_BOX</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aa84ebce42d1053bfc4552d06c9ec4bee" kindref="member">CV_BLOB_RENDER_ANGLE</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aec0b96c61251408d29f5f0d20c041038" kindref="member">CV_BLOB_RENDER_TO_LOG</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a2c5ecf02adc2da19fce6432aadcd6880" kindref="member">CV_BLOB_RENDER_TO_STD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="285" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="284" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a6e6fc02e0e84e86906c9cda70f7c2970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvAngle</definition>
+        <argsstring>(CvBlob *blob)</argsstring>
+        <name>cvAngle</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <briefdescription>
+<para>Calculates angle orientation of a blob. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Angle orientation in radians. </para></simplesect>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="320" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="319" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a037a0704d4d8722cd77cf21df28e7b91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvSaveImageBlob</definition>
+        <argsstring>(const char *filename, IplImage *img, CvBlob const *blob)</argsstring>
+        <name>cvSaveImageBlob</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> const *</type>
+          <declname>blob</declname>
+        </param>
+        <briefdescription>
+<para>Save the image of a blob to a file. The function uses an image (that can be the original pre-processed image or a processed one, or even the result of cvRenderBlobs, for example) and a blob structure. Then the function saves a copy of the part of the image where the blob is. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the file. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para><simplesectsep/><para>cvRenderBlob </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.cpp" line="330" bodyfile="/tmp/cvblob/cvBlob/cvblob.cpp" bodystart="329" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a75cf729e04b9212e64bd7bdd077ebde8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvRenderContourChainCode</definition>
+        <argsstring>(CvContourChainCode const *contour, IplImage const *img, CvScalar const &amp;color=CV_RGB(255, 255, 255))</argsstring>
+        <name>cvRenderContourChainCode</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref> const *</type>
+          <declname>contour</declname>
+        </param>
+        <param>
+          <type>IplImage const *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>CvScalar const &amp;</type>
+          <declname>color</declname>
+          <defval>CV_RGB(255, 255, 255)</defval>
+        </param>
+        <briefdescription>
+<para>Draw a contour. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>contour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chain code contour. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to draw on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color to draw (default, white). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="128" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="48" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a805d9f5450f84d0d2d373e66a9f1e3a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CvContourPolygon *</type>
+        <definition>CvContourPolygon * cvb::cvConvertChainCodesToPolygon</definition>
+        <argsstring>(CvContourChainCode const *cc)</argsstring>
+        <name>cvConvertChainCodesToPolygon</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref> const *</type>
+          <declname>cc</declname>
+        </param>
+        <briefdescription>
+<para>Convert a chain code contour to a polygon. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chain code contour. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A polygon. </para></simplesect>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref> </para><simplesectsep/><para>CvContourPolygon </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="136" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="85" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a221fc4e1bededd25596b0295d0d9fea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvRenderContourPolygon</definition>
+        <argsstring>(CvContourPolygon const *contour, IplImage *img, CvScalar const &amp;color=CV_RGB(255, 255, 255))</argsstring>
+        <name>cvRenderContourPolygon</name>
+        <param>
+          <type>CvContourPolygon const *</type>
+          <declname>contour</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>CvScalar const &amp;</type>
+          <declname>color</declname>
+          <defval>CV_RGB(255, 255, 255)</defval>
+        </param>
+        <briefdescription>
+<para>Draw a polygon. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>contour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polygon contour. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to draw on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color to draw (default, white). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>CvContourPolygon </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="144" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="126" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1afbac37a06504b4278c4b388c3d1025eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvContourPolygonArea</definition>
+        <argsstring>(CvContourPolygon const *p)</argsstring>
+        <name>cvContourPolygonArea</name>
+        <param>
+          <type>CvContourPolygon const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Calculates area of a polygonal contour. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contour (polygon type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Area of the contour. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="150" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="154" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a5397b4f0d6e91b9e30e92f04083e9553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvContourChainCodePerimeter</definition>
+        <argsstring>(CvContourChainCode const *c)</argsstring>
+        <name>cvContourChainCodePerimeter</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref> const *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Calculates perimeter of a chain code contour. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contour (chain code type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Perimeter of the contour. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="156" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="180" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a8fbc382f4b602deef3f77bce3ca5f8d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvContourPolygonPerimeter</definition>
+        <argsstring>(CvContourPolygon const *p)</argsstring>
+        <name>cvContourPolygonPerimeter</name>
+        <param>
+          <type>CvContourPolygon const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Calculates perimeter of a polygonal contour. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contour (polygon type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Perimeter of the contour. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="162" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="202" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ad26e04350883d97c5eda724970269f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::cvContourPolygonCircularity</definition>
+        <argsstring>(const CvContourPolygon *p)</argsstring>
+        <name>cvContourPolygonCircularity</name>
+        <param>
+          <type>const CvContourPolygon *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the circularity of a polygon (compactness measure). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contour (polygon type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Circularity: a non-negative value, where 0 correspond with a circumference. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="168" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="219" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a7005fbfa33695515e9e1e76fca2ed986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CvContourPolygon *</type>
+        <definition>CvContourPolygon * cvb::cvSimplifyPolygon</definition>
+        <argsstring>(CvContourPolygon const *p, double const delta=1.)</argsstring>
+        <name>cvSimplifyPolygon</name>
+        <param>
+          <type>CvContourPolygon const *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double const</type>
+          <declname>delta</declname>
+          <defval>1.</defval>
+        </param>
+        <briefdescription>
+<para>Simplify a polygon reducing the number of vertex according the distance &quot;delta&quot;. Uses a version of the Ramer-Douglas-Peucker algorithm (<ulink url="http://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm">http://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm</ulink>). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contour (polygon type). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimun distance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A simplify version of the original polygon. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="176" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="275" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a1cc4e4cd7cf6677160a0e2061fc21f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CvContourPolygon *</type>
+        <definition>CvContourPolygon * cvb::cvPolygonContourConvexHull</definition>
+        <argsstring>(CvContourPolygon const *p)</argsstring>
+        <name>cvPolygonContourConvexHull</name>
+        <param>
+          <type>CvContourPolygon const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Calculates convex hull of a contour. Uses the Melkman Algorithm. Code based on the version in <ulink url="http://w3.impa.br/~rdcastan/Cgeometry/.">http://w3.impa.br/~rdcastan/Cgeometry/.</ulink> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contour (polygon type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Convex hull. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="183" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="326" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a201f98f66a60f9a0845ed7169faf2e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvWriteContourPolygonCSV</definition>
+        <argsstring>(const CvContourPolygon &amp;p, const std::string &amp;filename)</argsstring>
+        <name>cvWriteContourPolygonCSV</name>
+        <param>
+          <type>const CvContourPolygon &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Write a contour to a CSV (Comma-separated values) file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polygon contour. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ace288b0f65a3528d6bcb6c1586b29819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvWriteContourPolygonSVG</definition>
+        <argsstring>(const CvContourPolygon &amp;p, const std::string &amp;filename, const CvScalar &amp;stroke=cvScalar(0, 0, 0), const CvScalar &amp;fill=cvScalar(255, 255, 255))</argsstring>
+        <name>cvWriteContourPolygonSVG</name>
+        <param>
+          <type>const CvContourPolygon &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const CvScalar &amp;</type>
+          <declname>stroke</declname>
+          <defval>cvScalar(0, 0, 0)</defval>
+        </param>
+        <param>
+          <type>const CvScalar &amp;</type>
+          <declname>fill</declname>
+          <defval>cvScalar(255, 255, 255)</defval>
+        </param>
+        <briefdescription>
+<para>Write a contour to a SVG file (<ulink url="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">http://en.wikipedia.org/wiki/Scalable_Vector_Graphics</ulink>). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polygon contour. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stroke</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stroke color (black by default). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fill</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color (white by default). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a3bd4ecb14e8bf387842640ac93331ae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::cvLabel</definition>
+        <argsstring>(IplImage const *img, IplImage *imgOut, CvBlobs &amp;blobs)</argsstring>
+        <name>cvLabel</name>
+        <param>
+          <type>IplImage const *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgOut</declname>
+        </param>
+        <param>
+          <type>CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+<para>Label the connected parts of a binary image. Algorithm based on paper &quot;A linear-time component-labeling algorithm using contour tracing technique&quot; of Fu Chang, Chun-Jen Chen and Chi-Jen Lu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input binary image (depth=IPL_DEPTH_8U and num. channels=1). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output image (depth=IPL_DEPTH_LABEL and num. channels=1). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of pixels that has been labeled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="279" bodyfile="/tmp/cvblob/cvBlob/cvlabel.cpp" bodystart="47" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a1d4d6724cdacdf3ea627ba2cff46fdd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvFilterLabels</definition>
+        <argsstring>(IplImage *imgIn, IplImage *imgOut, const CvBlobs &amp;blobs)</argsstring>
+        <name>cvFilterLabels</name>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgIn</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgOut</declname>
+        </param>
+        <param>
+          <type>const CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+<para>Draw a binary image with the blobs that have been given. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imgIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input image (depth=IPL_DEPTH_LABEL and num. channels=1). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output binary image (depth=IPL_DEPTH_8U and num. channels=1). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs to be drawn. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>cvLabel </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="289" bodyfile="/tmp/cvblob/cvBlob/cvlabel.cpp" bodystart="363" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1acbf0d4151192011f1f98ef1200032b23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CvLabel</type>
+        <definition>CvLabel cvb::cvGetLabel</definition>
+        <argsstring>(IplImage const *img, unsigned int x, unsigned int y)</argsstring>
+        <name>cvGetLabel</name>
+        <param>
+          <type>IplImage const *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the label value from a labeled image. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label image. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordenate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordenate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Label value. </para></simplesect>
+<simplesect kind="see"><para>CvLabel </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="298" bodyfile="/tmp/cvblob/cvBlob/cvlabel.cpp" bodystart="414" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ae1978c51f671315a7492531c09d9cc73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvReleaseBlob</definition>
+        <argsstring>(CvBlob *blob)</argsstring>
+        <name>cvReleaseBlob</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <briefdescription>
+<para>Clear a blob structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="305" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="304" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ac4bca0f28195192b892d155123180b74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvReleaseBlobs</definition>
+        <argsstring>(CvBlobs &amp;blobs)</argsstring>
+        <name>cvReleaseBlobs</name>
+        <param>
+          <type>CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+<para>Clear blobs structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>CvBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="325" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="324" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a03b6975d75330b1b0e9feeda1d7b2730" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CvLabel</type>
+        <definition>CvLabel cvb::cvGreaterBlob</definition>
+        <argsstring>(const CvBlobs &amp;blobs)</argsstring>
+        <name>cvGreaterBlob</name>
+        <param>
+          <type>const CvBlobs &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="341" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="340" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1af6500e1c0363b5ca3f55dc727328fdab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CvPoint2D64f</type>
+        <definition>CvPoint2D64f cvb::cvCentroid</definition>
+        <argsstring>(CvBlob *blob)</argsstring>
+        <name>cvCentroid</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <briefdescription>
+<para>Calculates centroid. Centroid will be returned and stored in the blob structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob whose centroid will be calculated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Centroid. </para></simplesect>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="367" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="366" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ad53528ea5d959c56a599dc5cb044c7d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvSetImageROItoBlob</definition>
+        <argsstring>(IplImage *img, CvBlob const *blob)</argsstring>
+        <name>cvSetImageROItoBlob</name>
+        <param>
+          <type>IplImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> const *</type>
+          <declname>blob</declname>
+        </param>
+        <briefdescription>
+<para>Set the ROI of an image to the bounding box of a blob. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="435" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="434" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1aa311f7f21ba5117c264e0a0cfe124b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CvScalar</type>
+        <definition>CvScalar cvb::cvBlobMeanColor</definition>
+        <argsstring>(CvBlob const *blob, IplImage const *imgLabel, IplImage const *img)</argsstring>
+        <name>cvBlobMeanColor</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> const *</type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type>IplImage const *</type>
+          <declname>imgLabel</declname>
+        </param>
+        <param>
+          <type>IplImage const *</type>
+          <declname>img</declname>
+        </param>
+        <briefdescription>
+<para>Calculates mean color of a blob in an image. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image of labels. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original image. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Average color. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="448" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1aa120b7423b633370cd83832de624362b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvReleaseTracks</definition>
+        <argsstring>(CvTracks &amp;tracks)</argsstring>
+        <name>cvReleaseTracks</name>
+        <param>
+          <type>CvTracks &amp;</type>
+          <declname>tracks</declname>
+        </param>
+        <briefdescription>
+<para>Clear tracks structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of tracks. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>CvTracks </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="526" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="525" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a07df28b5383f4daa661726966c21962b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvUpdateTracks</definition>
+        <argsstring>(CvBlobs const &amp;b, CvTracks &amp;t, const double thDistance, const unsigned int thInactive, const unsigned int thActive=0)</argsstring>
+        <name>cvUpdateTracks</name>
+        <param>
+          <type>CvBlobs const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>CvTracks &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>thDistance</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>thInactive</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>thActive</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Updates list of tracks based on current blobs. Tracking based on: A. Senior, A. Hampapur, Y-L Tian, L. Brown, S. Pankanti, R. Bolle. Appearance Models for Occlusion Handling. Second International workshop on Performance Evaluation of Tracking and Surveillance Systems &amp; CVPR&apos;01. December, 2001. (<ulink url="http://www.research.ibm.com/peoplevision/PETS2001.pdf">http://www.research.ibm.com/peoplevision/PETS2001.pdf</ulink>) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of blobs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of tracks. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max distance to determine when a track and a blob match. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thInactive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of frames a track can be inactive. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thActive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If a track becomes inactive but it has been active less than thActive frames, the track will be deleted. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>CvBlobs </para><simplesectsep/><para>Tracks </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="550" bodyfile="/tmp/cvblob/cvBlob/cvtrack.cpp" bodystart="157" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1ade771349b86c049b76dcb66708cc620b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvRenderTracks</definition>
+        <argsstring>(CvTracks const tracks, IplImage *imgSource, IplImage *imgDest, unsigned short mode=0x000f, CvFont *font=NULL)</argsstring>
+        <name>cvRenderTracks</name>
+        <param>
+          <type>CvTracks const</type>
+          <declname>tracks</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgSource</declname>
+        </param>
+        <param>
+          <type>IplImage *</type>
+          <declname>imgDest</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>mode</declname>
+          <defval>0x000f</defval>
+        </param>
+        <param>
+          <type>CvFont *</type>
+          <declname>font</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Prints tracks information. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tracks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of tracks. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input image (depth=IPL_DEPTH_8U and num. channels=3). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imgDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output image (depth=IPL_DEPTH_8U and num. channels=3). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render mode. By default is CV_TRACK_RENDER_ID|CV_TRACK_RENDER_BOUNDING_BOX. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OpenCV font for print on the image. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cvblob_8h_1a83f567bb938cd43fc300b03096677b8e" kindref="member">CV_TRACK_RENDER_ID</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1aebdd3c18abef97e2bb1731480c620903" kindref="member">CV_TRACK_RENDER_BOUNDING_BOX</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a61276c7a2cc5c680f6273678fc10ce8d" kindref="member">CV_TRACK_RENDER_TO_LOG</ref> </para><simplesectsep/><para><ref refid="cvblob_8h_1a269993759feafe78d0a073375d27e55e" kindref="member">CV_TRACK_RENDER_TO_STD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="568" bodyfile="/tmp/cvblob/cvBlob/cvtrack.cpp" bodystart="345" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a765f7aa1b6707b74d021fc7c79bc045a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::simplifyPolygonRecursive</definition>
+        <argsstring>(CvContourPolygon const *p, int const i1, int const i2, bool *pnUseFlag, double const delta)</argsstring>
+        <name>simplifyPolygonRecursive</name>
+        <param>
+          <type>CvContourPolygon const *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int const</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>int const</type>
+          <declname>i2</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>pnUseFlag</declname>
+        </param>
+        <param>
+          <type>double const</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvcontour.cpp" line="238" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="237" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a21e8549ca0713540ce088e1ca4943d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvWriteContourPolygonCSV</definition>
+        <argsstring>(const CvContourPolygon &amp;p, const string &amp;filename)</argsstring>
+        <name>cvWriteContourPolygonCSV</name>
+        <param>
+          <type>const CvContourPolygon &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvcontour.cpp" line="381" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="380" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1abb846806045097b545c405b3e82a27f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::cvWriteContourPolygonSVG</definition>
+        <argsstring>(const CvContourPolygon &amp;p, const string &amp;filename, const CvScalar &amp;stroke, const CvScalar &amp;fill)</argsstring>
+        <name>cvWriteContourPolygonSVG</name>
+        <param>
+          <type>const CvContourPolygon &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const CvScalar &amp;</type>
+          <declname>stroke</declname>
+        </param>
+        <param>
+          <type>const CvScalar &amp;</type>
+          <declname>fill</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvcontour.cpp" line="391" bodyfile="/tmp/cvblob/cvBlob/cvcontour.cpp" bodystart="390" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1aec8ed9e75a8b094a624707b932f5d219" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cvb::distantBlobTrack</definition>
+        <argsstring>(CvBlob const *b, CvTrack const *t)</argsstring>
+        <name>distantBlobTrack</name>
+        <param>
+          <type><ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> const *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> const *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvtrack.cpp" line="37" bodyfile="/tmp/cvblob/cvBlob/cvtrack.cpp" bodystart="36" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1aa431c203ced1d82cfce0b8d9998c8d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::getClusterForTrack</definition>
+        <argsstring>(unsigned int trackPos, CvID *close, unsigned int nBlobs, unsigned int nTracks, CvBlobs const &amp;blobs, CvTracks const &amp;tracks, list&lt; CvBlob * &gt; &amp;bb, list&lt; CvTrack * &gt; &amp;tt)</argsstring>
+        <name>getClusterForTrack</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>trackPos</declname>
+        </param>
+        <param>
+          <type>CvID *</type>
+          <declname>close</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nBlobs</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nTracks</declname>
+        </param>
+        <param>
+          <type>CvBlobs const &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <param>
+          <type>CvTracks const &amp;</type>
+          <declname>tracks</declname>
+        </param>
+        <param>
+          <type>list&lt; <ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> * &gt; &amp;</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>list&lt; <ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> * &gt; &amp;</type>
+          <declname>tt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvtrack.cpp" line="111" bodyfile="/tmp/cvblob/cvBlob/cvtrack.cpp" bodystart="135" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecvb_1a21b8bb48467827a1b260d41e171daee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cvb::getClusterForBlob</definition>
+        <argsstring>(unsigned int blobPos, CvID *close, unsigned int nBlobs, unsigned int nTracks, CvBlobs const &amp;blobs, CvTracks const &amp;tracks, list&lt; CvBlob * &gt; &amp;bb, list&lt; CvTrack * &gt; &amp;tt)</argsstring>
+        <name>getClusterForBlob</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>blobPos</declname>
+        </param>
+        <param>
+          <type>CvID *</type>
+          <declname>close</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nBlobs</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nTracks</declname>
+        </param>
+        <param>
+          <type>CvBlobs const &amp;</type>
+          <declname>blobs</declname>
+        </param>
+        <param>
+          <type>CvTracks const &amp;</type>
+          <declname>tracks</declname>
+        </param>
+        <param>
+          <type>list&lt; <ref refid="structcvb_1_1CvBlob" kindref="compound">CvBlob</ref> * &gt; &amp;</type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>list&lt; <ref refid="structcvb_1_1CvTrack" kindref="compound">CvTrack</ref> * &gt; &amp;</type>
+          <declname>tt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvtrack.cpp" line="114" bodyfile="/tmp/cvblob/cvBlob/cvtrack.cpp" bodystart="113" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/cvblob/cvBlob/cvaux.cpp" line="31"/>
+  </compounddef>
+</doxygen>

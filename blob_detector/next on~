@@ -1,0 +1,33 @@
+1 THEN 2:
+
+1) see if cvBlob will work
+
+  2.4 How can I compile a simple program with gcc/g++ that uses cvBlob?
+I usually use this Makefile in Kubuntu (considering that cvBlob is compiled and installed normally):
+
+sample:      sample.cpp
+        g++ `pkg-config opencv cvblob --cflags --libs` sample.cpp -o sample
+
+For CVBlob class read:
+ file:///home/robomakery/Code/slim/blob_detector/cvblob/doc/html/annotated.html
+
+
+2) BackgroundSubtractorMOG, (not MOG2, it's not as good)
+create class BackgroundSubtractor
+then use apply(mat image, Mat fgmask)
+
+
+Done
+HSV
+binary
+some colors
+
+some of packages for cvblob didn't install. problem?
+compiled cvblob
+
+
+color	H	S
+orange	8-13	136-180
+blue	101-105	221-252
+Yellow	19-22	89-184
+

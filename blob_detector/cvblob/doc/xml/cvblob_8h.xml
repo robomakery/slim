@@ -1,0 +1,706 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="cvblob_8h" kind="file">
+    <compoundname>cvblob.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">list</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">opencv/cv.h</includes>
+    <includedby refid="cvaux_8cpp" local="yes">cvBlob/cvaux.cpp</includedby>
+    <includedby refid="cvblob_8cpp" local="yes">cvBlob/cvblob.cpp</includedby>
+    <includedby refid="cvcolor_8cpp" local="yes">cvBlob/cvcolor.cpp</includedby>
+    <includedby refid="cvcontour_8cpp" local="yes">cvBlob/cvcontour.cpp</includedby>
+    <includedby refid="cvlabel_8cpp" local="yes">cvBlob/cvlabel.cpp</includedby>
+    <includedby refid="cvtrack_8cpp" local="yes">cvBlob/cvtrack.cpp</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>list</label>
+      </node>
+      <node id="26">
+        <label>limits</label>
+      </node>
+      <node id="27">
+        <label>opencv/cv.h</label>
+      </node>
+      <node id="23">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>vector</label>
+      </node>
+      <node id="22">
+        <label>iostream</label>
+      </node>
+      <node id="21">
+        <label>cvBlob/cvblob.h</label>
+        <link refid="cvblob.h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structcvb_1_1CvContourChainCode" prot="public">cvb::CvContourChainCode</innerclass>
+    <innerclass refid="structcvb_1_1CvBlob" prot="public">cvb::CvBlob</innerclass>
+    <innerclass refid="structcvb_1_1CvTrack" prot="public">cvb::CvTrack</innerclass>
+    <innernamespace refid="namespacecvb">cvb</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cvblob_8h_1a093b53ec45829ba70d9e8be437a9cfbe" prot="public" static="no">
+        <name>CVBLOB_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="31" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a6c3007549ff0f062e2bb4d9cae8a8147" prot="public" static="no">
+        <name>__CV_BEGIN__</name>
+        <initializer>__BEGIN__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="46" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a252c84a0954cc0bb5e011e7e6bf0be98" prot="public" static="no">
+        <name>__CV_END__</name>
+        <initializer>__END__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="49" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a15f244e529bb2c6a4e7245ec0fe51206" prot="public" static="no">
+        <name>CV_CHAINCODE_UP</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Up. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="66" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a9b7fcf030cfefac2339363851ee04773" prot="public" static="no">
+        <name>CV_CHAINCODE_UP_RIGHT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Up and right. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="67" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a92aac8df1864e48e85f3081e82e2c805" prot="public" static="no">
+        <name>CV_CHAINCODE_RIGHT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Right. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="68" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a15387f2b75523f414ce773b369b1f521" prot="public" static="no">
+        <name>CV_CHAINCODE_DOWN_RIGHT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>Down and right. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="69" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1aee51205238c5432d9aff4a92dd0f19ee" prot="public" static="no">
+        <name>CV_CHAINCODE_DOWN</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>Down. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="70" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1aab9a3cf6ed1c9431f39336e2689f79e3" prot="public" static="no">
+        <name>CV_CHAINCODE_DOWN_LEFT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para>Down and left. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="71" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1aa7dc08f3867bc7c5d1ed941c4a440c21" prot="public" static="no">
+        <name>CV_CHAINCODE_LEFT</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para>Left. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="72" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a1a4babf8e3ceb3c89b579a222577f29f" prot="public" static="no">
+        <name>CV_CHAINCODE_UP_LEFT</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para>Up and left. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="73" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a7b6294f56d1d9089f71d9236162a6df0" prot="public" static="no">
+        <name>IPL_DEPTH_LABEL</name>
+        <initializer>(sizeof(cvb::CvLabel)*8)</initializer>
+        <briefdescription>
+<para>Size of a label in bits. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvLabel </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="210" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a2738c9b3cad1cc8cda097cacc0ae45f8" prot="public" static="no">
+        <name>CV_BLOB_MAX_LABEL</name>
+        <initializer>std::numeric_limits&lt;CvLabel&gt;::max()</initializer>
+        <briefdescription>
+<para>Max label number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>CvLabel. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="215" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a72ea76fd059c1bd5191038c3c4a806d2" prot="public" static="no">
+        <name>CV_BLOB_RENDER_COLOR</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Render each blog with a different color. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="389" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a9c8c94ebb8d703696f22e30895618c91" prot="public" static="no">
+        <name>CV_BLOB_RENDER_CENTROID</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>Render centroid. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="390" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a8910d4138f7650718f7fe219cda784d2" prot="public" static="no">
+        <name>CV_BLOB_RENDER_BOUNDING_BOX</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+<para>Render bounding box. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="391" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1aa84ebce42d1053bfc4552d06c9ec4bee" prot="public" static="no">
+        <name>CV_BLOB_RENDER_ANGLE</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+<para>Render angle. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="392" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1aec0b96c61251408d29f5f0d20c041038" prot="public" static="no">
+        <name>CV_BLOB_RENDER_TO_LOG</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+<para>Print blob data to log out. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="393" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a2c5ecf02adc2da19fce6432aadcd6880" prot="public" static="no">
+        <name>CV_BLOB_RENDER_TO_STD</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+<para>Print blob data to std out. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderBlobs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="394" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a83f567bb938cd43fc300b03096677b8e" prot="public" static="no">
+        <name>CV_TRACK_RENDER_ID</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Print the ID of each track in the image. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderTracks </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="552" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="552" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1aebdd3c18abef97e2bb1731480c620903" prot="public" static="no">
+        <name>CV_TRACK_RENDER_BOUNDING_BOX</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>Draw bounding box of each track in the image. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderTracks </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="553" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="553" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a61276c7a2cc5c680f6273678fc10ce8d" prot="public" static="no">
+        <name>CV_TRACK_RENDER_TO_LOG</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+<para>Print track info to log out. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderTracks </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="554" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="554" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cvblob_8h_1a269993759feafe78d0a073375d27e55e" prot="public" static="no">
+        <name>CV_TRACK_RENDER_TO_STD</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+<para>Print track info to log out. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>cvRenderTracks </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="555" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="555" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cvblob_8h_1ac75f7848e8852265da838623733ae6fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;output, const cvb::CvBlob &amp;b)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structcvb_1_1CvBlob" kindref="compound">cvb::CvBlob</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Overload operator &quot;&lt;&lt;&quot; for printing blob structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Stream. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="577"/>
+      </memberdef>
+      <memberdef kind="function" id="cvblob_8h_1af2565de6152810afe509284d68bdcd8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;output, const cvb::CvContourPolygon &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const cvb::CvContourPolygon &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Overload operator &quot;&lt;&lt;&quot; for printing polygons in CSV format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Stream. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="582"/>
+      </memberdef>
+      <memberdef kind="function" id="cvblob_8h_1a471e2240410fa14b37b158f883141c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;output, const cvb::CvTrack &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structcvb_1_1CvTrack" kindref="compound">cvb::CvTrack</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Overload operator &quot;&lt;&lt;&quot; for printing track structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Stream. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="587"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>OpenCV Blob header file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007<sp/>by<sp/>Cristóbal<sp/>Carnero<sp/>Liñán</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>grendel.ccl@gmail.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>cvBlob.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cvBlob<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Lesser<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cvBlob<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Lesser<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>Lesser<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>cvBlob.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SWIG</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal">%module<sp/>cvblob</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">%{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cvblob_8h" kindref="compound" tooltip="OpenCV Blob header file.">cvblob.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">%}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CVBLOB_H</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CVBLOB_H</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(defined(_WIN32)<sp/>||<sp/>defined(__WIN32__)<sp/>||<sp/>defined(__TOS_WIN__)<sp/>||<sp/>defined(__WINDOWS__)<sp/>||<sp/>(defined(__APPLE__)<sp/>&amp;<sp/>defined(__MACH__)))</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;cv.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;opencv/cv.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__CV_BEGIN__</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__CV_BEGIN__<sp/>__BEGIN__</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>__CV_END__</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__CV_END__<sp/>__END__</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cvb</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Contours</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Chain<sp/>code:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7<sp/>0<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5<sp/>4<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="cvblob_8h_1a15f244e529bb2c6a4e7245ec0fe51206" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_UP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>///&lt;<sp/>Up.</highlight></codeline>
+<codeline lineno="67" refid="cvblob_8h_1a9b7fcf030cfefac2339363851ee04773" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_UP_RIGHT<sp/><sp/><sp/>1<sp/>///&lt;<sp/>Up<sp/>and<sp/>right.</highlight></codeline>
+<codeline lineno="68" refid="cvblob_8h_1a92aac8df1864e48e85f3081e82e2c805" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_RIGHT<sp/><sp/><sp/><sp/><sp/><sp/>2<sp/>///&lt;<sp/>Right.</highlight></codeline>
+<codeline lineno="69" refid="cvblob_8h_1a15387f2b75523f414ce773b369b1f521" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_DOWN_RIGHT<sp/>3<sp/>///&lt;<sp/>Down<sp/>and<sp/>right.</highlight></codeline>
+<codeline lineno="70" refid="cvblob_8h_1aee51205238c5432d9aff4a92dd0f19ee" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_DOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/>///&lt;<sp/>Down.</highlight></codeline>
+<codeline lineno="71" refid="cvblob_8h_1aab9a3cf6ed1c9431f39336e2689f79e3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_DOWN_LEFT<sp/><sp/>5<sp/>///&lt;<sp/>Down<sp/>and<sp/>left.</highlight></codeline>
+<codeline lineno="72" refid="cvblob_8h_1aa7dc08f3867bc7c5d1ed941c4a440c21" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_LEFT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/>///&lt;<sp/>Left.</highlight></codeline>
+<codeline lineno="73" refid="cvblob_8h_1a1a4babf8e3ceb3c89b579a222577f29f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_CHAINCODE_UP_LEFT<sp/><sp/><sp/><sp/>7<sp/>///&lt;<sp/>Up<sp/>and<sp/>left.</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cvChainCodeMoves[8][2]<sp/>=<sp/>{<sp/>{<sp/>0,<sp/>-1},</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>1,<sp/>-1},</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>1,<sp/><sp/>0},</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>1,<sp/><sp/>1},</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/><sp/>1},</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{-1,<sp/><sp/>1},</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{-1,<sp/><sp/>0},</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{-1,<sp/>-1}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>CvChainCode;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::list&lt;CvChainCode&gt;<sp/>CvChainCodes;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="structcvb_1_1CvContourChainCode" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcvb_1_1CvContourChainCode" kindref="compound" tooltip="Chain code contour.">CvContourChainCode</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113" refid="structcvb_1_1CvContourChainCode_1a97e1346b532ae1cd42e8f75feaa0bb84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvPoint<sp/><ref refid="structcvb_1_1CvContourChainCode_1a97e1346b532ae1cd42e8f75feaa0bb84" kindref="member" tooltip="Point where contour begin.">startingPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="114" refid="structcvb_1_1CvContourChainCode_1a5bd862d6110944a1cab83c134aecd19b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvChainCodes<sp/><ref refid="structcvb_1_1CvContourChainCode_1a5bd862d6110944a1cab83c134aecd19b" kindref="member" tooltip="Polygon description based on chain codes.">chainCode</ref>;<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::list&lt;CvContourChainCode<sp/>*&gt;<sp/>CvContoursChainCode;<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;CvPoint&gt;<sp/>CvContourPolygon;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvRenderContourChainCode(<ref refid="structcvb_1_1CvContourChainCode" kindref="compound" tooltip="Chain code contour.">CvContourChainCode</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*contour,<sp/>IplImage<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*img,<sp/>CvScalar<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;color=CV_RGB(255,<sp/>255,<sp/>255));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>CvContourPolygon<sp/>*cvConvertChainCodesToPolygon(<ref refid="structcvb_1_1CvContourChainCode" kindref="compound" tooltip="Chain code contour.">CvContourChainCode</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*cc);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvRenderContourPolygon(CvContourPolygon<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*contour,<sp/>IplImage<sp/>*img,<sp/>CvScalar<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;color=CV_RGB(255,<sp/>255,<sp/>255));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvContourPolygonArea(CvContourPolygon<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvContourChainCodePerimeter(<ref refid="structcvb_1_1CvContourChainCode" kindref="compound" tooltip="Chain code contour.">CvContourChainCode</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*c);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvContourPolygonPerimeter(CvContourPolygon<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvContourPolygonCircularity(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvContourPolygon<sp/>*p);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>CvContourPolygon<sp/>*cvSimplifyPolygon(CvContourPolygon<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>delta=1.);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>CvContourPolygon<sp/>*cvPolygonContourConvexHull(CvContourPolygon<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvWriteContourPolygonCSV(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvContourPolygon&amp;<sp/>p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvWriteContourPolygonSVG(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvContourPolygon&amp;<sp/>p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvScalar&amp;<sp/>stroke=cvScalar(0,0,0),<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvScalar&amp;<sp/>fill=cvScalar(255,255,255));</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Blobs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CvLabel;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//typedef<sp/>unsigned<sp/>char<sp/>CvLabel;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="cvblob_8h_1a7b6294f56d1d9089f71d9236162a6df0" refkind="member"><highlight class="preprocessor">#define<sp/>IPL_DEPTH_LABEL<sp/>(sizeof(cvb::CvLabel)*8)</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="215" refid="cvblob_8h_1a2738c9b3cad1cc8cda097cacc0ae45f8" refkind="member"><highlight class="preprocessor">#define<sp/>CV_BLOB_MAX_LABEL<sp/>std::numeric_limits&lt;CvLabel&gt;::max()</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CvID;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="structcvb_1_1CvBlob" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcvb_1_1CvBlob" kindref="compound" tooltip="Struct that contain information about one blob.">CvBlob</ref></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="223" refid="structcvb_1_1CvBlob_1a011eee1bdd419306dfad2919fe71ba80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvLabel<sp/><ref refid="structcvb_1_1CvBlob_1a011eee1bdd419306dfad2919fe71ba80" kindref="member" tooltip="Label assigned to the blob.">label</ref>;<sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227" refid="structcvb_1_1CvBlob_1a44fcb2c65be742c381880198d2b202d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a44fcb2c65be742c381880198d2b202d1" kindref="member" tooltip="Area (moment 00).">area</ref>;<sp/></highlight></codeline>
+<codeline lineno="228" refid="structcvb_1_1CvBlob_1ac73a5360b536d206d93995b50e9c8eb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1ac73a5360b536d206d93995b50e9c8eb9" kindref="member" tooltip="Moment 00 (area).">m00</ref>;<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231" refid="structcvb_1_1CvBlob_1a70ed8c3e8b158842983f631ee00d55b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a70ed8c3e8b158842983f631ee00d55b5" kindref="member" tooltip="X min.">minx</ref>;<sp/></highlight></codeline>
+<codeline lineno="232" refid="structcvb_1_1CvBlob_1a1fae7781545e101568385e7a4921538e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a1fae7781545e101568385e7a4921538e" kindref="member" tooltip="X max.">maxx</ref>;<sp/></highlight></codeline>
+<codeline lineno="233" refid="structcvb_1_1CvBlob_1aac16e7325a884f4f0e3ea97ebd11248b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1aac16e7325a884f4f0e3ea97ebd11248b" kindref="member" tooltip="Y min.">miny</ref>;<sp/></highlight></codeline>
+<codeline lineno="234" refid="structcvb_1_1CvBlob_1a6cbd1c17e334d092a88e1e35114c92c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a6cbd1c17e334d092a88e1e35114c92c9" kindref="member" tooltip="y max.">maxy</ref>;<sp/></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236" refid="structcvb_1_1CvBlob_1a19e07c8a0a0e318d0b6f504231687f99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvPoint2D64f<sp/><ref refid="structcvb_1_1CvBlob_1a19e07c8a0a0e318d0b6f504231687f99" kindref="member" tooltip="Centroid.">centroid</ref>;<sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238" refid="structcvb_1_1CvBlob_1a2f95d6e2eeb0a054ea3873ff069b42a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a2f95d6e2eeb0a054ea3873ff069b42a0" kindref="member" tooltip="Moment 10.">m10</ref>;<sp/></highlight></codeline>
+<codeline lineno="239" refid="structcvb_1_1CvBlob_1a486f757303f05aff6fc9b4d8648176c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a486f757303f05aff6fc9b4d8648176c5" kindref="member" tooltip="Moment 01.">m01</ref>;<sp/></highlight></codeline>
+<codeline lineno="240" refid="structcvb_1_1CvBlob_1aea92467a48b540945dfd44fe037f65e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1aea92467a48b540945dfd44fe037f65e7" kindref="member" tooltip="Moment 11.">m11</ref>;<sp/></highlight></codeline>
+<codeline lineno="241" refid="structcvb_1_1CvBlob_1af7a84e3fe0f66ba6255eb44d95dce208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1af7a84e3fe0f66ba6255eb44d95dce208" kindref="member" tooltip="Moment 20.">m20</ref>;<sp/></highlight></codeline>
+<codeline lineno="242" refid="structcvb_1_1CvBlob_1a889b587d96b3c20c676444cc20cfefbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a889b587d96b3c20c676444cc20cfefbb" kindref="member" tooltip="Moment 02.">m02</ref>;<sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="244" refid="structcvb_1_1CvBlob_1a086ef6361a63a5fd0d40c498fa6975f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a086ef6361a63a5fd0d40c498fa6975f4" kindref="member" tooltip="Central moment 11.">u11</ref>;<sp/></highlight></codeline>
+<codeline lineno="245" refid="structcvb_1_1CvBlob_1ae82c8e8b1b7cb4156c904485b05e4117" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1ae82c8e8b1b7cb4156c904485b05e4117" kindref="member" tooltip="Central moment 20.">u20</ref>;<sp/></highlight></codeline>
+<codeline lineno="246" refid="structcvb_1_1CvBlob_1a1843a266487572b336b1a4700c8a65b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a1843a266487572b336b1a4700c8a65b5" kindref="member" tooltip="Central moment 02.">u02</ref>;<sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="structcvb_1_1CvBlob_1a25f32c2e107103d8ef306efdfc71c5df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a25f32c2e107103d8ef306efdfc71c5df" kindref="member" tooltip="Normalized central moment 11.">n11</ref>;<sp/></highlight></codeline>
+<codeline lineno="249" refid="structcvb_1_1CvBlob_1a9897484f61aa933ec4f55fdf3d2947ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a9897484f61aa933ec4f55fdf3d2947ed" kindref="member" tooltip="Normalized central moment 20.">n20</ref>;<sp/></highlight></codeline>
+<codeline lineno="250" refid="structcvb_1_1CvBlob_1a5b4e4954b3b1d3f3e91203f85d5e8093" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a5b4e4954b3b1d3f3e91203f85d5e8093" kindref="member" tooltip="Normalized central moment 02.">n02</ref>;<sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="structcvb_1_1CvBlob_1a7d3cec154ce710730f41121e9d6c1b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a7d3cec154ce710730f41121e9d6c1b08" kindref="member" tooltip="Hu moment 1.">p1</ref>;<sp/></highlight></codeline>
+<codeline lineno="253" refid="structcvb_1_1CvBlob_1a07829ba96c277b4d998248a53284625f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob_1a07829ba96c277b4d998248a53284625f" kindref="member" tooltip="Hu moment 2.">p2</ref>;<sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="structcvb_1_1CvBlob_1adbf5a6017b4f313e80df1944b96a4896" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcvb_1_1CvContourChainCode" kindref="compound" tooltip="Chain code contour.">CvContourChainCode</ref><sp/><ref refid="structcvb_1_1CvBlob_1adbf5a6017b4f313e80df1944b96a4896" kindref="member" tooltip="Contour.">contour</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="256" refid="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvContoursChainCode<sp/><ref refid="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" kindref="member" tooltip="Internal contours.">internalContours</ref>;<sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;CvLabel,CvBlob<sp/>*&gt;<sp/>CvBlobs;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;CvLabel,CvBlob<sp/>*&gt;<sp/>CvLabelBlob;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cvLabel<sp/>(IplImage<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*img,<sp/>IplImage<sp/>*imgOut,<sp/>CvBlobs<sp/>&amp;blobs);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//IplImage<sp/>*cvFilterLabel(IplImage<sp/>*imgIn,<sp/>CvLabel<sp/>label);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvFilterLabels(IplImage<sp/>*imgIn,<sp/>IplImage<sp/>*imgOut,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvBlobs<sp/>&amp;blobs);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/>CvLabel<sp/>cvGetLabel(IplImage<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*img,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvReleaseBlob(<ref refid="structcvb_1_1CvBlob" kindref="compound" tooltip="Struct that contain information about one blob.">CvBlob</ref><sp/>*blob)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(blob)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(CvContoursChainCode::iterator<sp/>jt=blob-&gt;<ref refid="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" kindref="member" tooltip="Internal contours.">internalContours</ref>.begin();<sp/>jt!=blob-&gt;<ref refid="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" kindref="member" tooltip="Internal contours.">internalContours</ref>.end();<sp/>++jt)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structcvb_1_1CvContourChainCode" kindref="compound" tooltip="Chain code contour.">CvContourChainCode</ref><sp/>*contour<sp/>=<sp/>*jt;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(contour)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>contour;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>blob-&gt;<ref refid="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" kindref="member" tooltip="Internal contours.">internalContours</ref>.clear();</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>blob;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvReleaseBlobs(CvBlobs<sp/>&amp;blobs)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(CvBlobs::iterator<sp/>it=blobs.begin();<sp/>it!=blobs.end();<sp/>++it)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cvReleaseBlob((*it).second);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>blobs.clear();</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/>CvLabel<sp/>cvLargestBlob(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvBlobs<sp/>&amp;blobs);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>CvLabel<sp/>cvGreaterBlob(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CvBlobs<sp/>&amp;blobs)</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cvLargestBlob(blobs);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvFilterByArea(CvBlobs<sp/>&amp;blobs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minArea,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxArea);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvFilterByLabel(CvBlobs<sp/>&amp;blobs,<sp/>CvLabel<sp/>label);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>CvPoint2D64f<sp/>cvCentroid(CvBlob<sp/>*blob)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>blob-&gt;centroid=cvPoint2D64f(blob-&gt;m10/blob-&gt;area,<sp/>blob-&gt;m01/blob-&gt;area);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvAngle(CvBlob<sp/>*blob);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvSaveImageBlob(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/>IplImage<sp/>*img,<sp/>CvBlob<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*blob);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="389" refid="cvblob_8h_1a72ea76fd059c1bd5191038c3c4a806d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CV_BLOB_RENDER_COLOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001<sp/>///&lt;<sp/>Render<sp/>each<sp/>blog<sp/>with<sp/>a<sp/>different<sp/>color.<sp/>\see<sp/>cvRenderBlobs</highlight></codeline>
+<codeline lineno="390" refid="cvblob_8h_1a9c8c94ebb8d703696f22e30895618c91" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_BLOB_RENDER_CENTROID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0002<sp/>///&lt;<sp/>Render<sp/>centroid.<sp/>\see<sp/>cvRenderBlobs</highlight></codeline>
+<codeline lineno="391" refid="cvblob_8h_1a8910d4138f7650718f7fe219cda784d2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_BLOB_RENDER_BOUNDING_BOX<sp/><sp/><sp/><sp/><sp/>0x0004<sp/>///&lt;<sp/>Render<sp/>bounding<sp/>box.<sp/>\see<sp/>cvRenderBlobs</highlight></codeline>
+<codeline lineno="392" refid="cvblob_8h_1aa84ebce42d1053bfc4552d06c9ec4bee" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_BLOB_RENDER_ANGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0008<sp/>///&lt;<sp/>Render<sp/>angle.<sp/>\see<sp/>cvRenderBlobs</highlight></codeline>
+<codeline lineno="393" refid="cvblob_8h_1aec0b96c61251408d29f5f0d20c041038" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_BLOB_RENDER_TO_LOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0010<sp/>///&lt;<sp/>Print<sp/>blob<sp/>data<sp/>to<sp/>log<sp/>out.<sp/>\see<sp/>cvRenderBlobs</highlight></codeline>
+<codeline lineno="394" refid="cvblob_8h_1a2c5ecf02adc2da19fce6432aadcd6880" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_BLOB_RENDER_TO_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0020<sp/>///&lt;<sp/>Print<sp/>blob<sp/>data<sp/>to<sp/>std<sp/>out.<sp/>\see<sp/>cvRenderBlobs</highlight></codeline>
+<codeline lineno="395"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvRenderBlob(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IplImage<sp/>*imgLabel,<sp/>CvBlob<sp/>*blob,<sp/>IplImage<sp/>*imgSource,<sp/>IplImage<sp/>*imgDest,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>mode=0x000f,<sp/>CvScalar<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;color=CV_RGB(255,<sp/>255,<sp/>255),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha=1.);</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvRenderBlobs(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IplImage<sp/>*imgLabel,<sp/>CvBlobs<sp/>&amp;blobs,<sp/>IplImage<sp/>*imgSource,<sp/>IplImage<sp/>*imgDest,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>mode=0x000f,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha=1.);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvSetImageROItoBlob(IplImage<sp/>*img,<sp/>CvBlob<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*blob)</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/>cvSetImageROI(img,<sp/>cvRect(blob-&gt;minx,<sp/>blob-&gt;miny,<sp/>blob-&gt;maxx-blob-&gt;minx,<sp/>blob-&gt;maxy-blob-&gt;miny));</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/>CvScalar<sp/>cvBlobMeanColor(CvBlob<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*blob,<sp/>IplImage<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*imgLabel,<sp/>IplImage<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*img);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Aux</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvDotProductPoints(CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;c);</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvCrossProductPoints(CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;c);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvDistancePointPoint(CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cvDistanceLinePoint(CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b,<sp/>CvPoint<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;c,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isSegment=</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Tracking</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491" refid="structcvb_1_1CvTrack" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcvb_1_1CvTrack" kindref="compound" tooltip="Struct that contain information about one track.">CvTrack</ref></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="493" refid="structcvb_1_1CvTrack_1adefb8658228beb4986305f321561a9a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvID<sp/><ref refid="structcvb_1_1CvTrack_1adefb8658228beb4986305f321561a9a1" kindref="member" tooltip="Track identification number.">id</ref>;<sp/></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495" refid="structcvb_1_1CvTrack_1a55bc98d1a5579a109201d8b4516598b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvLabel<sp/><ref refid="structcvb_1_1CvTrack_1a55bc98d1a5579a109201d8b4516598b0" kindref="member" tooltip="Label assigned to the blob related to this track.">label</ref>;<sp/></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight></codeline>
+<codeline lineno="497" refid="structcvb_1_1CvTrack_1ae8a7f55f3146f80604c1320083d3cb05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1ae8a7f55f3146f80604c1320083d3cb05" kindref="member" tooltip="X min.">minx</ref>;<sp/></highlight></codeline>
+<codeline lineno="498" refid="structcvb_1_1CvTrack_1a97ac29e2d64c7c659721c5a9f0c56b5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1a97ac29e2d64c7c659721c5a9f0c56b5c" kindref="member" tooltip="X max.">maxx</ref>;<sp/></highlight></codeline>
+<codeline lineno="499" refid="structcvb_1_1CvTrack_1acb0827c96f57ef27914fbbe8932d7169" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1acb0827c96f57ef27914fbbe8932d7169" kindref="member" tooltip="Y min.">miny</ref>;<sp/></highlight></codeline>
+<codeline lineno="500" refid="structcvb_1_1CvTrack_1a46a2dc245cc4a0f75e25d04b46fe32a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1a46a2dc245cc4a0f75e25d04b46fe32a8" kindref="member" tooltip="y max.">maxy</ref>;<sp/></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="502" refid="structcvb_1_1CvTrack_1ae58e21902c6cd91ed50d244c499223a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CvPoint2D64f<sp/><ref refid="structcvb_1_1CvTrack_1ae58e21902c6cd91ed50d244c499223a4" kindref="member" tooltip="Centroid.">centroid</ref>;<sp/></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504" refid="structcvb_1_1CvTrack_1a62b746980694868060709156f0af306a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1a62b746980694868060709156f0af306a" kindref="member" tooltip="Indicates how much frames the object has been in scene.">lifetime</ref>;<sp/></highlight></codeline>
+<codeline lineno="505" refid="structcvb_1_1CvTrack_1a559cb8cb21100d19c4dc8537b776cb01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1a559cb8cb21100d19c4dc8537b776cb01" kindref="member" tooltip="Indicates number of frames that has been active from last inactive period.">active</ref>;<sp/></highlight></codeline>
+<codeline lineno="506" refid="structcvb_1_1CvTrack_1a3d28aba92ffd8dc349fd4186f5c3d9a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack_1a3d28aba92ffd8dc349fd4186f5c3d9a7" kindref="member" tooltip="Indicates number of frames that has been missing.">inactive</ref>;<sp/></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;CvID,<sp/>CvTrack<sp/>*&gt;<sp/>CvTracks;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;CvID,<sp/>CvTrack<sp/>*&gt;<sp/>CvIDTrack;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvReleaseTracks(CvTracks<sp/>&amp;tracks)</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(CvTracks::iterator<sp/>it=tracks.begin();<sp/>it!=tracks.end();<sp/>it++)</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structcvb_1_1CvTrack" kindref="compound" tooltip="Struct that contain information about one track.">CvTrack</ref><sp/>*track<sp/>=<sp/>(*it).second;</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(track)<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>track;</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/>tracks.clear();</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvUpdateTracks(CvBlobs<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b,<sp/>CvTracks<sp/>&amp;t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thDistance,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thInactive,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thActive=0);</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552" refid="cvblob_8h_1a83f567bb938cd43fc300b03096677b8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CV_TRACK_RENDER_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001<sp/>///&lt;<sp/>Print<sp/>the<sp/>ID<sp/>of<sp/>each<sp/>track<sp/>in<sp/>the<sp/>image.<sp/>\see<sp/>cvRenderTracks</highlight></codeline>
+<codeline lineno="553" refid="cvblob_8h_1aebdd3c18abef97e2bb1731480c620903" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_TRACK_RENDER_BOUNDING_BOX<sp/><sp/>0x0002<sp/>///&lt;<sp/>Draw<sp/>bounding<sp/>box<sp/>of<sp/>each<sp/>track<sp/>in<sp/>the<sp/>image.<sp/>\see<sp/>cvRenderTracks</highlight></codeline>
+<codeline lineno="554" refid="cvblob_8h_1a61276c7a2cc5c680f6273678fc10ce8d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_TRACK_RENDER_TO_LOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0010<sp/>///&lt;<sp/>Print<sp/>track<sp/>info<sp/>to<sp/>log<sp/>out.<sp/>\see<sp/>cvRenderTracks</highlight></codeline>
+<codeline lineno="555" refid="cvblob_8h_1a269993759feafe78d0a073375d27e55e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CV_TRACK_RENDER_TO_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0020<sp/>///&lt;<sp/>Print<sp/>track<sp/>info<sp/>to<sp/>log<sp/>out.<sp/>\see<sp/>cvRenderTracks</highlight></codeline>
+<codeline lineno="556"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cvRenderTracks(CvTracks<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>tracks,<sp/>IplImage<sp/>*imgSource,<sp/>IplImage<sp/>*imgDest,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>mode=0x000f,<sp/>CvFont<sp/>*font=NULL);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="571"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="573"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="577"><highlight class="normal">std::ostream&amp;<sp/><ref refid="cvblob_8h_1ac75f7848e8852265da838623733ae6fe" kindref="member" tooltip="Overload operator &amp;quot;&amp;lt;&amp;lt;&amp;quot; for printing blob structure.">operator&lt;&lt; </ref>(std::ostream&amp;<sp/>output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvBlob" kindref="compound" tooltip="Struct that contain information about one blob.">cvb::CvBlob</ref>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal">std::ostream&amp;<sp/><ref refid="cvblob_8h_1ac75f7848e8852265da838623733ae6fe" kindref="member" tooltip="Overload operator &amp;quot;&amp;lt;&amp;lt;&amp;quot; for printing blob structure.">operator&lt;&lt; </ref>(std::ostream&amp;<sp/>output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cvb::CvContourPolygon&amp;<sp/>p);</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal">std::ostream&amp;<sp/><ref refid="cvblob_8h_1ac75f7848e8852265da838623733ae6fe" kindref="member" tooltip="Overload operator &amp;quot;&amp;lt;&amp;lt;&amp;quot; for printing blob structure.">operator&lt;&lt; </ref>(std::ostream&amp;<sp/>output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structcvb_1_1CvTrack" kindref="compound" tooltip="Struct that contain information about one track.">cvb::CvTrack</ref>&amp;<sp/>t);</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/cvblob/cvBlob/cvblob.h"/>
+  </compounddef>
+</doxygen>

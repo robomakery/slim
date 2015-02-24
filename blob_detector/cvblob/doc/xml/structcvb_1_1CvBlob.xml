@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="structcvb_1_1CvBlob" kind="struct" prot="public">
+    <compoundname>cvb::CvBlob</compoundname>
+    <includes refid="cvblob_8h" local="no">cvblob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a011eee1bdd419306dfad2919fe71ba80" prot="public" static="no" mutable="no">
+        <type>CvLabel</type>
+        <definition>CvLabel cvb::CvBlob::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>Label assigned to the blob. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="223" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a44fcb2c65be742c381880198d2b202d1" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvBlob::area</definition>
+        <argsstring></argsstring>
+        <name>area</name>
+        <briefdescription>
+<para>Area (moment 00). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="227" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1ac73a5360b536d206d93995b50e9c8eb9" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvBlob::m00</definition>
+        <argsstring></argsstring>
+        <name>m00</name>
+        <briefdescription>
+<para>Moment 00 (area). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="228" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1ad8fd5e54f33840941220b0b241c2917c" prot="public" static="no" mutable="no">
+        <type>union cvb::CvBlob::@0</type>
+        <definition>union cvb::CvBlob::@0 cvb::CvBlob::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="229"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a70ed8c3e8b158842983f631ee00d55b5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvBlob::minx</definition>
+        <argsstring></argsstring>
+        <name>minx</name>
+        <briefdescription>
+<para>X min. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="231" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a1fae7781545e101568385e7a4921538e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvBlob::maxx</definition>
+        <argsstring></argsstring>
+        <name>maxx</name>
+        <briefdescription>
+<para>X max. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="232" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1aac16e7325a884f4f0e3ea97ebd11248b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvBlob::miny</definition>
+        <argsstring></argsstring>
+        <name>miny</name>
+        <briefdescription>
+<para>Y min. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="233" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a6cbd1c17e334d092a88e1e35114c92c9" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvBlob::maxy</definition>
+        <argsstring></argsstring>
+        <name>maxy</name>
+        <briefdescription>
+<para>y max. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="234" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a19e07c8a0a0e318d0b6f504231687f99" prot="public" static="no" mutable="no">
+        <type>CvPoint2D64f</type>
+        <definition>CvPoint2D64f cvb::CvBlob::centroid</definition>
+        <argsstring></argsstring>
+        <name>centroid</name>
+        <briefdescription>
+<para>Centroid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="236" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a2f95d6e2eeb0a054ea3873ff069b42a0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::m10</definition>
+        <argsstring></argsstring>
+        <name>m10</name>
+        <briefdescription>
+<para>Moment 10. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="238" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a486f757303f05aff6fc9b4d8648176c5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::m01</definition>
+        <argsstring></argsstring>
+        <name>m01</name>
+        <briefdescription>
+<para>Moment 01. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="239" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1aea92467a48b540945dfd44fe037f65e7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::m11</definition>
+        <argsstring></argsstring>
+        <name>m11</name>
+        <briefdescription>
+<para>Moment 11. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="240" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1af7a84e3fe0f66ba6255eb44d95dce208" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::m20</definition>
+        <argsstring></argsstring>
+        <name>m20</name>
+        <briefdescription>
+<para>Moment 20. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="241" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a889b587d96b3c20c676444cc20cfefbb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::m02</definition>
+        <argsstring></argsstring>
+        <name>m02</name>
+        <briefdescription>
+<para>Moment 02. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="242" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a086ef6361a63a5fd0d40c498fa6975f4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::u11</definition>
+        <argsstring></argsstring>
+        <name>u11</name>
+        <briefdescription>
+<para>Central moment 11. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="244" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1ae82c8e8b1b7cb4156c904485b05e4117" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::u20</definition>
+        <argsstring></argsstring>
+        <name>u20</name>
+        <briefdescription>
+<para>Central moment 20. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="245" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a1843a266487572b336b1a4700c8a65b5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::u02</definition>
+        <argsstring></argsstring>
+        <name>u02</name>
+        <briefdescription>
+<para>Central moment 02. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="246" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a25f32c2e107103d8ef306efdfc71c5df" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::n11</definition>
+        <argsstring></argsstring>
+        <name>n11</name>
+        <briefdescription>
+<para>Normalized central moment 11. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="248" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a9897484f61aa933ec4f55fdf3d2947ed" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::n20</definition>
+        <argsstring></argsstring>
+        <name>n20</name>
+        <briefdescription>
+<para>Normalized central moment 20. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="249" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a5b4e4954b3b1d3f3e91203f85d5e8093" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::n02</definition>
+        <argsstring></argsstring>
+        <name>n02</name>
+        <briefdescription>
+<para>Normalized central moment 02. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="250" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a7d3cec154ce710730f41121e9d6c1b08" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::p1</definition>
+        <argsstring></argsstring>
+        <name>p1</name>
+        <briefdescription>
+<para>Hu moment 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="252" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1a07829ba96c277b4d998248a53284625f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cvb::CvBlob::p2</definition>
+        <argsstring></argsstring>
+        <name>p2</name>
+        <briefdescription>
+<para>Hu moment 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="253" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1adbf5a6017b4f313e80df1944b96a4896" prot="public" static="no" mutable="no">
+        <type><ref refid="structcvb_1_1CvContourChainCode" kindref="compound">CvContourChainCode</ref></type>
+        <definition>CvContourChainCode cvb::CvBlob::contour</definition>
+        <argsstring></argsstring>
+        <name>contour</name>
+        <briefdescription>
+<para>Contour. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="255" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" prot="public" static="no" mutable="no">
+        <type>CvContoursChainCode</type>
+        <definition>CvContoursChainCode cvb::CvBlob::internalContours</definition>
+        <argsstring></argsstring>
+        <name>internalContours</name>
+        <briefdescription>
+<para>Internal contours. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="256" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct that contain information about one blob. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>cvb::CvBlob</label>
+        <link refid="structcvb_1_1CvBlob"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>contour</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cvb::CvContourChainCode</label>
+        <link refid="structcvb_1_1CvContourChainCode"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/cvblob/cvBlob/cvblob.h" line="222" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="221" bodyend="257"/>
+    <listofallmembers>
+      <member refid="structcvb_1_1CvBlob_1a44fcb2c65be742c381880198d2b202d1" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>area</name></member>
+      <member refid="structcvb_1_1CvBlob_1a19e07c8a0a0e318d0b6f504231687f99" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>centroid</name></member>
+      <member refid="structcvb_1_1CvBlob_1adbf5a6017b4f313e80df1944b96a4896" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>contour</name></member>
+      <member refid="structcvb_1_1CvBlob_1ab77ad4365d67059141e6e502a751a40b" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>internalContours</name></member>
+      <member refid="structcvb_1_1CvBlob_1a011eee1bdd419306dfad2919fe71ba80" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>label</name></member>
+      <member refid="structcvb_1_1CvBlob_1ac73a5360b536d206d93995b50e9c8eb9" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>m00</name></member>
+      <member refid="structcvb_1_1CvBlob_1a486f757303f05aff6fc9b4d8648176c5" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>m01</name></member>
+      <member refid="structcvb_1_1CvBlob_1a889b587d96b3c20c676444cc20cfefbb" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>m02</name></member>
+      <member refid="structcvb_1_1CvBlob_1a2f95d6e2eeb0a054ea3873ff069b42a0" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>m10</name></member>
+      <member refid="structcvb_1_1CvBlob_1aea92467a48b540945dfd44fe037f65e7" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>m11</name></member>
+      <member refid="structcvb_1_1CvBlob_1af7a84e3fe0f66ba6255eb44d95dce208" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>m20</name></member>
+      <member refid="structcvb_1_1CvBlob_1a1fae7781545e101568385e7a4921538e" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>maxx</name></member>
+      <member refid="structcvb_1_1CvBlob_1a6cbd1c17e334d092a88e1e35114c92c9" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>maxy</name></member>
+      <member refid="structcvb_1_1CvBlob_1a70ed8c3e8b158842983f631ee00d55b5" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>minx</name></member>
+      <member refid="structcvb_1_1CvBlob_1aac16e7325a884f4f0e3ea97ebd11248b" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>miny</name></member>
+      <member refid="structcvb_1_1CvBlob_1a5b4e4954b3b1d3f3e91203f85d5e8093" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>n02</name></member>
+      <member refid="structcvb_1_1CvBlob_1a25f32c2e107103d8ef306efdfc71c5df" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>n11</name></member>
+      <member refid="structcvb_1_1CvBlob_1a9897484f61aa933ec4f55fdf3d2947ed" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>n20</name></member>
+      <member refid="structcvb_1_1CvBlob_1a7d3cec154ce710730f41121e9d6c1b08" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>p1</name></member>
+      <member refid="structcvb_1_1CvBlob_1a07829ba96c277b4d998248a53284625f" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>p2</name></member>
+      <member refid="structcvb_1_1CvBlob_1a1843a266487572b336b1a4700c8a65b5" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>u02</name></member>
+      <member refid="structcvb_1_1CvBlob_1a086ef6361a63a5fd0d40c498fa6975f4" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>u11</name></member>
+      <member refid="structcvb_1_1CvBlob_1ae82c8e8b1b7cb4156c904485b05e4117" prot="public" virt="non-virtual"><scope>cvb::CvBlob</scope><name>u20</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="structcvb_1_1CvContourChainCode" kind="struct" prot="public">
+    <compoundname>cvb::CvContourChainCode</compoundname>
+    <includes refid="cvblob_8h" local="no">cvblob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcvb_1_1CvContourChainCode_1a97e1346b532ae1cd42e8f75feaa0bb84" prot="public" static="no" mutable="no">
+        <type>CvPoint</type>
+        <definition>CvPoint cvb::CvContourChainCode::startingPoint</definition>
+        <argsstring></argsstring>
+        <name>startingPoint</name>
+        <briefdescription>
+<para>Point where contour begin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="113" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvContourChainCode_1a5bd862d6110944a1cab83c134aecd19b" prot="public" static="no" mutable="no">
+        <type>CvChainCodes</type>
+        <definition>CvChainCodes cvb::CvContourChainCode::chainCode</definition>
+        <argsstring></argsstring>
+        <name>chainCode</name>
+        <briefdescription>
+<para>Polygon description based on chain codes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="114" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Chain code contour. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>CvChainCodes </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/tmp/cvblob/cvBlob/cvblob.h" line="112" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="111" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structcvb_1_1CvContourChainCode_1a5bd862d6110944a1cab83c134aecd19b" prot="public" virt="non-virtual"><scope>cvb::CvContourChainCode</scope><name>chainCode</name></member>
+      <member refid="structcvb_1_1CvContourChainCode_1a97e1346b532ae1cd42e8f75feaa0bb84" prot="public" virt="non-virtual"><scope>cvb::CvContourChainCode</scope><name>startingPoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
