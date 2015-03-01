@@ -8,7 +8,13 @@
     <!-- Filter points outside this minimum and maximum range -->
     <param name="limit_min" value="0.3" />
     <param name="limit_max" value="1.0" />
-    <!--Uncomment to publish point cloud after passthrough range filter -->
+    <!-- Uncomment to publish point cloud after passthrough range filter -->
     <param name="passthrough_output_cloud_topic" value="/camera/depth/points_passthrough" />
+
+    <!-- Voxel size after subsampling passthrough filtered point cloud -->
+    <param name="subsampled_voxel_size" value="0.025" />
+    <!-- Uncomment to publish point cloud after voxel grid filter -->
+    <param name="subsampled_output_cloud_topic" value="/camera/depth/points_subsampled" />
   </node>
+
 </launch>

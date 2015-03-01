@@ -9,15 +9,16 @@
 #include <pcl/segmentation/extract_clusters.h>
 #include <pcl/filters/passthrough.h>
 
-//using namespace std;
+#include "slim_perception/CloudVoxelizer.h"
 
 typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
 //typedef sensor_msgs::PointCloud2 PointCloud;
 
 ros::Publisher pubPassthrough;
-
 double passThroughLimitMin = 0.0f;
 double passThroughLimitMax = 2.0f;
+
+boost::scoped_ptr<CloudVoxelizer> voxelizer;
 
 void callback(const PointCloud::ConstPtr& msg)
 {
@@ -36,6 +37,10 @@ void callback(const PointCloud::ConstPtr& msg)
   filter.setFilterLimits(passThroughLimitMin, passThroughLimitMax);
   
   filter.filter(*cloudPassThroughFiltered);
+
+
+  // Subsample through voxel grid filter
+  voxelizer->voxelize(cloudPassThroughFiltered);
 
   // kd-tree object for searches.
 //pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree(new pcl::search::KdTree<pcl::PointXYZ>);
@@ -122,6 +127,8 @@ void callback(const PointCloud::ConstPtr& msg)
   if (pubPassthrough.getNumSubscribers() > 0) {
     pubPassthrough.publish(cloudPassThroughFiltered);
   }
+
+  voxelizer->publish();
 }
 
 int main(int argc, char **argv)
@@ -134,6 +141,8 @@ int main(int argc, char **argv)
   int rate;
   std::string inputCloudTopic;
   std::string passthroughOutputCloudTopic;
+  std::string subsampledOutputCloudTopic;
+  double subsampledVoxelSize;
 
   // Initialize node parameters from launch file or command line.
   // Use a private node handle so that multiple instances of the node can be run simultaneously
@@ -144,11 +153,16 @@ int main(int argc, char **argv)
   private_node_handle_.param("limit_min", passThroughLimitMin, 0.0);
   private_node_handle_.param("limit_max", passThroughLimitMax, 2.0);
   private_node_handle_.param("passthrough_output_cloud_topic", passthroughOutputCloudTopic, std::string(""));
+  private_node_handle_.param("subsampled_output_cloud_topic", subsampledOutputCloudTopic, std::string(""));
+  private_node_handle_.param("subsampled_voxel_size", subsampledVoxelSize, 0.025);
 
   if (!passthroughOutputCloudTopic.empty()) {
     // Create a publisher
     pubPassthrough = n.advertise<PointCloud> (passthroughOutputCloudTopic, 1);
   }
+
+  // Initialize point cloud subsampler (voxelizer)
+  voxelizer.reset(new CloudVoxelizer(private_node_handle_, subsampledOutputCloudTopic, subsampledVoxelSize));
 
   // Create a subscriber.
   // Name the topic, message queue, callback function with class name, and object containing callback function.

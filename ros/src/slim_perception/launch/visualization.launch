@@ -1,0 +1,4 @@
+<launch>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slim_perception)/launch/slim_perception.rviz" />
+</launch>

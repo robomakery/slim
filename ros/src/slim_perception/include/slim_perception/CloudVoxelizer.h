@@ -35,7 +35,9 @@ CloudVoxelizer::CloudVoxelizer(ros::NodeHandle &nh,
 {
   // Set up publisher for voxel grid 
   uint32_t queueSize = 1;
-  m_pub = nh.advertise<PointCloud>(outputVoxelGridTopic, queueSize, latch);
+  if (!outputVoxelGridTopic.empty()) {
+    m_pub = nh.advertise<PointCloud>(outputVoxelGridTopic, queueSize, latch);
+  }
 
   // Allocate output point cloud container
   m_voxelizedCloud.reset(new PointCloud);
@@ -58,7 +60,7 @@ void CloudVoxelizer::voxelize(PointCloud::ConstPtr cloudPtr)
 void CloudVoxelizer::publish()
 {
   // Publish
-  if (m_voxelizedCloud) {
+  if (m_voxelizedCloud && m_pub.getNumSubscribers()>0) {
     m_pub.publish(m_voxelizedCloud); 
   }
 }
