@@ -7,19 +7,35 @@
 //#include <pcl/filters/radius_outlier_removal.h>
 //#include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/segmentation/extract_clusters.h>
+#include <pcl/filters/passthrough.h>
 
-using namespace std;
+//using namespace std;
 
 typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
 //typedef sensor_msgs::PointCloud2 PointCloud;
 
-ros::Publisher pub;
+ros::Publisher pubPassthrough;
 
+double passThroughLimitMin = 0.0f;
+double passThroughLimitMax = 2.0f;
 
 void callback(const PointCloud::ConstPtr& msg)
 {
+  // Initialize point cloud for range-based pass through filtering
+  PointCloud::Ptr cloudPassThroughFiltered(new PointCloud);
+
   PointCloud::Ptr cloudExtracted(new PointCloud);
 //PointCloud::Ptr filteredCloud(new PointCloud);
+
+
+  // Pass Through Filter object.
+  pcl::PassThrough<pcl::PointXYZ> filter;
+  filter.setInputCloud(msg);
+  // Filter out all points with Z values not in the [min-max] range.
+  filter.setFilterFieldName("z");
+  filter.setFilterLimits(passThroughLimitMin, passThroughLimitMax);
+  
+  filter.filter(*cloudPassThroughFiltered);
 
   // kd-tree object for searches.
 //pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree(new pcl::search::KdTree<pcl::PointXYZ>);
@@ -41,7 +57,8 @@ void callback(const PointCloud::ConstPtr& msg)
 //
 //filter.filter(*filteredCloud);
 
-  // Plane segmentation (do not worry, we will see this later).
+  #if 0
+  // Plane segmentation
   pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients);
   pcl::SACSegmentation<pcl::PointXYZ> segmentation;
   segmentation.setOptimizeCoefficients(true);
@@ -62,6 +79,7 @@ void callback(const PointCloud::ConstPtr& msg)
   // We will extract the points that are NOT indexed (the ones that are not in a plane).
   extract.setNegative(true);
   extract.filter(*cloudExtracted);
+#endif
 
 //// Euclidean clustering object.
 //kdtree->setInputCloud(cloudExtracted);
@@ -96,13 +114,14 @@ void callback(const PointCloud::ConstPtr& msg)
 ////  std::string fileName = "cluster" + boost::to_string(currentClusterNum) + ".pcd";
 ////  pcl::io::savePCDFileASCII(fileName, *cluster);
 //
-//    pub.publish(cluster);
+//    pubPassthrough.publish(cluster);
 //
 //    currentClusterNum++;
 //  }
-  
 
-  pub.publish(cloudExtracted);
+  if (pubPassthrough.getNumSubscribers() > 0) {
+    pubPassthrough.publish(cloudPassThroughFiltered);
+  }
 }
 
 int main(int argc, char **argv)
@@ -113,21 +132,27 @@ int main(int argc, char **argv)
 
   // Declare variables that can be modified by launch file or command line.
   int rate;
-  string topic;
+  std::string inputCloudTopic;
+  std::string passthroughOutputCloudTopic;
 
   // Initialize node parameters from launch file or command line.
   // Use a private node handle so that multiple instances of the node can be run simultaneously
   // while using different parameters.
   ros::NodeHandle private_node_handle_("~");
   private_node_handle_.param("rate", rate, int(40));
-  private_node_handle_.param("topic", topic, string("/camera/depth/points"));
+  private_node_handle_.param("topic", inputCloudTopic, std::string("/camera/depth/points"));
+  private_node_handle_.param("limit_min", passThroughLimitMin, 0.0);
+  private_node_handle_.param("limit_max", passThroughLimitMax, 2.0);
+  private_node_handle_.param("passthrough_output_cloud_topic", passthroughOutputCloudTopic, std::string(""));
 
-  // Create a publisher
-  pub = n.advertise<PointCloud> ("points2", 1);
+  if (!passthroughOutputCloudTopic.empty()) {
+    // Create a publisher
+    pubPassthrough = n.advertise<PointCloud> (passthroughOutputCloudTopic, 1);
+  }
 
   // Create a subscriber.
   // Name the topic, message queue, callback function with class name, and object containing callback function.
-  ros::Subscriber sub_message = n.subscribe<PointCloud>(topic.c_str(), 1, callback);
+  ros::Subscriber sub_message = n.subscribe<PointCloud>(inputCloudTopic.c_str(), 1, callback);
 
   ros::spin();
 

@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- RGBD camera driver -->
+  <include file="$(find openni2_launch)/launch/openni2.launch" />
+
+  <!-- Main Point Cloud Perception Processing node -->
+  <node name="slim_perception" pkg="slim_perception" type="slim_perception_node">
+    <!-- Filter points outside this minimum and maximum range -->
+    <param name="limit_min" value="0.3" />
+    <param name="limit_max" value="1.0" />
+    <!--Uncomment to publish point cloud after passthrough range filter -->
+    <param name="passthrough_output_cloud_topic" value="/camera/depth/points_passthrough" />
+  </node>
+</launch>
