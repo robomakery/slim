@@ -1,0 +1,7 @@
+<launch>
+  <!-- Path to bag file -->
+  <arg name="path" />
+
+  <!-- Node for playing back bag file -->
+  <node pkg="rosbag" type="play" name="player" output="screen" args="--clock --loop $(arg path)"/>
+</launch>

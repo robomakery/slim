@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- Name of output bag file -->
+  <arg name="prefix" />
+
+  <!-- Topics to record -->
+  <arg name="topics" default="/tf /camera/rgb/camera_info /camera/rgb/image_raw /camera/depth/points /camera/depth/camera_info" />
+
+  <!-- Node for playing back bag file -->
+  <node pkg="rosbag" type="record" name="recorder" output="screen" args="-o $(arg prefix) $(arg topics)"/>
+
+</launch>
