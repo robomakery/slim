@@ -7,8 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /Grid1/Offset1
-        - /VoxelPointCloud21
-      Splitter Ratio: 0.5
+      Splitter Ratio: 0.643312
     Tree Height: 465
   - Class: rviz/Selection
     Name: Selection
@@ -122,8 +121,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.40548
-        Min Value: -0.275797
+        Max Value: 0.405959
+        Min Value: -0.275425
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -142,7 +141,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.025
+      Size (m): 0.01
       Style: Boxes
       Topic: /camera/depth/points_subsampled
       Use Fixed Frame: true
