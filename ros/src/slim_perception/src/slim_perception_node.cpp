@@ -5,20 +5,21 @@
 #include <pcl/filters/extract_indices.h>
 #include <pcl/segmentation/sac_segmentation.h>
 //#include <pcl/filters/radius_outlier_removal.h>
-//#include <pcl/filters/statistical_outlier_removal.h>
+#include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/segmentation/extract_clusters.h>
 #include <pcl/filters/passthrough.h>
 
 #include "slim_perception/CloudVoxelizer.h"
 
 typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
-//typedef sensor_msgs::PointCloud2 PointCloud;
 
 ros::Publisher pubPassthrough;
 double passThroughLimitMin = 0.0f;
 double passThroughLimitMax = 2.0f;
 
 boost::scoped_ptr<CloudVoxelizer> voxelizer;
+
+ros::Publisher pubOutlierFilter;
 
 void callback(const PointCloud::ConstPtr& msg)
 {
@@ -28,6 +29,7 @@ void callback(const PointCloud::ConstPtr& msg)
   PointCloud::Ptr cloudExtracted(new PointCloud);
 //PointCloud::Ptr filteredCloud(new PointCloud);
 
+  PointCloud::Ptr cloudOutlierFilter(new PointCloud);
 
   // Pass Through Filter object.
   pcl::PassThrough<pcl::PointXYZ> filter;
@@ -35,32 +37,33 @@ void callback(const PointCloud::ConstPtr& msg)
   // Filter out all points with Z values not in the [min-max] range.
   filter.setFilterFieldName("z");
   filter.setFilterLimits(passThroughLimitMin, passThroughLimitMax);
-  
   filter.filter(*cloudPassThroughFiltered);
 
 
+//// Filter object.
+//pcl::RadiusOutlierRemoval<pcl::PointXYZ> radiusFilter;
+//radiusFilter.setInputCloud(cloudPassThroughFiltered);
+//// Every point must have 10 neighbors within 15cm, or it will be removed.
+//radiusFilter.setRadiusSearch(200);
+//radiusFilter.setMinNeighborsInRadius(1);
+//radiusFilter.filter(*cloudOutlierFilter);
+
+//// Filter object.
+//pcl::StatisticalOutlierRemoval<pcl::PointXYZ> statisticalFilter;
+//statisticalFilter.setInputCloud(cloudPassThroughFiltered);
+//// Set number of neighbors to consider to 50.
+//statisticalFilter.setMeanK(50);
+//// Set standard deviation multiplier to 1.
+//// Points with a distance larger than 1 standard deviation of the mean distance will be outliers.
+//statisticalFilter.setStddevMulThresh(1.0);
+//statisticalFilter.filter(*cloudOutlierFilter);
+
   // Subsample through voxel grid filter
+//voxelizer->voxelize(cloudOutlierFilter);
   voxelizer->voxelize(cloudPassThroughFiltered);
 
   // kd-tree object for searches.
 //pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree(new pcl::search::KdTree<pcl::PointXYZ>);
-
-  // Filter object.
-//pcl::StatisticalOutlierRemoval<pcl::PointXYZ> filter;
-//filter.setInputCloud(msg);
-//// Set number of neighbors to consider to 50.
-//filter.setMeanK(50);
-//// Set standard deviation multiplier to 1.
-//// Points with a distance larger than 1 standard deviation of the mean distance will be outliers.
-//filter.setStddevMulThresh(1.0);
-
-//// Filter object.
-//pcl::RadiusOutlierRemoval<pcl::PointXYZ> filter;
-//// Every point must have 10 neighbors within 15cm, or it will be removed.
-//filter.setRadiusSearch(0.15);
-//filter.setMinNeighborsInRadius(10);
-//
-//filter.filter(*filteredCloud);
 
   #if 0
   // Plane segmentation
@@ -128,6 +131,10 @@ void callback(const PointCloud::ConstPtr& msg)
     pubPassthrough.publish(cloudPassThroughFiltered);
   }
 
+  if (pubOutlierFilter.getNumSubscribers() > 0) {
+    pubOutlierFilter.publish(cloudOutlierFilter);
+  }
+
   voxelizer->publish();
 }
 
@@ -141,6 +148,7 @@ int main(int argc, char **argv)
   int rate;
   std::string inputCloudTopic;
   std::string passthroughOutputCloudTopic;
+  std::string inlierOutputCloudTopic;
   std::string subsampledOutputCloudTopic;
   double subsampledVoxelSize;
 
@@ -153,12 +161,17 @@ int main(int argc, char **argv)
   private_node_handle_.param("limit_min", passThroughLimitMin, 0.0);
   private_node_handle_.param("limit_max", passThroughLimitMax, 2.0);
   private_node_handle_.param("passthrough_output_cloud_topic", passthroughOutputCloudTopic, std::string(""));
+  private_node_handle_.param("inlier_output_cloud_topic", inlierOutputCloudTopic, std::string(""));
   private_node_handle_.param("subsampled_output_cloud_topic", subsampledOutputCloudTopic, std::string(""));
   private_node_handle_.param("subsampled_voxel_size", subsampledVoxelSize, 0.025);
 
   if (!passthroughOutputCloudTopic.empty()) {
     // Create a publisher
-    pubPassthrough = n.advertise<PointCloud> (passthroughOutputCloudTopic, 1);
+    pubPassthrough = n.advertise<PointCloud>(passthroughOutputCloudTopic, 1);
+  }
+
+  if (!inlierOutputCloudTopic.empty()) {
+    pubOutlierFilter = n.advertise<PointCloud>(inlierOutputCloudTopic, 1);
   }
 
   // Initialize point cloud subsampler (voxelizer)
