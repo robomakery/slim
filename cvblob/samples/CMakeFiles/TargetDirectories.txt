@@ -1,0 +1,1 @@
+/home/robomakery/Code/slim/cvblob/samples/CMakeFiles/redObject.dir

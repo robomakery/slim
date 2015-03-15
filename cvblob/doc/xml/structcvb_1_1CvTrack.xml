@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="structcvb_1_1CvTrack" kind="struct" prot="public">
+    <compoundname>cvb::CvTrack</compoundname>
+    <includes refid="cvblob_8h" local="no">cvblob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1adefb8658228beb4986305f321561a9a1" prot="public" static="no" mutable="no">
+        <type>CvID</type>
+        <definition>CvID cvb::CvTrack::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Track identification number. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="493" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1a55bc98d1a5579a109201d8b4516598b0" prot="public" static="no" mutable="no">
+        <type>CvLabel</type>
+        <definition>CvLabel cvb::CvTrack::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+<para>Label assigned to the blob related to this track. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="495" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1ae8a7f55f3146f80604c1320083d3cb05" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::minx</definition>
+        <argsstring></argsstring>
+        <name>minx</name>
+        <briefdescription>
+<para>X min. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="497" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1a97ac29e2d64c7c659721c5a9f0c56b5c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::maxx</definition>
+        <argsstring></argsstring>
+        <name>maxx</name>
+        <briefdescription>
+<para>X max. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="498" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1acb0827c96f57ef27914fbbe8932d7169" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::miny</definition>
+        <argsstring></argsstring>
+        <name>miny</name>
+        <briefdescription>
+<para>Y min. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="499" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1a46a2dc245cc4a0f75e25d04b46fe32a8" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::maxy</definition>
+        <argsstring></argsstring>
+        <name>maxy</name>
+        <briefdescription>
+<para>y max. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="500" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1ae58e21902c6cd91ed50d244c499223a4" prot="public" static="no" mutable="no">
+        <type>CvPoint2D64f</type>
+        <definition>CvPoint2D64f cvb::CvTrack::centroid</definition>
+        <argsstring></argsstring>
+        <name>centroid</name>
+        <briefdescription>
+<para>Centroid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="502" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1a62b746980694868060709156f0af306a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::lifetime</definition>
+        <argsstring></argsstring>
+        <name>lifetime</name>
+        <briefdescription>
+<para>Indicates how much frames the object has been in scene. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="504" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1a559cb8cb21100d19c4dc8537b776cb01" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+<para>Indicates number of frames that has been active from last inactive period. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="505" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcvb_1_1CvTrack_1a3d28aba92ffd8dc349fd4186f5c3d9a7" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int cvb::CvTrack::inactive</definition>
+        <argsstring></argsstring>
+        <name>inactive</name>
+        <briefdescription>
+<para>Indicates number of frames that has been missing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/cvblob/cvBlob/cvblob.h" line="506" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct that contain information about one track. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>CvID </para><simplesectsep/><para>CvLabel </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/tmp/cvblob/cvBlob/cvblob.h" line="492" bodyfile="/tmp/cvblob/cvBlob/cvblob.h" bodystart="491" bodyend="507"/>
+    <listofallmembers>
+      <member refid="structcvb_1_1CvTrack_1a559cb8cb21100d19c4dc8537b776cb01" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>active</name></member>
+      <member refid="structcvb_1_1CvTrack_1ae58e21902c6cd91ed50d244c499223a4" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>centroid</name></member>
+      <member refid="structcvb_1_1CvTrack_1adefb8658228beb4986305f321561a9a1" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>id</name></member>
+      <member refid="structcvb_1_1CvTrack_1a3d28aba92ffd8dc349fd4186f5c3d9a7" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>inactive</name></member>
+      <member refid="structcvb_1_1CvTrack_1a55bc98d1a5579a109201d8b4516598b0" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>label</name></member>
+      <member refid="structcvb_1_1CvTrack_1a62b746980694868060709156f0af306a" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>lifetime</name></member>
+      <member refid="structcvb_1_1CvTrack_1a97ac29e2d64c7c659721c5a9f0c56b5c" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>maxx</name></member>
+      <member refid="structcvb_1_1CvTrack_1a46a2dc245cc4a0f75e25d04b46fe32a8" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>maxy</name></member>
+      <member refid="structcvb_1_1CvTrack_1ae8a7f55f3146f80604c1320083d3cb05" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>minx</name></member>
+      <member refid="structcvb_1_1CvTrack_1acb0827c96f57ef27914fbbe8932d7169" prot="public" virt="non-virtual"><scope>cvb::CvTrack</scope><name>miny</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

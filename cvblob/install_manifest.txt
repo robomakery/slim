@@ -1,0 +1,4 @@
+/usr/local/share/cvblob/cvBlobConfig.cmake
+/usr/local/lib/pkgconfig/cvblob.pc
+/usr/local/include/cvblob.h
+/usr/local/lib/libcvblob.so
