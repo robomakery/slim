@@ -18,7 +18,7 @@ int main( int argc, char** argv )
   if(argc > 1)
     imgName = argv[1];
   else
-    imgName = "./inputFiles/meta_items.jpg";
+    imgName = "./inputFiles/balls.jpg";
 
  Mat image;
  
@@ -44,8 +44,8 @@ int main( int argc, char** argv )
  //hsv_planes[2]; // V channel
   
 
- imwrite( "./outputFiles/H_meta.jpg", hsv_planes[0]  ); 
- imwrite( "./outputFiles/S_meta.jpg", hsv_planes[1]  );
+ //imwrite( "./outputFiles/H_meta.jpg", hsv_planes[0]  ); 
+ //imwrite( "./outputFiles/S_meta.jpg", hsv_planes[1]  );
 
  Mat hBinaryBlue;
  inRange(hsv_planes[0], Scalar(101),Scalar(105),hBinaryBlue);
@@ -60,12 +60,16 @@ int main( int argc, char** argv )
  //Use cvBlob library to get location and dimensions on blob
  // library available at http://cvblob.googlecode.com
  // cvblobs Struct takes a binary and original image and creates a blob list
-// CvBlobs blobs;
- //unsigned int result=cvLabel(hBinaryBlue, labelImg, blobs);
-
+ //  CvBlobs blobs;
+  // IplImage iplHBinBlue = hBinaryBlue; 
+  // IplImage iplimg = image; 
+//   IplImage* iplHBinBlue = new IplImage(hBinaryBlue);
+//IplImage* iplimg = new IplImage(image);
+  // unsigned int result=cvLabel(iplHBinBlue, iplimg, blobs);
+   
  
  
-
+//Release iplImage????HOW?
  waitKey(0);
  return 0;
 }
