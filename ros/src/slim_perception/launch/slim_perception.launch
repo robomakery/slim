@@ -27,6 +27,12 @@
     <param name="subsampled_voxel_size" value="0.01" />
     <!-- Uncomment to publish point cloud after voxel grid filter -->
     <param name="subsampled_output_cloud_topic" value="/camera/depth/points_subsampled" />
+
+    <param name="plane_output_cloud_topic" value="/camera/depth/points_plane" />
   </node>
 
+<!--
+  <node pkg="tf" type="static_transform_publisher" name="camera_base_link_broadcaster"
+        args="1 0 0 0 0 0 1 base_link camera_link 100" />
+-->
 </launch>

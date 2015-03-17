@@ -13,23 +13,24 @@
 
 typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
 
-ros::Publisher pubPassthrough;
 double passThroughLimitMin = 0.0f;
 double passThroughLimitMax = 2.0f;
 
 boost::scoped_ptr<CloudVoxelizer> voxelizer;
 
+// Publishers
+ros::Publisher pubPassthrough;
 ros::Publisher pubOutlierFilter;
+ros::Publisher pubPlaneFilter;
 
 void callback(const PointCloud::ConstPtr& msg)
 {
   // Initialize point cloud for range-based pass through filtering
   PointCloud::Ptr cloudPassThroughFiltered(new PointCloud);
-
   PointCloud::Ptr cloudExtracted(new PointCloud);
 //PointCloud::Ptr filteredCloud(new PointCloud);
-
   PointCloud::Ptr cloudOutlierFilter(new PointCloud);
+  PointCloud::Ptr cloudPlaneFilter(new PointCloud);
 
   // Pass Through Filter object.
   pcl::PassThrough<pcl::PointXYZ> filter;
@@ -63,17 +64,16 @@ void callback(const PointCloud::ConstPtr& msg)
   voxelizer->voxelize(cloudPassThroughFiltered);
 
   // kd-tree object for searches.
-//pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree(new pcl::search::KdTree<pcl::PointXYZ>);
+  pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree(new pcl::search::KdTree<pcl::PointXYZ>);
 
-  #if 0
   // Plane segmentation
   pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients);
   pcl::SACSegmentation<pcl::PointXYZ> segmentation;
   segmentation.setOptimizeCoefficients(true);
   segmentation.setModelType(pcl::SACMODEL_PLANE);
   segmentation.setMethodType(pcl::SAC_RANSAC);
-  segmentation.setDistanceThreshold(0.03);
-  segmentation.setInputCloud(msg);
+  segmentation.setDistanceThreshold(0.01);
+  segmentation.setInputCloud(voxelizer->getVoxelizedCloud());
 
   // Object for storing the indices.
   pcl::PointIndices::Ptr pointIndices(new pcl::PointIndices);
@@ -82,26 +82,25 @@ void callback(const PointCloud::ConstPtr& msg)
 
   // Object for extracting points from a list of indices.
   pcl::ExtractIndices<pcl::PointXYZ> extract;
-  extract.setInputCloud(msg);
+  extract.setInputCloud(voxelizer->getVoxelizedCloud());
   extract.setIndices(pointIndices);
   // We will extract the points that are NOT indexed (the ones that are not in a plane).
   extract.setNegative(true);
-  extract.filter(*cloudExtracted);
-#endif
+  extract.filter(*cloudPlaneFilter);
 
-//// Euclidean clustering object.
-//kdtree->setInputCloud(cloudExtracted);
-//pcl::EuclideanClusterExtraction<pcl::PointXYZ> clustering;
-//// Set cluster tolerance to 2cm (small values may cause objects to be divided
-//// in several clusters, whereas big values may join objects in a same cluster).
-//clustering.setClusterTolerance(0.02);
-//// Set the minimum and maximum number of points that a cluster can have.
-//clustering.setMinClusterSize(100);
-//clustering.setMaxClusterSize(25000);
-//clustering.setSearchMethod(kdtree);
-//clustering.setInputCloud(cloudExtracted);
-//std::vector<pcl::PointIndices> clusters;
-//clustering.extract(clusters);
+  // Euclidean clustering object.
+  kdtree->setInputCloud(cloudPlaneFilter);
+  pcl::EuclideanClusterExtraction<pcl::PointXYZ> clustering;
+  // Set cluster tolerance to 2cm (small values may cause objects to be divided
+  // in several clusters, whereas big values may join objects in a same cluster).
+  clustering.setClusterTolerance(0.02);
+  // Set the minimum and maximum number of points that a cluster can have.
+  clustering.setMinClusterSize(100);
+  clustering.setMaxClusterSize(25000);
+  clustering.setSearchMethod(kdtree);
+  clustering.setInputCloud(cloudPlaneFilter);
+  std::vector<pcl::PointIndices> clusters;
+  clustering.extract(clusters);
 
 //  // For every cluster...
 //  int currentClusterNum = 1;
@@ -122,7 +121,7 @@ void callback(const PointCloud::ConstPtr& msg)
 ////  std::string fileName = "cluster" + boost::to_string(currentClusterNum) + ".pcd";
 ////  pcl::io::savePCDFileASCII(fileName, *cluster);
 //
-//    pubPassthrough.publish(cluster);
+////  pubPassthrough.publish(cluster);
 //
 //    currentClusterNum++;
 //  }
@@ -136,6 +135,10 @@ void callback(const PointCloud::ConstPtr& msg)
   }
 
   voxelizer->publish();
+
+  if (pubPlaneFilter.getNumSubscribers() > 0) {
+    pubPlaneFilter.publish(cloudPlaneFilter);
+  }
 }
 
 int main(int argc, char **argv)
@@ -151,6 +154,7 @@ int main(int argc, char **argv)
   std::string inlierOutputCloudTopic;
   std::string subsampledOutputCloudTopic;
   double subsampledVoxelSize;
+  std::string planeOutputCloudTopic;
 
   // Initialize node parameters from launch file or command line.
   // Use a private node handle so that multiple instances of the node can be run simultaneously
@@ -163,7 +167,8 @@ int main(int argc, char **argv)
   private_node_handle_.param("passthrough_output_cloud_topic", passthroughOutputCloudTopic, std::string(""));
   private_node_handle_.param("inlier_output_cloud_topic", inlierOutputCloudTopic, std::string(""));
   private_node_handle_.param("subsampled_output_cloud_topic", subsampledOutputCloudTopic, std::string(""));
-  private_node_handle_.param("subsampled_voxel_size", subsampledVoxelSize, 0.025);
+  private_node_handle_.param("subsampled_voxel_size", subsampledVoxelSize, 0.01);
+  private_node_handle_.param("plane_output_cloud_topic", planeOutputCloudTopic, std::string(""));
 
   if (!passthroughOutputCloudTopic.empty()) {
     // Create a publisher
@@ -176,6 +181,11 @@ int main(int argc, char **argv)
 
   // Initialize point cloud subsampler (voxelizer)
   voxelizer.reset(new CloudVoxelizer(private_node_handle_, subsampledOutputCloudTopic, subsampledVoxelSize));
+
+  // Publisher for plane filtering
+  if (!planeOutputCloudTopic.empty()) {
+    pubPlaneFilter = n.advertise<PointCloud>(planeOutputCloudTopic, 1);
+  }
 
   // Create a subscriber.
   // Name the topic, message queue, callback function with class name, and object containing callback function.
