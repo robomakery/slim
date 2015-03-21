@@ -22,6 +22,7 @@ boost::scoped_ptr<CloudVoxelizer> voxelizer;
 ros::Publisher pubPassthrough;
 ros::Publisher pubOutlierFilter;
 ros::Publisher pubPlaneFilter;
+ros::Publisher pubNonPlaneFilter;
 
 void callback(const PointCloud::ConstPtr& msg)
 {
@@ -30,6 +31,7 @@ void callback(const PointCloud::ConstPtr& msg)
   PointCloud::Ptr cloudExtracted(new PointCloud);
 //PointCloud::Ptr filteredCloud(new PointCloud);
   PointCloud::Ptr cloudOutlierFilter(new PointCloud);
+  PointCloud::Ptr cloudNonPlaneFilter(new PointCloud);
   PointCloud::Ptr cloudPlaneFilter(new PointCloud);
 
   // Pass Through Filter object.
@@ -86,45 +88,47 @@ void callback(const PointCloud::ConstPtr& msg)
   extract.setIndices(pointIndices);
   // We will extract the points that are NOT indexed (the ones that are not in a plane).
   extract.setNegative(true);
+  extract.filter(*cloudNonPlaneFilter);
+  // Extract points that ARE indexed (the ones that are in a plane)
+  extract.setNegative(false);
   extract.filter(*cloudPlaneFilter);
 
-  // Euclidean clustering object.
-  kdtree->setInputCloud(cloudPlaneFilter);
-  pcl::EuclideanClusterExtraction<pcl::PointXYZ> clustering;
-  // Set cluster tolerance to 2cm (small values may cause objects to be divided
-  // in several clusters, whereas big values may join objects in a same cluster).
-  clustering.setClusterTolerance(0.02);
-  // Set the minimum and maximum number of points that a cluster can have.
-  clustering.setMinClusterSize(100);
-  clustering.setMaxClusterSize(25000);
-  clustering.setSearchMethod(kdtree);
-  clustering.setInputCloud(cloudPlaneFilter);
-  std::vector<pcl::PointIndices> clusters;
-  clustering.extract(clusters);
 
-//  // For every cluster...
-//  int currentClusterNum = 1;
-//  for (std::vector<pcl::PointIndices>::const_iterator i = clusters.begin(); i != clusters.end(); ++i)
-//  {
-//    // ...add all its points to a new cloud...
-//    PointCloud::Ptr cluster(new PointCloud);
-//    for (std::vector<int>::const_iterator point = i->indices.begin(); point != i->indices.end(); point++)
-//      cluster->points.push_back(cloudExtracted->points[*point]);
-//    cluster->width = cluster->points.size();
-//    cluster->height = 1;
-//    cluster->is_dense = true;
-//
-//    // ...and save it to disk.
-//    if (cluster->points.size() <= 0)
-//      break;
-////  std::cout << "Cluster " << currentClusterNum << " has " << cluster->points.size() << " points." << std::endl;
-////  std::string fileName = "cluster" + boost::to_string(currentClusterNum) + ".pcd";
-////  pcl::io::savePCDFileASCII(fileName, *cluster);
-//
-////  pubPassthrough.publish(cluster);
-//
-//    currentClusterNum++;
+//// Euclidean clustering object.
+//kdtree->setInputCloud(cloudNonPlaneFilter);
+//pcl::EuclideanClusterExtraction<pcl::PointXYZ> clustering;
+//// Set cluster tolerance to 2cm (small values may cause objects to be divided
+//// in several clusters, whereas big values may join objects in a same cluster).
+//clustering.setClusterTolerance(0.02);
+//// Set the minimum and maximum number of points that a cluster can have.
+//clustering.setMinClusterSize(100);
+//clustering.setMaxClusterSize(25000);
+//clustering.setSearchMethod(kdtree);
+//clustering.setInputCloud(cloudNonPlaneFilter);
+//std::vector<pcl::PointIndices> clusters;
+//clustering.extract(clusters);
+
+//// For every cluster...
+//int currentClusterNum = 1;
+//for (std::vector<pcl::PointIndices>::const_iterator i = clusters.begin(); i != clusters.end(); ++i)
+//{
+//  // ...add all its points to a new cloud...
+//  PointCloud::Ptr cluster(new PointCloud);
+//  for (std::vector<int>::const_iterator point = i->indices.begin(); point != i->indices.end(); point++) {
+//    cluster->points.push_back(cloudExtracted->points[*point]);
 //  }
+//  cluster->width = cluster->points.size();
+//  cluster->height = 1;
+//  cluster->is_dense = true;
+//
+//  // ...and save it to disk.
+//  if (cluster->points.size() <= 0)
+//    break;
+//
+//  std::cout << "Cluster " << currentClusterNum << " has " << cluster->points.size() << " points." << std::endl;
+//  pubPassthrough.publish(cluster);
+//  currentClusterNum++;
+//}
 
   if (pubPassthrough.getNumSubscribers() > 0) {
     pubPassthrough.publish(cloudPassThroughFiltered);
@@ -136,6 +140,9 @@ void callback(const PointCloud::ConstPtr& msg)
 
   voxelizer->publish();
 
+  if (pubNonPlaneFilter.getNumSubscribers() > 0) {
+    pubNonPlaneFilter.publish(cloudNonPlaneFilter);
+  }
   if (pubPlaneFilter.getNumSubscribers() > 0) {
     pubPlaneFilter.publish(cloudPlaneFilter);
   }
@@ -184,7 +191,8 @@ int main(int argc, char **argv)
 
   // Publisher for plane filtering
   if (!planeOutputCloudTopic.empty()) {
-    pubPlaneFilter = n.advertise<PointCloud>(planeOutputCloudTopic, 1);
+    pubNonPlaneFilter = n.advertise<PointCloud>(planeOutputCloudTopic, 1);
+    pubPlaneFilter = n.advertise<PointCloud>("/camera/depth/points_plane", 1);
   }
 
   // Create a subscriber.
