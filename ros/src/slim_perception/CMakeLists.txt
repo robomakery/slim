@@ -7,6 +7,7 @@ project(slim_perception)
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   pcl_ros
+  image_transport
 )
 
 ## System dependencies are found with CMake's conventions
@@ -110,6 +111,7 @@ add_executable(simple_viewer src/simple_viewer.cpp)
 add_executable(generate_cad_model_views src/generate_cad_model_views.cpp)
 add_executable(cloud_matcher_node src/cloud_matcher_node.cpp)
 add_executable(test_opencv_features src/test_opencv_features.cpp)
+add_executable(image_object_matcher_node src/image_object_matcher_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -133,6 +135,9 @@ target_link_libraries(cloud_matcher_node
   ${catkin_LIBRARIES}
 )
 target_link_libraries(test_opencv_features
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(image_object_matcher_node
   ${catkin_LIBRARIES}
 )
 

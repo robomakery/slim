@@ -28,7 +28,7 @@
     <!-- Uncomment to publish point cloud after voxel grid filter -->
     <param name="subsampled_output_cloud_topic" value="/camera/depth/points_subsampled" />
 
-    <param name="plane_output_cloud_topic" value="/camera/depth/points_plane" />
+    <param name="plane_output_cloud_topic" value="/camera/depth/points_non_plane" />
   </node>
 
 <!--
