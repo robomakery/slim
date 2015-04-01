@@ -4,9 +4,9 @@ shoulder_pan_controller:
     max_velocity: 2.0
     motors:
         - id: 0
-          init: 512
-          min: 0
-          max: 900
+          init: 452
+          min: 140
+          max: 752
 
 shoulder_pitch_controller:
     type: dynamixel_hardware_interface/JointPositionController
@@ -14,9 +14,9 @@ shoulder_pitch_controller:
     max_velocity: 2.0
     motors:
         - id: 1
-          init: 2048
-          min: 926
-          max: 3825
+          init: 2040
+          min: 861
+          max: 2750
 
 elbow_roll_controller:
     type: dynamixel_hardware_interface/JointPositionController
@@ -24,9 +24,9 @@ elbow_roll_controller:
     max_velocity: 2.0
     motors:
         - id: 2
-          init: 512
-          min: 0
-          max: 650
+          init: 513
+          min: 200
+          max: 832
 
 elbow_pitch_controller:
     type: dynamixel_hardware_interface/JointPositionController
@@ -34,9 +34,9 @@ elbow_pitch_controller:
     max_velocity: 2.0
     motors:
         - id: 3
-          init: 512
-          min: 200
-          max: 890
+          init: 508
+          min: 137
+          max: 810
 
 wrist_roll_controller:
     type: dynamixel_hardware_interface/JointPositionController
@@ -44,9 +44,9 @@ wrist_roll_controller:
     max_velocity: 2.0
     motors:
         - id: 4
-          init: 512
-          min: 0
-          max: 1023
+          init: 495
+          min: 79
+          max: 911
 
 wrist_pitch_controller:
     type: dynamixel_hardware_interface/JointPositionController 
@@ -54,9 +54,9 @@ wrist_pitch_controller:
     max_velocity: 2.0
     motors:
         - id: 5
-          init: 512
-          min: 200
-          max: 900
+          init: 507
+          min: 135
+          max: 863
 
 gripper_roll_controller:
     type: dynamixel_hardware_interface/JointPositionController
@@ -64,9 +64,9 @@ gripper_roll_controller:
     max_velocity: 2.0
     motors:
         - id: 6
-          init: 512
-          min: 0
-          max: 1023
+          init: 522
+          min: 74
+          max: 971
 
 gripper_finger_controller:
     type: dynamixel_hardware_interface/JointPositionController
@@ -74,6 +74,6 @@ gripper_finger_controller:
     max_velocity: 2.0
     motors:
         - id: 7
-          init: 424
-          min: 225
-          max: 424
+          init: 281
+          min: 103
+          max: 460

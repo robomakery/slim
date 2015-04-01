@@ -2,7 +2,8 @@ namespace: clam_controller_manager
 diagnostics_rate: 2
 serial_ports:
      port_ttl:
-        port_name: /dev/dynamixel_ttl
+        port_name: /dev/ttyUSB1
+#        port_name: /dev/dynamixel_ttl
         baud_rate: 1000000
         min_motor_id: 0
         max_motor_id: 7
@@ -11,7 +12,8 @@ serial_ports:
             error_level_temp: 70
             warn_level_temp: 65
      port_rs485:
-         port_name: /dev/dynamixel_rs485
+         port_name: /dev/ttyUSB0
+ #         port_name: /dev/dynamixel_rs485
          baud_rate: 1000000
          min_motor_id: 0
          max_motor_id: 7
