@@ -10,6 +10,7 @@
 #include <pcl/filters/passthrough.h>
 
 #include "slim_perception/CloudVoxelizer.h"
+#include "slim_perception/CubeDetector.h"
 
 typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
 
@@ -94,41 +95,44 @@ void callback(const PointCloud::ConstPtr& msg)
   extract.filter(*cloudPlaneFilter);
 
 
-//// Euclidean clustering object.
-//kdtree->setInputCloud(cloudNonPlaneFilter);
-//pcl::EuclideanClusterExtraction<pcl::PointXYZ> clustering;
-//// Set cluster tolerance to 2cm (small values may cause objects to be divided
-//// in several clusters, whereas big values may join objects in a same cluster).
-//clustering.setClusterTolerance(0.02);
-//// Set the minimum and maximum number of points that a cluster can have.
-//clustering.setMinClusterSize(100);
-//clustering.setMaxClusterSize(25000);
-//clustering.setSearchMethod(kdtree);
-//clustering.setInputCloud(cloudNonPlaneFilter);
-//std::vector<pcl::PointIndices> clusters;
-//clustering.extract(clusters);
+  // Euclidean clustering object.
+  kdtree->setInputCloud(cloudNonPlaneFilter);
+  pcl::EuclideanClusterExtraction<pcl::PointXYZ> clustering;
+  // Set cluster tolerance to 2cm (small values may cause objects to be divided
+  // in several clusters, whereas big values may join objects in a same cluster).
+  clustering.setClusterTolerance(0.02);
+  // Set the minimum and maximum number of points that a cluster can have.
+  clustering.setMinClusterSize(100);
+  clustering.setMaxClusterSize(25000);
+  clustering.setSearchMethod(kdtree);
+  clustering.setInputCloud(cloudNonPlaneFilter);
+  std::vector<pcl::PointIndices> clusters;
+  clustering.extract(clusters);
 
-//// For every cluster...
-//int currentClusterNum = 1;
-//for (std::vector<pcl::PointIndices>::const_iterator i = clusters.begin(); i != clusters.end(); ++i)
-//{
-//  // ...add all its points to a new cloud...
-//  PointCloud::Ptr cluster(new PointCloud);
-//  for (std::vector<int>::const_iterator point = i->indices.begin(); point != i->indices.end(); point++) {
-//    cluster->points.push_back(cloudExtracted->points[*point]);
-//  }
-//  cluster->width = cluster->points.size();
-//  cluster->height = 1;
-//  cluster->is_dense = true;
-//
-//  // ...and save it to disk.
-//  if (cluster->points.size() <= 0)
-//    break;
-//
-//  std::cout << "Cluster " << currentClusterNum << " has " << cluster->points.size() << " points." << std::endl;
-//  pubPassthrough.publish(cluster);
-//  currentClusterNum++;
-//}
+  if (!clusters.empty()) {
+    ROS_INFO_STREAM("Number of clusters = " << clusters.size());
+  }
+
+  // For every cluster...
+  int currentClusterNum = 1;
+  for (std::vector<pcl::PointIndices>::const_iterator i = clusters.begin(); i != clusters.end(); ++i)
+  {
+    // ...add all its points to a new cloud...
+    PointCloud::Ptr cluster(new PointCloud);
+    for (std::vector<int>::const_iterator point = i->indices.begin(); point != i->indices.end(); point++) {
+      cluster->points.push_back(cloudExtracted->points[*point]);
+    }
+    cluster->width = cluster->points.size();
+    cluster->height = 1;
+    cluster->is_dense = true;
+
+    // ...and save it to disk.
+    if (cluster->points.size() <= 0)
+      break;
+
+    std::cout << "Cluster " << currentClusterNum << " has " << cluster->points.size() << " points." << std::endl;
+    currentClusterNum++;
+  }
 
   if (pubPassthrough.getNumSubscribers() > 0) {
     pubPassthrough.publish(cloudPassThroughFiltered);

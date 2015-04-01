@@ -15,7 +15,8 @@
   </include>
 
   <!-- Send robot XML description to param server -->
-  <param name="robot_description" command="cat $(find clam_description)/urdf/clam.urdf" />
+  <!-- <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" /> -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
 
   <!-- Publish the robot state -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />

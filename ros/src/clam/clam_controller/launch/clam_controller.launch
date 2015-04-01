@@ -48,13 +48,16 @@
   <include file="$(find clam_controller)/launch/joint_state_aggregator.launch" />
 
   <!-- Launch fake joint state publisher -->
-  <!--node name="joint_state_publisher" pkg="clam_controller" type="joint_state_publisher.py" output="screen">
-    <rosparam param="source_list">[joint_states]</rosparam>
+  <!--<node name="joint_state_publisher" pkg="clam_controller" type="joint_state_publisher.py" output="screen">
+    <rosparam param="source_list">["/elbow_pitch_controller/state","/gripper_finger_controller/state","/gripper_roll_controller/state","/shoulder_pan_controller/state","/shoulder_pitch_controller/state","/wrist_pitch_controller/state","/wrist_roll_controller/state"]</rosparam>
+
+    <rosparam param="source_list">[/elbow_pitch_controller/state]</rosparam>
+    <rosparam param="source_list">["/motor_states/port_rs485","/motor_states/port_ttl"]</rosparam>
     <rosparam param="use_gui">FALSE</rosparam>
-  </node-->
+  </node>-->
 
   <!--node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
-    <rosparam param="source_list">[joint_states]</rosparam>
+    <rosparam param="source_list">["/elbow_pitch_controller/state,/gripper_finger_controller/state,/gripper_roll_controller/state,/shoulder_pan_controller/state,/shoulder_pitch_controller/state,/wrist_pitch_controller/state,/wrist_roll_controller/state"]</rosparam>
     <rosparam param="use_gui">FALSE</rosparam>
   </node-->
 

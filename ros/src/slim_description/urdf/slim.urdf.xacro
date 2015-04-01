@@ -471,7 +471,7 @@
     </actuator>
   </transmission>
 
-  <xacro:include filename="$(find clam_description)/urdf/clam.xacro" />
+  <xacro:include filename="$(find slim_description)/urdf/slim_no_base.xacro" />
 
   <!-- ros_control plugin -->
   <gazebo>

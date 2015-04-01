@@ -109,7 +109,7 @@ add_executable(slim_perception_node src/slim_perception_node.cpp)
 add_executable(write_pcd_from_topic src/write_pcd_from_topic.cpp)
 add_executable(simple_viewer src/simple_viewer.cpp)
 add_executable(generate_cad_model_views src/generate_cad_model_views.cpp)
-add_executable(cloud_matcher_node src/cloud_matcher_node.cpp)
+add_executable(cloud_matcher src/cloud_matcher_node.cpp)
 add_executable(test_opencv_features src/test_opencv_features.cpp)
 add_executable(image_object_matcher_node src/image_object_matcher_node.cpp)
 
@@ -131,7 +131,7 @@ target_link_libraries(generate_cad_model_views
   ${catkin_LIBRARIES}
   ${VTK_LIBRARIES}
 )
-target_link_libraries(cloud_matcher_node
+target_link_libraries(cloud_matcher
   ${catkin_LIBRARIES}
 )
 target_link_libraries(test_opencv_features

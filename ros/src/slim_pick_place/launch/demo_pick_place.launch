@@ -14,7 +14,7 @@
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
 
   <!-- load joint trajectory controllers -->
-  <rosparam file="$(find slim_pick_place)/config/joint_trajectory_controllers.yaml"/>
+  <rosparam file="$(find slim_control)/config/joint_trajectory_controllers.yaml"/>
   <node name="controller_spawner" pkg="controller_manager" type="spawner"
         args="arm_controller gantry_controller gripper_controller" />
 

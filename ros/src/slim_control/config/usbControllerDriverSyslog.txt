@@ -1,0 +1,39 @@
+# RS-485
+
+Mar 14 17:23:37 robo1 kernel: [ 5739.710202] usb 2-4.1.2: new full-speed USB device number 16 using ehci-pci
+Mar 14 17:23:37 robo1 kernel: [ 5740.187446] usb 2-4.1.2: New USB device found, idVendor=0403, idProduct=6001
+Mar 14 17:23:37 robo1 kernel: [ 5740.187457] usb 2-4.1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 14 17:23:37 robo1 kernel: [ 5740.187465] usb 2-4.1.2: Product: FT232R USB UART
+Mar 14 17:23:37 robo1 kernel: [ 5740.187470] usb 2-4.1.2: Manufacturer: FTDI
+Mar 14 17:23:37 robo1 kernel: [ 5740.187475] usb 2-4.1.2: SerialNumber: A96TX7ZJ
+Mar 14 17:23:37 robo1 kernel: [ 5740.234825] ftdi_sio 2-4.1.2:1.0: FTDI USB Serial Device converter detected
+Mar 14 17:23:37 robo1 kernel: [ 5740.234895] usb 2-4.1.2: Detected FT232RL
+Mar 14 17:23:37 robo1 kernel: [ 5740.234901] usb 2-4.1.2: Number of endpoints 2
+Mar 14 17:23:37 robo1 kernel: [ 5740.234907] usb 2-4.1.2: Endpoint 1 MaxPacketSize 64
+Mar 14 17:23:37 robo1 kernel: [ 5740.234913] usb 2-4.1.2: Endpoint 2 MaxPacketSize 64
+Mar 14 17:23:37 robo1 kernel: [ 5740.234918] usb 2-4.1.2: Setting MaxPacketSize 64
+Mar 14 17:23:37 robo1 kernel: [ 5740.235747] usb 2-4.1.2: FTDI USB Serial Device converter now attached to ttyUSB0
+Mar 14 17:23:37 robo1 mtp-probe: checking bus 2, device 16: "/sys/devices/pci0000:00/0000:00:04.1/usb2/2-4/2-4.1/2-4.1.2"
+Mar 14 17:23:37 robo1 mtp-probe: bus: 2, device: 16 was not an MTP device
+
+
+--------------------------
+
+# TTL
+
+Mar 14 17:24:16 robo1 kernel: [ 5779.469111] usb 2-4.1.4: new full-speed USB device number 17 using ehci-pci
+Mar 14 17:24:17 robo1 kernel: [ 5779.946362] usb 2-4.1.4: New USB device found, idVendor=0403, idProduct=6001
+Mar 14 17:24:17 robo1 kernel: [ 5779.946373] usb 2-4.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 14 17:24:17 robo1 kernel: [ 5779.946380] usb 2-4.1.4: Product: FT232R USB UART
+Mar 14 17:24:17 robo1 kernel: [ 5779.946386] usb 2-4.1.4: Manufacturer: FTDI
+Mar 14 17:24:17 robo1 kernel: [ 5779.946391] usb 2-4.1.4: SerialNumber: A9CZN5H1
+Mar 14 17:24:17 robo1 kernel: [ 5779.993736] ftdi_sio 2-4.1.4:1.0: FTDI USB Serial Device converter detected
+Mar 14 17:24:17 robo1 kernel: [ 5779.993804] usb 2-4.1.4: Detected FT232RL
+Mar 14 17:24:17 robo1 kernel: [ 5779.993810] usb 2-4.1.4: Number of endpoints 2
+Mar 14 17:24:17 robo1 kernel: [ 5779.993816] usb 2-4.1.4: Endpoint 1 MaxPacketSize 64
+Mar 14 17:24:17 robo1 kernel: [ 5779.993822] usb 2-4.1.4: Endpoint 2 MaxPacketSize 64
+Mar 14 17:24:17 robo1 kernel: [ 5779.993827] usb 2-4.1.4: Setting MaxPacketSize 64
+Mar 14 17:24:17 robo1 kernel: [ 5779.994661] usb 2-4.1.4: FTDI USB Serial Device converter now attached to ttyUSB1
+Mar 14 17:24:17 robo1 mtp-probe: checking bus 2, device 17: "/sys/devices/pci0000:00/0000:00:04.1/usb2/2-4/2-4.1/2-4.1.4"
+Mar 14 17:24:17 robo1 mtp-probe: bus: 2, device: 17 was not an MTP device
+

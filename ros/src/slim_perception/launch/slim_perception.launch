@@ -13,7 +13,7 @@
   </include>
 
   <!-- Main Point Cloud Perception Processing node -->
-  <node name="slim_perception" pkg="slim_perception" type="slim_perception_node">
+  <node name="slim_perception" pkg="slim_perception" type="slim_perception_node" output="screen">
     <!-- Filter points outside this minimum and maximum range -->
     <param name="limit_min" value="0.3" />
     <param name="limit_max" value="1.0" />
@@ -30,6 +30,14 @@
 
     <param name="plane_output_cloud_topic" value="/camera/depth/points_non_plane" />
   </node>
+
+<!--
+  <node name="cloud_matcher" pkg="slim_perception" type="cloud_matcher">
+    <param name="topic" value="/camera/depth/points" />
+    <param name="model_file_path" value="/home/robomakery/data/kiva_pod/meshes/pod_lowres.ply" />
+    <param name="voxel_size" value="0.01" />
+  </node>
+-->
 
 <!--
   <node pkg="tf" type="static_transform_publisher" name="camera_base_link_broadcaster"

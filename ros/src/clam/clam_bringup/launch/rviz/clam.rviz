@@ -11,7 +11,7 @@ Panels:
         - /MotionPlanning1/Planning Metrics1
         - /MotionPlanning1/Planned Path1
       Splitter Ratio: 0.392982
-    Tree Height: 533
+    Tree Height: 241
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -67,41 +67,179 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: false
+      Enabled: true
       Links:
-        {}
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        elbow_pitch_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        elbow_roll_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_roll_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_gripper_fwd_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_gripper_pincher_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_gripper_aft_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_gripper_fwd_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_gripper_pincher_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shoulder_pan_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shoulder_pitch_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_pitch_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_roll_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: ClamArm
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
     - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
       Enabled: true
       Name: Move Arm Control
       Show Axes: false
       Show Descriptions: true
+      Show Visual Aids: false
       Update Topic: /clam_marker_server/update
       Value: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: true
-      Marker Scale: 0.1
+        base_link:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
+        camera_rgb_frame:
+          Value: true
+        camera_rgb_optical_frame:
+          Value: true
+        elbow_pitch_link:
+          Value: true
+        elbow_roll_link:
+          Value: true
+        gripper_finger_link:
+          Value: true
+        gripper_roll_link:
+          Value: true
+        l_gripper_fwd_link:
+          Value: true
+        l_gripper_pincher_link:
+          Value: true
+        r_gripper_aft_link:
+          Value: true
+        r_gripper_fwd_link:
+          Value: true
+        r_gripper_pincher_link:
+          Value: true
+        shoulder_pan_link:
+          Value: true
+        shoulder_pitch_link:
+          Value: true
+        wrist_pitch_link:
+          Value: true
+        wrist_roll_link:
+          Value: true
+      Marker Scale: 0.25
       Name: ClamArmTF
       Show Arrows: true
-      Show Axes: false
+      Show Axes: true
       Show Names: true
       Tree:
-        {}
+        base_link:
+          camera_link:
+            camera_depth_frame:
+              camera_depth_optical_frame:
+                {}
+            camera_rgb_frame:
+              camera_rgb_optical_frame:
+                {}
+          shoulder_pan_link:
+            shoulder_pitch_link:
+              elbow_roll_link:
+                elbow_pitch_link:
+                  wrist_roll_link:
+                    wrist_pitch_link:
+                      gripper_roll_link:
+                        gripper_finger_link:
+                          l_gripper_pincher_link:
+                            {}
+                        l_gripper_fwd_link:
+                          {}
+                        r_gripper_aft_link:
+                          r_gripper_pincher_link:
+                            {}
+                        r_gripper_fwd_link:
+                          {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Alpha: 1
-      Autocompute Intensity Bounds:
-        Max Intensity: 4096
-        Min Intensity: 0
+      Auto Size:
+        Auto Size Factor: 1
         Value: true
+      Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 10
         Min Value: -10
@@ -117,25 +255,26 @@ Visualization Manager:
       Depth Map Topic: /camera/depth_registered/image_rect
       Depth Map Transport Hint: raw
       Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
       Name: DepthCloud
+      Occlusion Compensation:
+        Occlusion Time-Out: 30
+        Value: false
       Position Transformer: XYZ
       Queue Size: 5
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.01
       Style: Spheres
       Topic Filter: true
       Use Fixed Frame: true
-      Use rainbow:
-        Max Color: 255; 255; 255
-        Min Color: 0; 0; 0
-        Value: true
+      Use rainbow: true
       Value: false
     - Alpha: 1
-      Autocompute Intensity Bounds:
-        Max Intensity: 4096
-        Min Intensity: 0
-        Value: true
+      Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 0.350458
         Min Value: -0.727807
@@ -147,6 +286,11 @@ Visualization Manager:
       Color Transformer: RGB8
       Decay Time: 0
       Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
       Name: DepthCloudFiltered
       Position Transformer: XYZ
       Queue Size: 10
@@ -156,16 +300,10 @@ Visualization Manager:
       Style: Squares
       Topic: /block_detection_action_server/block_output
       Use Fixed Frame: true
-      Use rainbow:
-        Max Color: 255; 255; 255
-        Min Color: 0; 0; 0
-        Value: true
+      Use rainbow: true
       Value: false
     - Alpha: 1
-      Autocompute Intensity Bounds:
-        Max Intensity: 4096
-        Min Intensity: 0
-        Value: true
+      Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 10
         Min Value: -10
@@ -177,6 +315,11 @@ Visualization Manager:
       Color Transformer: FlatColor
       Decay Time: 0
       Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
       Name: DepthCloudTable
       Position Transformer: XYZ
       Queue Size: 10
@@ -186,10 +329,7 @@ Visualization Manager:
       Style: Points
       Topic: /block_detection_action_server/plane_output
       Use Fixed Frame: true
-      Use rainbow:
-        Max Color: 255; 255; 255
-        Min Color: 0; 0; 0
-        Value: true
+      Use rainbow: true
       Value: false
     - Arrow Length: 0.1
       Class: rviz/PoseArray
@@ -199,15 +339,19 @@ Visualization Manager:
       Topic: /
       Value: true
     - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
       Enabled: true
       Name: RecognizedBlocks
       Show Axes: false
       Show Descriptions: false
+      Show Visual Aids: false
       Update Topic: /block_controls/update
       Value: true
     - Class: moveit_rviz_plugin/MotionPlanning
       Enabled: true
+      Move Group Namespace: ""
       MoveIt_Goal_Tolerance: 0
+      MoveIt_Planning_Attempts: 10
       MoveIt_Planning_Time: 5
       MoveIt_Use_Constraint_Aware_IK: true
       MoveIt_Warehouse_Host: 127.0.0.1
@@ -215,6 +359,11 @@ Visualization Manager:
       Name: MotionPlanning
       Planned Path:
         Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
           base_link:
             Alpha: 1
             Show Axes: false
@@ -230,22 +379,37 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_fake_tip_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           gripper_finger_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_fixed_finger_link:
+          gripper_roll_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_roll_link:
+          l_gripper_fwd_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          l_gripper_pincher_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          r_gripper_aft_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          r_gripper_fwd_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          r_gripper_pincher_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -256,11 +420,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           shoulder_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          tabletop_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -288,14 +447,14 @@ Visualization Manager:
         Show Manipulability: false
         Show Manipulability Index: false
         Show Weight Limit: false
+        TextHeight: 0.08
       Planning Request:
-        Cartesian teleop: false
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 0; 85; 255
         Interactive Marker Size: 0.3
         Joint Violation Color: 255; 0; 255
-        Planning Group: arm
+        Planning Group: ""
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -308,9 +467,16 @@ Visualization Manager:
         Scene Color: 50; 230; 50
         Scene Display Time: 0.2
         Show Scene Geometry: true
+        Voxel Coloring: Z-Axis
+        Voxel Rendering: Occupied Voxels
       Scene Robot:
         Attached Body Color: 150; 50; 150
         Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
           base_link:
             Alpha: 1
             Show Axes: false
@@ -326,22 +492,37 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_fake_tip_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           gripper_finger_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_fixed_finger_link:
+          gripper_roll_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          gripper_roll_link:
+          l_gripper_fwd_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          l_gripper_pincher_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          r_gripper_aft_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          r_gripper_fwd_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          r_gripper_pincher_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -352,11 +533,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           shoulder_pitch_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          tabletop_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -372,7 +548,8 @@ Visualization Manager:
             Show Trail: false
             Value: true
         Robot Alpha: 0.5
-        Show Scene Robot: true
+        Show Robot Collision: false
+        Show Robot Visual: true
       Value: true
     - Class: rviz/Marker
       Enabled: true
@@ -385,41 +562,48 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: /base_link
+    Fixed Frame: base_link
+    Frame Rate: 30
   Name: root
   Tools:
     - Class: rviz/Interact
+      Hide Inactive Objects: true
     - Class: rviz/MoveCamera
     - Class: rviz/Select
   Value: true
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.11753
+      Distance: 1.65394
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
       Focal Point:
         X: 0.32505
         Y: -0.0786566
         Z: 0.28123
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.335203
-      Target Frame: /base_link
+      Pitch: 0.330203
+      Target Frame: base_link
       Value: Orbit (rviz)
-      Yaw: 5.57313
+      Yaw: 5.51813
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1200
+  Height: 947
   Help:
     collapsed: false
   Hide Left Dock: false
   Hide Right Dock: false
   Motion Planning:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a200000434fc0200000004fb000000100044006900730070006c0061007900730100000041000002bc000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a00560069006500770073000000024d000000b0000000b000fffffffb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000303000001720000016700ffffff000003960000043400000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a200000354fc0200000004fb000000100044006900730070006c006100790073010000004100000198000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a00560069006500770073000000024d000000b0000000b000fffffffb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000001df000001b6000001ab00ffffff000002560000035400000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1600
-  X: 3831
-  Y: -269
+  Width: 1278
+  X: 0
+  Y: 24

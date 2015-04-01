@@ -32,7 +32,7 @@ void callback(const PointCloud::ConstPtr msg)
 int main(int argc, char **argv)
 {
   // Set up ROS.
-  ros::init(argc, argv, "slim_perception");
+  ros::init(argc, argv, "cloud_matcher");
   ros::NodeHandle n;
 
   // Declare variables that can be modified by launch file or command line.
@@ -46,10 +46,10 @@ int main(int argc, char **argv)
   ros::NodeHandle private_node_handle_("~");
   private_node_handle_.param("topic", topic, std::string("/camera/depth/points"));
   private_node_handle_.param("model_file_path", modelFilePath, std::string("/mnt/hgfs/llister/Devel/robomakery/data/woodenShelf/Model.ply"));
-  private_node_handle_.param("voxel_size", voxelSize,  0.02);
+  private_node_handle_.param("voxel_size", voxelSize,  0.01);
 
   // Initialize CloudVoxelizer object for depth camera point clouds
-  cloudVoxelizer.reset(new CloudVoxelizer(n, std::string("/camera/depth/voxelized_points"), voxelSize));
+//cloudVoxelizer.reset(new CloudVoxelizer(n, std::string("/camera/depth/voxelized_points"), voxelSize));
 
   // Initialize CloudVoxelizer object for CAD model
   // Enable latching b/c model doesn't change and new subscribers can get data later on
@@ -59,8 +59,9 @@ int main(int argc, char **argv)
   pcl::PLYReader modelReader;
   PointCloud modelPointCloud;
   modelReader.read(modelFilePath, modelPointCloud);
-  modelPointCloud.header.frame_id = "/camera_rgb_frame";
+  modelPointCloud.header.frame_id = "/camera_depth_frame";
   PointCloud::ConstPtr cloudPtr(new PointCloud(modelPointCloud));
+
 
   // Voxelize CAD model point cloud
   cadModelVoxelizer->voxelize(cloudPtr);
@@ -68,7 +69,7 @@ int main(int argc, char **argv)
   
   // Create a subscriber.
   // Name the topic, message queue, callback function with class name, and object containing callback function.
-  ros::Subscriber sub_message = n.subscribe<PointCloud>(topic.c_str(), 1, callback);
+//ros::Subscriber sub_message = n.subscribe<PointCloud>(topic.c_str(), 1, callback);
 
   ros::spin();
 

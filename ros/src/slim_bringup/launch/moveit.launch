@@ -1,0 +1,44 @@
+<launch>
+
+  <!-- Debug -->  
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+  <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+  <!-- Verbose mode -->
+  <arg name="verbose" default="false" />
+  <arg unless="$(arg verbose)" name="command_args" value="" />
+  <arg     if="$(arg verbose)" name="command_args" value="--verbose" />
+
+  <!-- load robot params -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find slim_description)/urdf/slim.urdf.xacro'" />
+
+  <!-- load low level controllers -->
+  <!-- <include file="$(find clam_bringup)/launch/lowlevel.launch" /> -->
+
+  <!-- load joint trajectory controllers -->
+  <rosparam file="$(find slim_control)/config/joint_trajectory_controllers.yaml"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner"
+        args="arm_controller gantry_controller gripper_controller" />
+
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find slim_moveit_config)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true" />
+  </include>
+
+  <!-- Run the main MoveIt executable -->
+  <include file="$(find slim_moveit_config)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="fake_execution" value="false"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+  <include file="$(find slim_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="config" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+  
+
+</launch>
