@@ -2,12 +2,12 @@
 <launch>
 
   <!-- Low level simulator -->
-  <include file="$(find clam_bringup)/launch/lowlevel_simulator.launch" />
+  <include file="$(find slim_bringup)/launch/lowlevel_simulator.launch" />
 
   <!-- MoveIt -->
-  <include file="$(find clam_moveit_config)/launch/move_group.launch" />
+  <include file="$(find slim_moveit_config)/launch/move_group.launch" />
 
   <!-- Rviz -->
-  <include file="$(find clam_moveit_config)/launch/moveit_rviz.launch" />
+  <include file="$(find slim_moveit_config)/launch/moveit_rviz.launch" />
 
 </launch>
