@@ -1,0 +1,22 @@
+<launch>
+
+  <!-- Main Point Cloud Perception Processing node -->
+  <node name="slim_perception" pkg="slim_perception" type="slim_perception_node" output="screen">
+    <!-- Filter points outside this minimum and maximum range -->
+    <param name="limit_min" value="0.3" />
+    <param name="limit_max" value="1.0" />
+    <!-- Uncomment to publish point cloud after passthrough range filter -->
+    <param name="passthrough_output_cloud_topic" value="/camera/depth/points_passthrough" />
+
+    <!-- Filter points using outlier removal -->
+    <param name="inlier_output_cloud_topic" value="/camera/depth/points_inliers" />
+
+    <!-- Voxel size after subsampling passthrough filtered point cloud -->
+    <param name="subsampled_voxel_size" value="0.01" />
+    <!-- Uncomment to publish point cloud after voxel grid filter -->
+    <param name="subsampled_output_cloud_topic" value="/camera/depth/points_subsampled" />
+
+    <param name="plane_output_cloud_topic" value="/camera/depth/points_non_plane" />
+  </node>
+
+</launch>
