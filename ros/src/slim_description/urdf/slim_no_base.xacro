@@ -330,7 +330,7 @@ http://www.ros.org/wiki/xacro
   <joint name="left_finger_joint" type="revolute">
     <parent link="gripper_roll_link"/>
     <child link="left_finger_link"/>
-    <origin xyz="0.026 .017 0" rpy="${1.04*M_PI} ${M_PI/2} ${34.58*M_PI/180}" />
+    <origin xyz="0.041 .02 0" rpy="4.1 ${M_PI/2} ${34.58*M_PI/180}" />
     <axis xyz="1 0 0" />
     <limit effort="300" velocity="1" lower="-1.8254371376" upper="0.0"/>
     <dynamics damping="50" friction="1"/>
@@ -344,18 +344,18 @@ http://www.ros.org/wiki/xacro
     </inertial>
 
     <visual>
-      <origin xyz="-0.026 0.003 -0.002" rpy="0 ${M_PI/2} 0" />
+      <origin xyz="-0.026 -0.00 0.012" rpy="0 ${M_PI/2} 0" />
       <geometry>
         <mesh filename="package://clam_description/stl/grippers/road_narrows/RNHKEF102-109-5000-faces.stl" scale="${M_SCALE}" />
       </geometry>
-      <material name="Red" />
+      <material name="Grey" />
     </visual>
   </link>
 
   <joint name="right_finger_joint" type="revolute">
     <parent link="gripper_roll_link" />
     <child link="right_finger_link" />
-    <origin xyz="0.026 -0.011  0" rpy="${1.345*M_PI} ${M_PI/2} ${34.58*M_PI/180}" />
+    <origin xyz="0.04 -0.021 0" rpy="4 ${M_PI/2} ${34.58*M_PI/180}" />
     <axis xyz="1 0 0" />
     <mimic joint="left_finger_joint" multiplier="-1.0" offset="0.0" />
     <limit effort="300" velocity="1" lower="-1.8254371376" upper="0.0"/>
@@ -370,11 +370,11 @@ http://www.ros.org/wiki/xacro
     </inertial>
 
     <visual>
-      <origin xyz="-0.026 -0.031 -0.002" rpy="0 ${M_PI/2} 0" />
+      <origin xyz="-0.026 -0.041 0.012" rpy="0 ${M_PI/2} 0" />
       <geometry>
         <mesh filename="package://clam_description/stl/grippers/road_narrows/RNHKEF103-109-5000-faces.stl" scale="${M_SCALE}" />
       </geometry>
-      <material name="Grey" />
+      <material name="Red" />
     </visual>
   </link>
   <!-- end gripper -->
